@@ -12,6 +12,8 @@ Distributed systems meet us on a professional way more often and often. Modern p
 
 The talk is built on an example of persistent distributed queue, which is being developed in Yandex. Attendees will learn how and what was tested by Andrew along Yandex team and what results were obtained.
 
+<script async class="speakerdeck-embed" data-slide="2" data-id="8fbb5337e106474e9753c5359a663239" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
 [Slides (in Russian)](https://speakerdeck.com/asatarin/tiestirovaniie-raspriedieliennykh-sistiem)
 
 [Video (in Russian)](https://youtu.be/h8RV4JfSovg)
@@ -27,9 +29,9 @@ As the saying goes, “with great power comes great responsibility”. C++ is a 
 
 Sanitizers are wonderful tools, which will help you find complex defects in C++ programs. I’ll talk about these tools, what they can do, and how to use them in your project.
 
-<script async class="speakerdeck-embed" data-id="bcb48dac52af45049d477d8ab9d4b389" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-slide="2" data-id="bcb48dac52af45049d477d8ab9d4b389" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/Aeu7abIKgGs" frameborder="0" allowfullscreen></iframe>
+<iframe width="device-width" height="600" src="https://www.youtube.com/embed/Aeu7abIKgGs" frameborder="0" allowfullscreen></iframe>
 
 [Slides (in Russian)](https://speakerdeck.com/asatarin/moitie-ruki-pieried-iedoi-ili-sanitaiziery-v-tiestirovanii)
 
