@@ -1,4 +1,7 @@
-## Testing distributed systems
+---
+title: Testing distributed systems
+layout: post
+---
 
 **Abstract**
 
