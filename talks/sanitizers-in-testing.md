@@ -1,4 +1,7 @@
-## Wash your hands before you eat, or Sanitizers in testing
+---
+title: Wash your hands before you eat, or Sanitizers in testing
+layout: post
+---
 
 **Abstract**
 
