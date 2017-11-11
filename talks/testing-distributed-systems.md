@@ -1,5 +1,6 @@
 ---
 title: Testing distributed systems
+layout: talk
 ---
 
 **Abstract**
