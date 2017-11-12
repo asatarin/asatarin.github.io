@@ -3,7 +3,18 @@
 
 @import "{{ site.theme }}";
 
-iframe {
-    width: 100%;
-    height: 56.25vw; /* 100/56.25 = 560/315 = 1.778 */
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
 }
