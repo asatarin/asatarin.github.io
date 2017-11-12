@@ -33,4 +33,4 @@ Attendees will learn how and what was tested by Andrey along Yandex team and wha
 - [Testing Distributed Systems](https://asatarin.github.io/testing-distributed-systems/) — curated list of resources on testing distributed systems
 - ["Simple Testing Can Prevent Most Critical Failures"](https://www.usenix.org/conference/osdi14/technical-sessions/presentation/yuan) — great paper with overview of different defect types in distributed systems and how to find them. If you have time to read only one paper this is the one.
 - [Inside Yandex: Data Storage and Processing Infrastructure](https://events.yandex.ru/events/meetings/15-oct-2016/) — several talks on data infrastructure at Yandex (in Russian)
-- [Talks by Kyle Kingsbure (Aphyr)](http://jepsen.io/talks) — if you are testing distributed systems you must be familiar with Kyle's work
+- [Talks by Kyle Kingsbury (Aphyr)](http://jepsen.io/talks) — if you are testing distributed systems you must be familiar with Kyle's work
