@@ -3,6 +3,8 @@ title: Wash Your Hands Before You Eat, or Sanitizers in Testing
 layout: talk
 ---
 
+Presented in Saint-Petersburg in June 2017 at [Heisenbug](https://heisenbug-piter.ru/talks/wash-your-hands-before-eating-or-sanitizer-in-testing/) conference.
+
 ### Abstract
 
 As the saying goes, “with great power comes great responsibility”. 
@@ -16,11 +18,7 @@ what they can do, and how to use them in your project.
 
 <script async class="speakerdeck-embed" data-slide="2" data-id="bcb48dac52af45049d477d8ab9d4b389" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
-<div>
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/Aeu7abIKgGs" frameborder="0" allowfullscreen></iframe>
-</div>
-
-[Conference page](https://heisenbug-piter.ru/talks/wash-your-hands-before-eating-or-sanitizer-in-testing/)
 
 ### References
 
