@@ -2,10 +2,5 @@
 title: Talks
 ---
 
-* [Testing distributed systems](testing-distributed-systems)
-
-Presented in Moscow in December 2016 and in Ekaterinburg in April 2017.
-
-* [Wash your hands before you eat, or Sanitizers in testing](sanitizers-in-testing)
-
-Presented in Saint-Petersburg in June 2017
+* [Testing Distributed Systems](testing-distributed-systems) (2016-2017)
+* [Wash Your Hands Before You Eat, or Sanitizers in Testing](sanitizers-in-testing) (2017)
