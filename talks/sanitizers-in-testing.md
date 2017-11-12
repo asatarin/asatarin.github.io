@@ -1,9 +1,9 @@
 ---
-title: Wash your hands before you eat, or Sanitizers in testing
+title: Wash Your Hands Before You Eat, or Sanitizers in Testing
 layout: talk
 ---
 
-**Abstract**
+### Abstract
 
 As the saying goes, “with great power comes great responsibility”. 
 C++ is a language with great expression power and vast capabilities. 
@@ -19,3 +19,13 @@ what they can do, and how to use them in your project.
 <iframe width="100%" height="600" src="https://www.youtube.com/embed/Aeu7abIKgGs" frameborder="0" allowfullscreen></iframe>
 
 [Conference page](https://heisenbug-piter.ru/talks/wash-your-hands-before-eating-or-sanitizer-in-testing/)
+
+### References
+
+- ["AddressSanitizer: A Fast Address Sanity Checker"](https://scholar.google.ru/scholar?cluster=2096653874509075773&hl=en&as_sdt=0,5) 
+- ["MemorySanitizer: fast detector of uninitialized memory use in C++"](https://scholar.google.ru/scholar?cluster=3033949213014053600&hl=en&as_sdt=0,5)
+- ["ThreadSanitizer: data race detection in practice"](https://scholar.google.ru/scholar?cluster=14589555155353882213&hl=en&as_sdt=0,5)
+- [https://github.com/google/sanitizers](https://github.com/google/sanitizers)
+- [AddressSanitizer, или как сделать программы на CС++ надежнее и безопаснее, Константин Серебряный](https://youtu.be/vKtNwALHb2k) — talk on AddressSanitizer by Konstantin Serebryany at HighLoad 2012 in Moscow (in Russian)
+- [""go test -race" Under the Hood"](https://youtu.be/5erqWdlhQLA) by Kavya Joshi — explanation of "go race" which is based on ThreadSanitizer, presented at StrangeLoop 2016
+- [Konstantin Serebryany](https://research.google.com/pubs/KonstantinSerebryany.html) page at Google Research
