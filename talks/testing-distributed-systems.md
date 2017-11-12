@@ -26,7 +26,9 @@ Attendees will learn how and what was tested by Andrey along Yandex team and wha
 
 <script async class="speakerdeck-embed" data-slide="2" data-id="8fbb5337e106474e9753c5359a663239" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/h8RV4JfSovg" frameborder="0" allowfullscreen></iframe>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/h8RV4JfSovg" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### References
 
