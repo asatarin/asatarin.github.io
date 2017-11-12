@@ -5,8 +5,6 @@ layout: talk
 
 Presented in Saint-Petersburg in June 2017 at [Heisenbug](https://heisenbug-piter.ru/talks/wash-your-hands-before-eating-or-sanitizer-in-testing/) conference.
 
-{:toc}
-
 ### Abstract
 
 As the saying goes, “with great power comes great responsibility”. 
