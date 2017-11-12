@@ -1,3 +1,6 @@
+---
+title: Andrey Satarin
+---
 Hi, my name is Andrey Satarin.
 
 You can checkout [my talks](talks) or list of resources on [testing distributed systems](testing-distributed-systems) I maintain.
