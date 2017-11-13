@@ -48,8 +48,23 @@ $header-bg-color: #fff;
   padding-right: 0.3em;
   margin-left: -0.9em;
   color: #9ddcff;
-  content: "/";
+  content: "\00A7";
 }
+
+#main-content h2:before {
+  padding-right: 0.3em;
+  margin-left: -0.9em;
+  color: #9ddcff;
+  content: "\00A7";
+}
+
+#main-content h3:before {
+  padding-right: 0.3em;
+  margin-left: -0.9em;
+  color: #9ddcff;
+  content: "\00A7";
+}
+
 
 .video-container {
 	position:relative;
