@@ -8,6 +8,7 @@
   text-align: left;
   margin: auto;
   color: #000;
+  max-width: 64rem;
 
   @include large {
     padding: 3rem 6rem 2rem;
