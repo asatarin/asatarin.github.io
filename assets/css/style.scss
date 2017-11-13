@@ -1,12 +1,13 @@
 ---
 ---
 
+$header-bg-color: #fff;
+
 @import "{{ site.theme }}";
 
 .page-header {
   color: $header-heading-color;
   text-align: left;
-  background-color: none;
   background-image: none;
   margin: auto;
   color: #000;
