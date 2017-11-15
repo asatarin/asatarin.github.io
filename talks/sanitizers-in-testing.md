@@ -28,6 +28,6 @@ what they can do, and how to use them in your project.
 - ["MemorySanitizer: fast detector of uninitialized memory use in C++"](https://scholar.google.ru/scholar?cluster=3033949213014053600&hl=en&as_sdt=0,5)
 - ["ThreadSanitizer: data race detection in practice"](https://scholar.google.ru/scholar?cluster=14589555155353882213&hl=en&as_sdt=0,5)
 - [https://github.com/google/sanitizers](https://github.com/google/sanitizers)
-- [AddressSanitizer, или как сделать программы на C/С++ надежнее и безопаснее, Константин Серебряный](https://youtu.be/vKtNwALHb2k) — talk on AddressSanitizer by Konstantin Serebryany at HighLoad 2012 in Moscow (in Russian)
+- [AddressSanitizer, или как сделать программы на C/С++ надежнее и безопаснее, Константин Серебряный](https://youtu.be/vKtNwALHb2k) — talk on AddressSanitizer by Konstantin Serebryany at HighLoad 2012 in Moscow (in Russian)
 - [""go test -race" Under the Hood"](https://youtu.be/5erqWdlhQLA) by Kavya Joshi — explanation of "go race" which is based on ThreadSanitizer, presented at StrangeLoop 2016
 - [Konstantin Serebryany](https://research.google.com/pubs/KonstantinSerebryany.html) page at Google Research
