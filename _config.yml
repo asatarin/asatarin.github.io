@@ -4,5 +4,8 @@ author: Andrey Satarin
 google_analytics: 
 show_downloads: false
 theme: jekyll-theme-cayman
+
+permalink: /:categories/:year/:title/
+
 plugins:
   - jekyll-feed
