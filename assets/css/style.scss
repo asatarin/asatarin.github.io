@@ -44,6 +44,19 @@ $header-bg-color: #fff;
   }
 }
 
+.page-title {
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.page-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    font-weight: normal;
+    opacity: 0.7;
+}
 
 .video-container {
 	position:relative;
