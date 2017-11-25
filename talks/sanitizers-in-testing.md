@@ -1,5 +1,5 @@
 ---
-title: Wash Your Hands Before You Eat, or Sanitizers in Testing
+title: Wash Your Hands Before You Eat, or Sanitizers in Testing
 layout: talk
 ---
 
