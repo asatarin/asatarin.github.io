@@ -39,6 +39,12 @@ $header-bg-color: #fff;
   }
 }
 
+.site-footer {
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  border-top: solid 1px $hr-border-color;
+}
+
 .video-container {
 	position:relative;
 	padding-bottom:56.25%;
