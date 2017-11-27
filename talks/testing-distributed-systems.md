@@ -37,6 +37,7 @@ Attendees will learn how and what was tested by Andrey along Yandex team and wha
 - [Inside Yandex: Data Storage and Processing Infrastructure](https://events.yandex.ru/events/meetings/15-oct-2016/) — several talks on data infrastructure at Yandex (in Russian)
 - [Talks by Kyle Kingsbury (Aphyr)](http://jepsen.io/talks) — if you are testing distributed systems you must be familiar with Kyle's work
 
+Not exactly references, but you could checkout interviews with me on testing distributed systems, [one in November 2016](https://habrahabr.ru/company/jugru/blog/313908/) and [another one in June 2017](https://habrahabr.ru/company/jugru/blog/329974/) (both in Russian).
 
 ### Other versions
 
