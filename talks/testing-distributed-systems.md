@@ -3,7 +3,7 @@ title: Testing Distributed Systems
 layout: talk
 ---
 
-Presented in Moscow in December 2016 at [Heisenbug](http://2016.heisenbug-moscow.ru/en/talks/testirovanie-raspredelennyh-sistem/) conference and in Ekaterinburg in April 2017.
+Presented in Moscow in December 2016 at [Heisenbug](http://2016.heisenbug-moscow.ru/en/talks/testirovanie-raspredelennyh-sistem/) conference and in Ekaterinburg in April 2017. Video and slides are in Russian.
 
 ### Abstract
 
