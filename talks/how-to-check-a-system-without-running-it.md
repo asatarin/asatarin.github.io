@@ -19,6 +19,10 @@ increase system stability and availability in production.
 
 <script async class="speakerdeck-embed" data-slide="2" data-id="19ab7d275dd446b38197481cb7541961" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/11F60YO3iNU" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ### References
 - [Three days that shoked us in 2013](https://habrahabr.ru/company/odnoklassniki/blog/268413/) in Russian
 - ["Paxos Made Live – An Engineering Perspective"](https://blog.acolyer.org/2015/03/05/paxos-made-live/)
