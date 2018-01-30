@@ -7,9 +7,10 @@ You can checkout [my talks](/talks) or list of resources on [testing distributed
 
 ## About
 
-Andrey is engaged in testing distributed systems at Yandex. 
-Previously he has worked in various projects: testing online multiplayer game at Mail.ru, 
-cloud antivirus detection system at Kaspersky Lab, and foreign exchange pricing service at Deutsche Bank. 
+Andrey is involved in testing at Amazon Web Services. 
+Previously he has worked in various projects: testing distributed NewSQL database at Yandex, 
+cloud antivirus detection system at Kaspersky Lab, online multiplayer game at Mail.ru, 
+and foreign exchange pricing service at Deutsche Bank. 
 Andrey is interested in testing large scale distributed and backend systems.
 
 ## Contacts
