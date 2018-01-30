@@ -8,7 +8,7 @@ You can checkout [my talks](/talks) or list of resources on [testing distributed
 ## About
 
 Andrey is engaged in testing distributed systems at Yandex. 
-Prevously he has worked in various projects: testing online multiplayer game at Mail.ru, 
+Previously he has worked in various projects: testing online multiplayer game at Mail.ru, 
 cloud antivirus detection system at Kaspersky Lab, and foreign exchange pricing service at Deutsche Bank. 
 Andrey is interested in testing large scale distributed and backend systems.
 
