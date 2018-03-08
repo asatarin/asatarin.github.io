@@ -1,5 +1,6 @@
 ---
 title: How to Check a System Without Running It
+description: Presented in Moscow in December 2017 at Heisenbug conference. Video and slides are in Russian.
 layout: talk
 ---
 
