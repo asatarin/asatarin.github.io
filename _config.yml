@@ -5,6 +5,13 @@ google_analytics:
 show_downloads: false
 theme: jekyll-theme-cayman
 
+social:
+  name: Andrey Satarin
+  links:
+    - https://twitter.com/asatarin
+    - https://www.linkedin.com/in/asatarin
+    - https://github.com/asatarin
+    
 permalink: /:categories/:year/:title/
 
 plugins:
