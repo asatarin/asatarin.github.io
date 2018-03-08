@@ -1,5 +1,6 @@
 ---
 title: Testing Distributed Systems
+descriptin: Presented in Moscow in December 2016 at Heisenbug conference and in Ekaterinburg in April 2017. Video and slides are in Russian.
 layout: talk
 ---
 
