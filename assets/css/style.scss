@@ -12,6 +12,8 @@ $header-bg-color: #fff;
   margin: auto;
   color: #000;
   max-width: 64rem;
+  padding: 1rem;
+  padding-bottom: 0rem;
 
   @include large {
     padding: 2rem 6rem 1rem;
@@ -43,6 +45,7 @@ $header-bg-color: #fff;
 }
 
 .main-content {
+  padding-top: 1rem;
   @include large {
     padding: 0rem 6rem;
   }
