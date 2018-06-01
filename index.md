@@ -5,7 +5,7 @@ Hi, my name is Andrey Satarin.
 
 You can checkout [my talks](/talks) or list of resources on [testing distributed systems](/testing-distributed-systems) I maintain.
 
-## About
+## Bio
 
 Andrey is involved in testing at Amazon Web Services. 
 Previously he has worked in various projects: testing distributed NewSQL database at Yandex, 
