@@ -42,7 +42,7 @@ Not exactly references, but you could checkout interviews with me on testing dis
 
 ### Other versions
 
-Shorter version of this talk was presented at [DUMP 2017](http://dump-conf.ru/archive/2017/#section_32) conference in Ekateringbug in April 2017.
+Shorter version of this talk was presented at [DUMP 2017](http://dump-conf.ru/archive/2017/#section_32) conference in Yekaterinburg in April 2017.
  - [Slides](https://speakerdeck.com/asatarin/tiestirovaniie-raspriedieliennykh-sistiem-dump-2017) in Russian
  - [Video](https://youtu.be/QXtr30paTl8) in Russian
  
