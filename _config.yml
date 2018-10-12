@@ -6,6 +6,9 @@ google_analytics:
 show_downloads: false
 theme: jekyll-theme-cayman
 
+site:
+  author: Andrey Satarin
+
 twitter:
   username: asatarin
   card: summary
