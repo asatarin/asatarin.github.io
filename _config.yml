@@ -5,6 +5,10 @@ google_analytics:
 show_downloads: false
 theme: jekyll-theme-cayman
 
+twitter:
+  username: asatarin
+  card: summary
+
 social:
   name: Andrey Satarin
   links:
