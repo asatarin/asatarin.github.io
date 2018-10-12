@@ -1,5 +1,6 @@
 ---
 title: Talks
+description: Talks
 ---
 
 - [Testing Distributed Systems](testing-distributed-systems) (2016-2017, in Russian)
