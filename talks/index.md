@@ -1,6 +1,6 @@
 ---
 title: Talks
-description: Talks
+description: Talks by Andrey Satarin
 ---
 
 - [Testing Distributed Systems](testing-distributed-systems) (2016-2017, in Russian)
