@@ -29,4 +29,4 @@ increase system stability and availability in production.
 - ["Paxos Made Live – An Engineering Perspective"](https://blog.acolyer.org/2015/03/05/paxos-made-live/)
 - ["Early detection of configuration errors to reduce failure damage"](https://blog.acolyer.org/2016/11/29/early-detection-of-configuration-errors-to-reduce-failure-damage/)
 - [Gixy — open source tool from Yandex to make your Nginx configuration safe](https://habrahabr.ru/company/yandex/blog/327590/) in Russian
-- ["Configuration testing for Java developers: a case study"](https://heisenbug-piter.ru/en/talks/2018/spb/3pnf97jpummk4yeociqwi0/) practical application of these ideas implemented in Java, talk by Ruslan Cheremin (in Russian)
+- ["Configuration testing for Java developers: a case study"](https://youtu.be/Tk_nmV-mWOA) — talk by [Ruslan Cheremin](https://twitter.com/dj_begemot) on practical application of these ideas implemented in Java (in Russian). [Slides](https://heisenbug-piter.ru/en/talks/2018/spb/3pnf97jpummk4yeociqwi0/) are also published (in Russian).
