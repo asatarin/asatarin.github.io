@@ -29,4 +29,4 @@ This talk will be useful for testers and Java developers.
 - [How Do I Correctly Implement the equals() Method?](http://www.drdobbs.com/jvm/java-qa-how-do-i-correctly-implement-th/184405053)
 - [Error Prone](http://errorprone.info/)
 - [AutoValue](https://github.com/google/auto/blob/master/value/userguide/index.md) — Google way to create value objects
-- [Immutables](https://immutables.org) — Java annotation processor to create value objects and more
+- [Immutables](https://immutables.github.io/) — Java annotation processor to create value objects and more
