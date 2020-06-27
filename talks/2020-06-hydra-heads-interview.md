@@ -1,0 +1,53 @@
+---
+title: Hydra Heads Interview 
+description: Interview with Andrey Satarin for Hydra Conference 2020
+layout: talk
+---
+
+As part of Hydra Conference promotion I gave an interview about distributed systems, Hydra conference and other things (in Russian).
+
+<div class="video-container">
+<iframe src="https://youtu.be/BP00xihSQo8" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+### References
+
+These references came up during discussion and questions.
+
+
+#### Books
+ - ["Distributed systems for fun and profit"](http://book.mixu.net/distsys/single-page.html)
+ 
+    This short book will give you good grasp of some theoretical concepts without going too deep. 
+    it's a good starting point to dive into distributed systems.
+    
+ - [“Database Internals: A Deep Dive into How Distributed Data Systems Work”](https://www.amazon.com/dp/1492040347/ref=cm_sw_r_tw_dp_x_GcI9Eb0T0NTMT)
+   
+    First part is about single node databases and not directly about distributed systems. Second part is specifically about distributed systems. 
+    One of the great things about this book is references — lots of good ones to go deep in any topic covered.
+    
+ - [“Designing Data-Intensive Applications”](https://www.amazon.com/dp/1449373321/ref=cm_sw_r_tw_dp_x_IcI9EbNF3SFHR)
+ 
+    It's almost classic book at this point. Martin Kleppmann does great job of introducing reader to a lot of concepts in distributed systems managing data.
+ 
+
+#### Amazon Aurora
+Paper reviews on [Amazon Aurora database](https://aws.amazon.com/rds/aurora/), with links to papers themselfes:
+ - [Amazon Aurora: design considerations for high throughput cloud-native relational databases](https://blog.acolyer.org/2019/03/25/amazon-aurora-design-considerations-for-high-throughput-cloud-native-relational-databases/)
+ - [Amazon Aurora: on avoiding distributed consensus for I/Os, commits, and membership changes](https://blog.acolyer.org/2019/03/27/amazon-aurora-on-avoiding-distributed-consensus-for-i-os-commits-and-membership-changes/)
+
+
+#### Papers
+ - https://www.the-paper-trail.org/post/2014-08-09-distributed-systems-theory-for-the-distributed-systems-engineer/
+
+    My deep dive into distributed systems started with this reading list. 
+    It maintains good balance between core theoretical concepts and practical system implementations. Highly recommended.
+
+ - [Kinetics of Large Clusters](https://gridem.blogspot.com/2017/08/kinetics-of-large-clusters.html)
+ 
+     Blog post from my former colleague on probability of data loss in a cluster.
+     
+ - [Twitter thread](https://twitter.com/backendsecret/status/1255236961532551174) on how to start testing distributed systems (in Russian)
+
+    This is thread when I was guest author at [@backendsecret](https://twitter.com/backendsecret) 
