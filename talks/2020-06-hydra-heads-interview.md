@@ -24,16 +24,16 @@ These references came up during discussion and questions.
     
  - [“Database Internals: A Deep Dive into How Distributed Data Systems Work”](https://www.amazon.com/dp/1492040347/ref=cm_sw_r_tw_dp_x_GcI9Eb0T0NTMT)
    
-    First part is about single node databases and not directly about distributed systems. Second part is specifically about distributed systems. 
+    The first part is about single node databases and not directly about distributed systems. The second part is specifically about distributed systems. 
     One of the great things about this book is references — lots of good ones to go deep in any topic covered.
     
  - [“Designing Data-Intensive Applications”](https://www.amazon.com/dp/1449373321/ref=cm_sw_r_tw_dp_x_IcI9EbNF3SFHR)
  
-    It's almost classic book at this point. Martin Kleppmann does great job of introducing reader to a lot of concepts in distributed systems managing data.
+    It's almost classic book at this point. Martin Kleppmann does great job introducing the reader to fundamental concepts in distributed systems.
  
 
 #### Amazon Aurora
-Paper reviews on [Amazon Aurora database](https://aws.amazon.com/rds/aurora/), with links to papers themselfes:
+Paper reviews on [Amazon Aurora database](https://aws.amazon.com/rds/aurora/), with links to papers themselves:
  - [Amazon Aurora: design considerations for high throughput cloud-native relational databases](https://blog.acolyer.org/2019/03/25/amazon-aurora-design-considerations-for-high-throughput-cloud-native-relational-databases/)
  - [Amazon Aurora: on avoiding distributed consensus for I/Os, commits, and membership changes](https://blog.acolyer.org/2019/03/27/amazon-aurora-on-avoiding-distributed-consensus-for-i-os-commits-and-membership-changes/)
 
