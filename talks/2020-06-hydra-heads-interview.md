@@ -42,12 +42,12 @@ Paper reviews on [Amazon Aurora database](https://aws.amazon.com/rds/aurora/), w
  - [Distributed systems theory for the distributed systems engineer](https://www.the-paper-trail.org/post/2014-08-09-distributed-systems-theory-for-the-distributed-systems-engineer/)
 
     My deep dive into distributed systems started with this reading list. 
-    It maintains good balance between core theoretical concepts and practical system implementations. Highly recommended.
+    It maintains a good balance between core theoretical concepts and practical system implementations. Highly recommended.
 
  - [Kinetics of Large Clusters](https://gridem.blogspot.com/2017/08/kinetics-of-large-clusters.html)
  
-     Blog post from my former colleague on probability of data loss in a cluster.
+     A blog post from my former colleague on the probability of data loss in a cluster.
      
- - [Twitter thread](https://twitter.com/backendsecret/status/1255236961532551174) on how to start testing distributed systems (in Russian)
+ - [Twitter thread on how to start testing distributed systems](https://twitter.com/backendsecret/status/1255236961532551174)(in Russian)
 
-    This is thread when I was guest author at [@backendsecret](https://twitter.com/backendsecret) 
+    This is thread when I was a guest author at [@backendsecret](https://twitter.com/backendsecret) 
