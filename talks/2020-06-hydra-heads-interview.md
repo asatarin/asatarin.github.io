@@ -7,7 +7,7 @@ layout: talk
 As part of Hydra Conference promotion I gave an interview about distributed systems, Hydra conference and other things (in Russian).
 
 <div class="video-container">
-<iframe src="https://youtu.be/BP00xihSQo8" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/BP00xihSQo8" frameborder="0" allowfullscreen></iframe>
 </div>
 
 
@@ -39,7 +39,7 @@ Paper reviews on [Amazon Aurora database](https://aws.amazon.com/rds/aurora/), w
 
 
 #### Papers
- - https://www.the-paper-trail.org/post/2014-08-09-distributed-systems-theory-for-the-distributed-systems-engineer/
+ - [Distributed systems theory for the distributed systems engineer](https://www.the-paper-trail.org/post/2014-08-09-distributed-systems-theory-for-the-distributed-systems-engineer/)
 
     My deep dive into distributed systems started with this reading list. 
     It maintains good balance between core theoretical concepts and practical system implementations. Highly recommended.
