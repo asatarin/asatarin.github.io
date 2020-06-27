@@ -5,7 +5,7 @@ date: 2020-06-17
 layout: talk
 ---
 
-As part of Hydra Conference promotion I gave an interview about distributed systems, Hydra conference and other things (in Russian).
+An interview I gave while promoting [Hydra conference](https://hydraconf.com/), on the topics of distributed systems, Hydra and other things (in Russian).
 
 <div class="video-container">
 <iframe src="https://www.youtube.com/embed/BP00xihSQo8" frameborder="0" allowfullscreen></iframe>
@@ -49,5 +49,5 @@ Paper reviews on [Amazon Aurora database](https://aws.amazon.com/rds/aurora/), w
  
      A blog post from my former colleague on the probability of data loss in a cluster.
      
- - [Twitter thread on how to start testing distributed systems](https://twitter.com/backendsecret/status/1255236961532551174)(in Russian), 
+ - This is a [Twitter thread on how to start testing distributed systems](https://twitter.com/backendsecret/status/1255236961532551174)(in Russian), 
  from when I was a guest author at [@backendsecret](https://twitter.com/backendsecret) 
