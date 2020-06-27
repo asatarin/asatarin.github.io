@@ -44,6 +44,11 @@ $header-bg-color: #fff;
     margin-top: 0rem;
 }
 
+.page-date {
+    text-align: left;
+    font-size: 0.8rem;
+}
+
 .main-content {
   padding-top: 1rem;
   @include large {
