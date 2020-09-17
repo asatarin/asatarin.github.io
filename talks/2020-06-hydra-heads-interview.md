@@ -30,7 +30,7 @@ These references came up during discussion and questions.
     
  - [“Designing Data-Intensive Applications”](https://www.amazon.com/dp/1449373321/ref=cm_sw_r_tw_dp_x_IcI9EbNF3SFHR)
  
-    It's almost classic book at this point. Martin Kleppmann does great job introducing the reader to fundamental concepts in distributed systems.
+    It's almost a classic book at this point. Martin Kleppmann does great job introducing the reader to fundamental concepts in distributed systems.
  
 
 #### Amazon Aurora
