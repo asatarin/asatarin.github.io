@@ -20,7 +20,7 @@ These references came up during discussion and questions.
 #### Books
  - ["Distributed systems for fun and profit"](http://book.mixu.net/distsys/single-page.html)
  
-    This short book will give you good grasp of some theoretical concepts without going too deep. 
+    This short book will give you a good grasp of some theoretical concepts without going too deep. 
     it's a good starting point to dive into distributed systems.
     
  - [“Database Internals: A Deep Dive into How Distributed Data Systems Work”](https://www.amazon.com/dp/1492040347/ref=cm_sw_r_tw_dp_x_GcI9Eb0T0NTMT)
