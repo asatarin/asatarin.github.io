@@ -37,7 +37,7 @@ The first part is about single node databases and not directly about distributed
 It’s almost a classic book at this point. Martin Kleppmann does great job introducing the reader to fundamental concepts in distributed systems.
 
 Some older interviews with me in Russian
- * https://habr.com/ru/company/jugru/blog/329974/
- * https://habr.com/ru/company/jugru/blog/313908/
+ * [https://habr.com/ru/company/jugru/blog/329974/](https://habr.com/ru/company/jugru/blog/329974/)
+ * [https://habr.com/ru/company/jugru/blog/313908/](https://habr.com/ru/company/jugru/blog/313908/)
  
  
