@@ -3,6 +3,7 @@ title: Talks
 description: Talks by Andrey Satarin
 ---
 
+- [Heisenbug Show Interview](2020-09-heisenbug-show) (2020, in Russian)
 - [Hydra Heads Interview](2020-06-hydra-heads-interview) (2020, in Russian)
 - [EqualsVerifier, ErrorProne and All the Others](equals-verifier-and-error-prone) (2018, in Russian)
 - [How to Check a System Without Running It](how-to-check-a-system-without-running-it) (2017, in Russian)
