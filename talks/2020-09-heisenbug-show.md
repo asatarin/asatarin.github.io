@@ -30,10 +30,13 @@ Blogs
 
 Books
  * [“Distributed systems for fun and profit”](http://book.mixu.net/distsys/single-page.html) by Mikito Takada
+
 This short book will give you a good grasp of some theoretical concepts without going too deep. it’s a good starting point to dive into distributed systems.
  * [“Database Internals: A Deep Dive into How Distributed Data Systems Work”](https://www.amazon.com/Database-Internals-Deep-Distributed-Systems/dp/1492040347/) by [Alex Petrov](https://twitter.com/ifesdjeen)
+
 The first part is about single node databases and not directly about distributed systems. The second part is specifically about distributed systems. One of the great things about this book is references — lots of good ones to go deep in any topic covered.
  * [“Designing Data-Intensive Applications”](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321/) by [Martin Kleppmann](https://twitter.com/martinkl)
+
 It’s almost a classic book at this point. Martin Kleppmann does great job introducing the reader to fundamental concepts in distributed systems.
 
 Some older interviews with me in Russian
