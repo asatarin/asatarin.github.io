@@ -5,7 +5,7 @@ date: 2016-12-10
 layout: talk
 ---
 
-Presented in Moscow in December 2016 at [Heisenbug](http://2016.heisenbug-moscow.ru/en/talks/testirovanie-raspredelennyh-sistem/) conference and in Ekaterinburg in April 2017. Video and slides are in Russian.
+Presented in Moscow in December 2016 at [Heisenbug](http://2016.heisenbug-moscow.ru/en/talks/testirovanie-raspredelennyh-sistem/) conference and in Yekaterinburg in April 2017. Video and slides are in Russian.
 
 ### Abstract
 
