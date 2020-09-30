@@ -8,7 +8,7 @@ You can checkout [my talks](/talks) or list of resources on [testing distributed
 
 ## Contacts
 
-* My professional [profile on LinkedIn](https://www.linkedin.com/in/asatarin/)
+* Professional [profile on LinkedIn](https://www.linkedin.com/in/asatarin/)
 * Twitter [@asatarin](https://twitter.com/asatarin)
 
 
