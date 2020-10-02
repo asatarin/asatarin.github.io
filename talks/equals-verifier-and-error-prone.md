@@ -7,6 +7,8 @@ layout: talk
 
 Presented in Saint Petersburg in May 2018 at Heisenbug conference. Video and slides are in Russian.
 
+[PDF with slides](/assets/talks/talk-equalsverifier-and-errorprone.pdf) (in Russian).
+
 ### Abstract
 Best kind of tests are ones that cost almost nothing, yet find defects. 
 We’ll talk about two Java tools that are close to this ideal. 
