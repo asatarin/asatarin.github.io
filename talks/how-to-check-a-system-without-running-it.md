@@ -7,6 +7,8 @@ layout: talk
 
 Presented in Moscow in December 2017 at [Heisenbug](https://2017.heisenbug-moscow.ru/talks/2017/msk/79fuksrzakwwqu4cmikw62/) conference. Video and slides are in Russian.
 
+[PDF with slides](/assets/talks/talk-how-to-check-a-system-without-running-it.pdf) (in Russian).
+
 ### Abstract
 Every day the systems which we develop become more and more complicated. 
 It seems there is nowhere to hide from the ubiquitous complexity. 
