@@ -49,5 +49,5 @@ Paper reviews on [Amazon Aurora database](https://aws.amazon.com/rds/aurora/), w
  
      A blog post from my former colleague on the probability of data loss in a cluster.
      
- - This is a [Twitter thread on how to start testing distributed systems](https://twitter.com/backendsecret/status/1255236961532551174)(in Russian), 
+ - This is a [Twitter thread on how to start testing distributed systems](https://twitter.com/backendsecret/status/1255236961532551174) (in Russian), 
  from when I was a guest author at [@backendsecret](https://twitter.com/backendsecret) 
