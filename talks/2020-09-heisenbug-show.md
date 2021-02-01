@@ -5,7 +5,7 @@ date: 2020-09-22
 layout: talk
 ---
 
-An interview I gave to [Nikita Makarov](https://twitter.com/PapaMinos) from Heisenbug conference program committee (in Russian).
+An interview I gave to [Nikita Makarov](https://www.linkedin.com/in/nikita-makarov-8075875/) from Heisenbug conference program committee (in Russian).
 We talked about distributed systems and testing them (d'oh!).
 
 <div class="video-container">
