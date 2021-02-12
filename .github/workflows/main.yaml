@@ -15,4 +15,4 @@ jobs:
     - uses: actions/checkout@v1
     - uses: docker://dkhamsing/awesome_bot:latest
       with:
-        args: --allow 999 --allow-dupe --allow-ssl --allow-redirect "$(find . -name "/github/workspace/*.md")"
+        args: --allow 999 --allow-dupe --allow-ssl --allow-redirect "index.md"
