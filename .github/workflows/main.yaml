@@ -15,5 +15,5 @@ jobs:
     - uses: actions/checkout@v1
     - uses: docker://dkhamsing/awesome_bot:latest
       with:
-        entrypoint: bash
+        entrypoint: sh
         args: /github/workspace/.github/workflows/build.sh 
