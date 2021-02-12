@@ -2,8 +2,8 @@
 
 echo Awesome Bot
 
-echo awesome_bot --allow-dupe --allow-ssl --allow-redirect $(find . -name "/github/workspace/*.md")
+echo awesome_bot --allow-dupe --allow-ssl --allow-redirect $(find /github/workspace/ -name "*.md")
 
-awesome_bot --allow-dupe --allow-ssl --allow-redirect $(find . -name "/github/workspace/*.md")
+awesome_bot --allow-dupe --allow-ssl --allow-redirect $(find /github/workspace/ -name "*.md")
 
 echo Awesome Bot
