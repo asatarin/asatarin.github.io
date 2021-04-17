@@ -19,7 +19,7 @@ Talks on distributed systems and testing
  * [Testing Distributed Systems](/talks/testing-distributed-systems/) talk by me (Heisenbug 2016, in Russian)
  * [CrashMonkey & Ace Systematically Testing File System Crash Consistency](https://youtu.be/BmhKbGoCyqo) by Jayashree Mohan (Heisenbug 2019)
  * [Randomized Testing](https://youtu.be/cA_A-BSqT50) by Stanislav Bashkyrtsev (Heisenbug 2016, in Russian)
- * [Redundancy does not imply fault tolerance](https://hydraconf.com/2020/msk/talks/4cs5kob6u7wvchmlyjq66h/) by Aishwarya Ganesan (Hydra 2020)
+ * [Redundancy does not imply fault tolerance](https://2020.hydraconf.com/2020/msk/talks/4cs5kob6u7wvchmlyjq66h/) by Aishwarya Ganesan (Hydra 2020)
 
 Blogs
  * [Testing Microservices, the sane way](https://medium.com/@copyconstruct/testing-microservices-the-sane-way-9bb31d158c16) by Cindy Sridharan
