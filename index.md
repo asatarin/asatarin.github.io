@@ -18,7 +18,7 @@ You can checkout [my talks](/talks) or list of resources on [testing distributed
 In the past he has worked on: testing a distributed NewSQL database at Yandex, 
 cloud antivirus detection at Kaspersky Lab, an online multiplayer game at Mail.ru, 
 and a foreign exchange pricing service at Deutsche Bank. 
-Andrey is interested in bulding large scale distributed databases and backend systems.
+Andrey is interested in building large scale distributed databases and backend systems.
 
 (Rus) Андрей разрабатывает Amazon Aurora в Amazon Web Services. В своей карьере успел 
 поработать в совершенно разных проектах: тестировал распределенную NewSQL 
