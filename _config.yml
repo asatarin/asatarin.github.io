@@ -17,7 +17,14 @@ social:
     - https://twitter.com/asatarin
     - https://www.linkedin.com/in/asatarin
     - https://github.com/asatarin
-    
+
+defaults:
+  - 
+    scope:
+      path: ""
+    values:
+      image: https://i.ytimg.com/vi/BP00xihSQo8/maxresdefault.jpg
+
 permalink: /:categories/:year/:title/
 
 plugins:
