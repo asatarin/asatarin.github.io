@@ -1,6 +1,6 @@
 ---
 title: Talks
-description: Talks by Andrey Satarin
+description: Public talks and interviews given by Andrey Satarin on various tech subjects
 ---
 
 - [Heisenbug Show Interview](2020-09-heisenbug-show) (2020, in Russian)
