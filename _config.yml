@@ -23,7 +23,7 @@ defaults:
     scope:
       path: ""
     values:
-      image: https://i.ytimg.com/vi/BP00xihSQo8/maxresdefault.jpg
+      image: /assets/thumbnails/default-thumbnail.png
 
 permalink: /:categories/:year/:title/
 
