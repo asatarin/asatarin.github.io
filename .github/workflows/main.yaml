@@ -17,3 +17,8 @@ jobs:
       with:
         entrypoint: sh
         args: /github/workspace/.github/workflows/build.sh 
+    - uses: github/super-linter@v4
+      env:
+        VALIDATE_ALL_CODEBASE: true
+        DEFAULT_BRANCH: master
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
