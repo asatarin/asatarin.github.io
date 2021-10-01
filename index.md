@@ -14,11 +14,11 @@ You can checkout [my talks](/talks) or list of resources on [testing distributed
 
 ## Bio
 
-Andrey is a Staff Software Engineer at Google in the Core Data organization, 
+Andrey is a Staff Software Engineer at Google in the Core Data organization, 
 where he is responsible for engineering productivity for petabyte scale 
 OLAP/query processing systems. He is an active participant in the distributed 
 systems community and is serving on the program committee of Hydra conference. 
-In the past he was working on Amazon Aurora at Amazon Web Services, a distributed 
+In the past he was working on Amazon Aurora at Amazon Web Services, a distributed 
 SQL database at Yandex, cloud antivirus detection system at Kaspersky Lab, 
-an online multiplayer game at Mail.ru, and a foreign exchange pricing service at Deutsche Bank. 
+an online multiplayer game at Mail.ru, and a foreign exchange pricing service at Deutsche Bank. 
 He is interested in building large scale distributed databases and backend systems.
