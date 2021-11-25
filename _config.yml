@@ -25,7 +25,7 @@ defaults:
     values:
       image: /assets/thumbnails/default-thumbnail.png
 
-permalink: /:categories/:year/:title/
+permalink: /:year/:title/
 
 plugins:
   - jekyll-feed
