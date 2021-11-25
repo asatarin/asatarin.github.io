@@ -1,5 +1,6 @@
+---
 title: All Posts
---
+---
 
 List of all the posts:
 <ul>
