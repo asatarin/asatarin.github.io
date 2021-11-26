@@ -32,3 +32,4 @@ permalink: /:year/:title/
 
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
