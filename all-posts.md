@@ -3,8 +3,8 @@ title: List of all the posts
 ---
 
 {% assign begin_2022 = "2022-01-01" | date: '%s' %} 
-{% assign begin_2021 = "2022-01-01" | date: '%s' %} 
-{% assign begin_2020 = "2022-01-01" | date: '%s' %} 
+{% assign begin_2021 = "2021-01-01" | date: '%s' %} 
+{% assign begin_2020 = "2020-01-01" | date: '%s' %} 
 
 ### 2021
 <ul>
