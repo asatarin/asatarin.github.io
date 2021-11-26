@@ -18,6 +18,9 @@ social:
     - https://www.linkedin.com/in/asatarin
     - https://github.com/asatarin
 
+feed:
+  posts_limit: 20
+
 defaults:
   - 
     scope:
