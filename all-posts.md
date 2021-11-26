@@ -7,7 +7,8 @@ List of all the posts:
 
 <ul>
   {% for post in site.posts %}
-    {% if post.date < '2022-01-01' %}
+    {% assign date_as_str = post.date | date: '%s' %}
+    {% if date_as_str >= "2021-01-01" and date_as_str < "2022-01-01" %}
       <li>
         <a href="{{ post.url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y"" }})
       </li>
@@ -18,7 +19,8 @@ List of all the posts:
 ### 2020
 <ul>
   {% for post in site.posts %}
-    {% if post.date < '2021-01-01' %}
+    {% assign date_as_str = post.date | date: '%s' %}
+    {% if date_as_str < "2021-01-01" %}
       <li>
         <a href="{{ post.url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y"" }})
       </li>
