@@ -2,15 +2,11 @@
 title: List of all the posts
 ---
 
-{% assign begin_2022 = "2022-01-01" | date: '%s' %} 
-{% assign begin_2021 = "2021-01-01" | date: '%s' %} 
-{% assign begin_2020 = "2020-01-01" | date: '%s' %} 
-
 ### 2021
 <ul>
   {% for post in site.posts %}
-    {% assign date_as_str = post.date | date: '%s' %}
-    {% if date_as_str >= begin_2021 and date_as_str < begin_2022 %}
+    {% assign date_as_str = post.date | date: '%Y' %}
+    {% if date_as_str >= 2021 and date_as_str < 2022 %}
       <li>
         <a href="{{ post.url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y"" }})
       </li>
@@ -21,8 +17,8 @@ title: List of all the posts
 ### 2020
 <ul>
   {% for post in site.posts %}
-    {% assign date_as_str = post.date | date: '%s' %}
-    {% if date_as_str < begin_2021 %}
+    {% assign date_as_str = post.date | date: '%Y' %}
+    {% if date_as_str < 2021 %}
       <li>
         <a href="{{ post.url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y"" }})
       </li>
