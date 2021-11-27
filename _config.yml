@@ -19,7 +19,6 @@ social:
     - https://github.com/asatarin
 
 feed:
-  id: test-feed.xml
   path: /test-feed.xml
   posts_limit: 20
 
