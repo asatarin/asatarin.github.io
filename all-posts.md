@@ -10,7 +10,7 @@ title: List of all the posts
       <li>
         <a href="{{ post.url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y"" }}) <br/>
         <p> {{ post.description }} </p>
-        {% if {{ post.snippet }} %}
+        {% if post.snippet %}
           <br/> <p> {{ post.snippet }} </p>
         {% endif %}
       </li>
