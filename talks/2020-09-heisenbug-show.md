@@ -6,8 +6,8 @@ image: /assets/thumbnails/2020-09-heisenbug-show.jpg
 layout: talk
 ---
 
-An interview I gave to [Nikita Makarov](https://www.linkedin.com/in/nikita-makarov-8075875/) from Heisenbug conference program committee (in Russian).
-We talked about distributed systems and testing them (d'oh!).
+An interview I gave to [Nikita Makarov](https://www.linkedin.com/in/nikita-makarov-8075875/) from [Heisenbug](https://heisenbug-moscow.ru/en/)
+conference program committee (in Russian). We talked about distributed systems and testing them (d'oh!).
 
 <div class="video-container">
 <iframe src="https://www.youtube.com/embed/-kD8zu7DGew" frameborder="0" allowfullscreen></iframe>
