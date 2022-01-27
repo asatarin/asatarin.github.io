@@ -22,7 +22,7 @@ systems community and is serving on the program committee of the Hydra conferen
 In the past he was working on Amazon Aurora at Amazon Web Services, a distributed 
 SQL database at Yandex, cloud antivirus detection system at Kaspersky Lab, 
 an online multiplayer game at Mail.ru, and a foreign exchange pricing service at Deutsche Bank. 
-He is interested in building large scale distributed databases and backend systems.
+He is interested in building large scale distributed databases and backend systems.
 
 #### Russian
 Андрей является ведущим разработчиком в Google в организации Core Data, 
