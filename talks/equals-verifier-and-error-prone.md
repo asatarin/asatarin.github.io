@@ -6,7 +6,8 @@ image: /assets/thumbnails/2018-equals-verifier-and-error-prone.jpg
 layout: talk
 ---
 
-Presented in Saint Petersburg in May 2018 at Heisenbug conference. Video and slides are in Russian.
+Presented in Saint Petersburg in May 2018 at [Heisenbug](https://2018.heisenbug-piter.ru/en/talks/2018/spb/6qwtgffkk0y8gw4yg6q6cy/) 
+conference. Video and slides are in Russian.
 
 [PDF with slides](/assets/talks/talk-equalsverifier-and-errorprone.pdf) (in Russian).
 
