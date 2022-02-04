@@ -5,7 +5,7 @@ date: 2022-02-02
 layout: talk
 ---
 
-This is a talk on "Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3" 
+This is a talk on "Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3" 
 paper for distributed systems [reading group](http://charap.co/category/reading-group/) 
 lead by [Aleksey Charapko](https://twitter.com/AlekseyCharapko). 
 
@@ -19,9 +19,9 @@ Andrew Warfield. It was presented at SOSP 2021.
 
 #### Paper Abstract
 This paper reports our experience applying lightweight formal methods to validate the correctness 
-of ShardStore, a new key-value storage node implementation for the Amazon S3 cloud object storage service. 
+of ShardStore, a new key-value storage node implementation for the Amazon S3 cloud object storage service. 
 By "lightweight formal methods" we mean a pragmatic approach to verifying the correctness 
-of a production storage node that is under ongoing feature development by a full-time engineering team. 
+of a production storage node that is under ongoing feature development by a full-time engineering team. 
 We do not aim to achieve full formal verification, but instead emphasize automation, usability, 
 and the ability to continually ensure correctness as both software and its specification evolve over time. 
 Our approach decomposes correctness into independent properties, each checked by the most appropriate tool, 
