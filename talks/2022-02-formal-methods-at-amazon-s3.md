@@ -9,7 +9,7 @@ This is a talk on "Using Lightweight Formal Methods to Validate a Key-Value Stor
 paper for distributed systems [reading group](http://charap.co/category/reading-group/) 
 lead by [Aleksey Charapko](https://twitter.com/AlekseyCharapko). 
 
-PDF with slides TBD.
+[PDF with slides](/assets/talks/2022-02-formal-methods-at-amazon-S3.pdf).
 
 ### Paper
 "Using lightweight formal methods to validate a key-value storage node in Amazon S3" 
@@ -30,7 +30,8 @@ Our work has prevented 16 issues from reaching production, including subtle cras
 concurrency problems, and has been extended by non-formal-methods experts to check new 
 features and properties as ShardStore has evolved.
 
-Slides TBD
+<script async class="speakerdeck-embed" data-id="3b0d36b7552f4643b240cc599491e25b" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
 
 Video TBD
 
