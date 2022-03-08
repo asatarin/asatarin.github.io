@@ -1,5 +1,5 @@
 ---
-title: Talks
+title: Public Talks
 description: Public talks and interviews given by Andrey Satarin on various tech subjects
 ---
 
