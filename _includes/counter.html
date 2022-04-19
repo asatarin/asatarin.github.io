@@ -26,3 +26,18 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/37858025" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+
+
+{% if site.google_analytics %}
+<!-- Google Analytics counter -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{site.google_analytics}}');
+</script>
+<!-- Google Analytics counter -->
+{% endif %}
+
