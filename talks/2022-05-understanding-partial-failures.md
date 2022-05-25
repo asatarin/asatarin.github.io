@@ -5,7 +5,7 @@ date: 2022-05-25
 layout: talk
 ---
 
-This is a talk on "Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3" 
+This is a talk on "Understanding, Detecting and Localizing Partial Failures in Large System Software" 
 paper for distributed systems [reading group](http://charap.co/category/reading-group/) 
 lead by [Aleksey Charapko](https://twitter.com/AlekseyCharapko). 
 
