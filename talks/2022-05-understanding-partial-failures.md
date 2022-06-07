@@ -40,3 +40,12 @@ Video coming soon.
  - [Talk at NSDI 2020](https://youtu.be/FZj_5fNZfcI)
  - [Post](https://blog.acolyer.org/2020/03/16/omega-gen/) from The Morning Paper blog
 
+
+### Errata
+On slides 5 and 6 failure hierarchy incorrectly showed ```Fail-stop ⊂ Fail-Recover ⊂ Omission Failure ⊂ Byzantine Failure```. 
+The correct hierarchy is ```Fail-stop ⊂ Omission Failure ⊂ Fail-Recover ⊂ Byzantine Failure```. 
+Slides are updated, but video still contains the false hierarchy.
+
+See Chapter 2.2 "Abstracting Processes" from 
+[Introduction to Reliable and Secure Distributed Programming](https://www.distributedprogramming.net/) by Christian Cachin, Rachid Guerraoui, Luís Rodrigues.
+
