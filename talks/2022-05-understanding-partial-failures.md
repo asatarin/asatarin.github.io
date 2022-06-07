@@ -42,9 +42,9 @@ Video coming soon.
 
 
 ### Errata
-On slides 5 and 6 failure hierarchy incorrectly showed ```Fail-stop ⊂ Fail-Recover ⊂ Omission Failure ⊂ Byzantine Failure```. 
+Slides 5 and 6 showed incorrect failure hierarchy.
 The correct hierarchy is ```Fail-stop ⊂ Omission Failure ⊂ Fail-Recover ⊂ Byzantine Failure```. 
-Slides are updated, but video still contains the false hierarchy.
+Slides are updated, but video still contains incorrect slides.
 
 See Chapter 2.2 "Abstracting Processes" from 
 [Introduction to Reliable and Secure Distributed Programming](https://www.distributedprogramming.net/) by Christian Cachin, Rachid Guerraoui, Luís Rodrigues.
