@@ -33,7 +33,9 @@ unknown, confirmed partial failure bug in the latest version of ZooKeeper.
 
 <script async class="speakerdeck-embed" data-id="5355625a35c6442ba13defb06ff3f5d5" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
-Video coming soon.
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/LACafAXKQ4Y" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### References
  - Paper ["Understanding, Detecting and Localizing Partial Failures in Large System Software"](https://www.usenix.org/conference/nsdi20/presentation/lou)
