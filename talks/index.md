@@ -4,8 +4,8 @@ description: Public talks and interviews given by Andrey Satarin on various tech
 ---
 
 ### English
-- [Formal Methods at Amazon S3](2022-02-formal-methods-at-amazon-s3) (2022)
-- [Understanding Partial Failures in Large Systems](2022-05-understanding-partial-failures) (2022)
+- [Understanding Partial Failures in Large Systems](2022-05-understanding-partial-failures) (May, 2022)
+- [Formal Methods at Amazon S3](2022-02-formal-methods-at-amazon-s3) (February, 2022)
 
 ### Russian
 - [Heisenbug Show Interview](2020-09-heisenbug-show) (2020, in Russian)
