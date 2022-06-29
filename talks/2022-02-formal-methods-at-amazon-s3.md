@@ -6,7 +6,7 @@ image: /assets/thumbnails/2022-02-formal-methods-at-amazon-s3.jpg
 layout: talk
 ---
 
-<!-- Comments and feedback https://docs.google.com/document/d/1k0MLqGJOKMozLoWKEvPwXCzOiTRuMd9Orw9zT0eDpic/edit#  -->
+[comment]: # ( Comments and feedback https://docs.google.com/document/d/1k0MLqGJOKMozLoWKEvPwXCzOiTRuMd9Orw9zT0eDpic/edit# )
 
 This is a talk on "Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3" 
 paper for distributed systems [reading group](http://charap.co/category/reading-group/) 
