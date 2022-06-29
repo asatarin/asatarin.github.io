@@ -14,7 +14,7 @@ lead by [Aleksey Charapko](https://twitter.com/AlekseyCharapko).
 
 ### Paper
 "Understanding, Detecting and Localizing Partial Failures in Large System Software" 
-by Chang Lou, Peng Huang, and Scott Smith. Presented at NSDI 2020.
+by Chang Lou, Peng Huang, and Scott Smith. Presented at [NSDI 2020](https://www.usenix.org/conference/nsdi20/presentation/lou).
 
 #### Paper Abstract
 Partial failures occur frequently in cloud systems and can cause serious damage including 
