@@ -18,7 +18,7 @@ lead by [Aleksey Charapko](https://twitter.com/AlekseyCharapko).
 "Using lightweight formal methods to validate a key-value storage node in Amazon S3" 
 by James Bornholt, Rajeev Joshi, Vytautas Astrauskas, Brendan Cully, Bernhard Kragl, 
 Seth Markle, Kyle Sauri, Drew Schleit, Grant Slatton, Serdar Tasiran, Jacob Van Geffen,
-Andrew Warfield. Presented at SOSP 2021. [ACM DL](https://dl.acm.org/doi/abs/10.1145/3477132.3483540)
+Andrew Warfield. Presented at [SOSP 2021](https://dl.acm.org/doi/abs/10.1145/3477132.3483540).
 
 #### Paper Abstract
 This paper reports our experience applying lightweight formal methods to validate the correctness 
