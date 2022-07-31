@@ -46,7 +46,7 @@ unknown, confirmed partial failure bug in the latest version of ZooKeeper.
 
 ### Errata
 Slides 5 and 6 showed incorrect failure hierarchy.
-The correct hierarchy is ```Fail-stop ⊂ Omission Failure ⊂ Fail-Recover ⊂ Byzantine Failure```. 
+The correct hierarchy is ```Fail-Stop``` ⊂ ```Omission Failure``` ⊂ ```Fail-Recover``` ⊂ ```Byzantine Failure```. 
 Slides are updated, but video still contains incorrect slides.
 
 See Chapter 2.2 "Abstracting Processes" from 
