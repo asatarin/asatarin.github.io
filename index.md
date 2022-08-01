@@ -1,6 +1,6 @@
 ---
 title: Andrey Satarin
-description: Personal website
+description: Personal Website
 ---
 
 You can checkout [my talks](/talks) or list of resources on [testing distributed systems](/testing-distributed-systems) I maintain.
