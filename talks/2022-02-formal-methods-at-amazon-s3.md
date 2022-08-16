@@ -38,7 +38,7 @@ features and properties as ShardStore has evolved.
 <script async class="speakerdeck-embed" data-id="3b0d36b7552f4643b240cc599491e25b" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
 <div class="video-container">
-<iframe src="https://www.youtube.com/embed/fAYNN2MmOvk" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/fAYNN2MmOvk" loading="lazy" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ### References
