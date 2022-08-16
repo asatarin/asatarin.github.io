@@ -10,7 +10,7 @@ An interview I gave to [Nikita Makarov](https://www.linkedin.com/in/nikita-makar
 conference program committee (in Russian). We talked about distributed systems and testing them (d'oh!).
 
 <div class="video-container">
-<iframe src="https://www.youtube.com/embed/-kD8zu7DGew" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/-kD8zu7DGew" loading="lazy" frameborder="0" allowfullscreen></iframe>
 </div>
 
 
