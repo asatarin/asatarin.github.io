@@ -24,7 +24,7 @@ what they can do, and how to use them in your project.
 <script async class="speakerdeck-embed" data-slide="2" data-id="bcb48dac52af45049d477d8ab9d4b389" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
 <div class="video-container">
-<iframe src="https://www.youtube.com/embed/Aeu7abIKgGs" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/Aeu7abIKgGs" loading="lazy" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ### References
