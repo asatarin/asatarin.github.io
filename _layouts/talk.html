@@ -14,7 +14,9 @@
     <section class="page-header">
       {% include navigation.html %}
       <h1 class="page-title">{{ page.title | default: site.github.repository_name }}</h1>
-      <h2 class="page-description">{{ site.author.name | default: site.github.project_tagline }}</h2>
+      <h2 class="page-description">{{ site.author.name | default: site.github.project_tagline }} 
+        (<a href="https://twitter.com/{{ site.author.twitter }}">@{{ site.author.twitter }}</a>)
+      </h2>
       <div class="page-date">{{ page.date | date_to_long_string }}</div>
     </section>
 
