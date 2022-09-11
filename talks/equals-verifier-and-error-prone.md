@@ -9,8 +9,6 @@ layout: talk
 Presented in Saint Petersburg in May 2018 at [Heisenbug](https://2018.heisenbug-piter.ru/en/talks/2018/spb/6qwtgffkk0y8gw4yg6q6cy/) 
 conference. Video and slides are in Russian.
 
-[PDF with slides](/assets/talks/talk-equalsverifier-and-errorprone.pdf) (in Russian).
-
 ### Abstract
 Best kind of tests are ones that cost almost nothing, yet find defects. 
 We’ll talk about two Java tools that are close to this ideal. 
@@ -20,6 +18,8 @@ The second tool is [ErrorProne](http://errorprone.info/)
 from Google — a compile-time checker for common mistakes in your code.
 
 This talk will be useful for testers and Java developers.
+
+[Download slides in Russian (PDF)](/assets/talks/talk-equalsverifier-and-errorprone.pdf)
 
 <script async class="speakerdeck-embed" data-id="d8ba17b409c147aa8c59377ecf5d17ef" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
