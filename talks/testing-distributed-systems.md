@@ -8,8 +8,6 @@ layout: talk
 
 Presented in Moscow in December 2016 at [Heisenbug](http://2016.heisenbug-moscow.ru/en/talks/testirovanie-raspredelennyh-sistem/) conference and in Yekaterinburg in April 2017. Video and slides are in Russian.
 
-[PDF with slides](/assets/talks/talk-testing-distributed-systems.pdf) (in Russian).
-
 ### Abstract
 
 Distributed systems meet us on a professional way more often and often. 
@@ -28,6 +26,8 @@ Issues will be covered:
 
 The talk is built on an example of persistent distributed queue, which is being developed at Yandex. 
 Attendees will learn how and what was tested by Andrey along Yandex team and what results were obtained.
+
+[Download slides in Russian (PDF)](/assets/talks/talk-testing-distributed-systems.pdf)
 
 <script async class="speakerdeck-embed" data-slide="2" data-id="8fbb5337e106474e9753c5359a663239" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
