@@ -22,7 +22,9 @@ what they can do, and how to use them in your project.
 [Download slides in Russian (PDF)](/assets/talks/talk-sanitizers-in-testing.pdf)
 
 <div class="video-container">
-<script async class="speakerdeck-embed" data-slide="2" data-id="bcb48dac52af45049d477d8ab9d4b389" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+<div class="deck-embed js-deck-embed" style="aspect-ratio:1024/575;" data-ratio="1.77777777777778" data-state="processed">
+    <div class="speakerdeck-embed" data-slide="2" data-title="false" data-skip-resize="true" data-id="bcb48dac52af45049d477d8ab9d4b389" data-name="Мойте руки перед едой, или Санитайзеры в тестировании" data-ratio="1.77777777777778" data-host="speakerdeck.com"></div>
+</div>
 </div>
 
 <div class="video-container">
