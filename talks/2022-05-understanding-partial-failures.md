@@ -10,8 +10,6 @@ This is a talk on "Understanding, Detecting and Localizing Partial Failures in L
 paper for distributed systems [reading group](http://charap.co/category/reading-group/) 
 lead by [Aleksey Charapko](https://twitter.com/AlekseyCharapko). 
 
-[PDF with slides](/assets/talks/2022-05-understanding-partial-failures.pdf).
-
 ### Paper
 "Understanding, Detecting and Localizing Partial Failures in Large System Software" 
 by Chang Lou, Peng Huang, and Scott Smith. Presented at [NSDI 2020](https://www.usenix.org/conference/nsdi20/presentation/lou).
@@ -31,6 +29,8 @@ In evaluating 22 real-world partial failure cases in these systems, the generate
 watchdogs can detect 20 cases with a median detection time of 4.2 seconds, and 
 pinpoint the failure scope for 18 cases. The generated watchdogs also expose an 
 unknown, confirmed partial failure bug in the latest version of ZooKeeper.
+
+[Download slides (PDF)](/assets/talks/2022-05-understanding-partial-failures.pdf)
 
 <script async class="speakerdeck-embed" data-id="5355625a35c6442ba13defb06ff3f5d5" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
