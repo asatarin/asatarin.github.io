@@ -8,8 +8,6 @@ layout: talk
 
 Presented in Moscow in December 2017 at [Heisenbug](https://2017.heisenbug-moscow.ru/talks/2017/msk/79fuksrzakwwqu4cmikw62/) conference. Video and slides are in Russian.
 
-[PDF with slides](/assets/talks/talk-how-to-check-a-system-without-running-it.pdf) (in Russian).
-
 ### Abstract
 Every day the systems which we develop become more and more complicated. 
 It seems there is nowhere to hide from the ubiquitous complexity. 
@@ -21,6 +19,8 @@ how far it was useful for our project.
 
 This talk will be helpful for those who want to learn an easy way to 
 increase system stability and availability in production.
+
+[Download slides in Russian (PDF)](/assets/talks/talk-how-to-check-a-system-without-running-it.pdf)
 
 <script async class="speakerdeck-embed" data-slide="2" data-id="19ab7d275dd446b38197481cb7541961" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
