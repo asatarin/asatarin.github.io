@@ -8,8 +8,6 @@ layout: talk
 
 Presented in Saint-Petersburg in June 2017 at [Heisenbug](http://2017.heisenbug-piter.ru/en/talks/wash-your-hands-before-eating-or-sanitizer-in-testing/) conference. Video and slides are in Russian.
 
-[PDF with slides](/assets/talks/talk-sanitizers-in-testing.pdf) (in Russian).
-
 ### Abstract
 
 As the saying goes, “with great power comes great responsibility”. 
@@ -20,6 +18,8 @@ which are absent in programs written in managed languages.
 Sanitizers are wonderful tools, which will help you find complex 
 defects in C++ programs. I’ll talk about these tools, 
 what they can do, and how to use them in your project.
+
+[Download slides in Russian (PDF)](/assets/talks/talk-sanitizers-in-testing.pdf)
 
 <script async class="speakerdeck-embed" data-slide="2" data-id="bcb48dac52af45049d477d8ab9d4b389" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
