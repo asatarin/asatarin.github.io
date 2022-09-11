@@ -32,7 +32,9 @@ unknown, confirmed partial failure bug in the latest version of ZooKeeper.
 
 [Download slides (PDF)](/assets/talks/2022-05-understanding-partial-failures.pdf)
 
+<div class="video-container">
 <script async class="speakerdeck-embed" data-id="5355625a35c6442ba13defb06ff3f5d5" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+</div>
 
 <div class="video-container">
 <iframe src="https://www.youtube.com/embed/LACafAXKQ4Y" loading="lazy" frameborder="0" allowfullscreen></iframe>
