@@ -5,6 +5,10 @@ date: 2022-09-28
 layout: talk
 ---
 
+{% comment %}
+Notes and draft for the talk https://docs.google.com/document/d/1rrcea6jOsAuB3SeGcsEZwb_b2GTfMc7hXlIXRSGoCKc/edit#
+{% endcomment %}
+
 This is a talk on "Understanding and Detecting Software Upgrade Failures in Distributed Systems" 
 paper for distributed systems [reading group](http://charap.co/category/reading-group/) 
 lead by [Aleksey Charapko](https://twitter.com/AlekseyCharapko). 
