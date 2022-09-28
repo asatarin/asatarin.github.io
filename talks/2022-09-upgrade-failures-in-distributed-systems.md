@@ -41,7 +41,9 @@ DUPChecker has been requested by HBase developers to be integrated into their to
 <script async class="speakerdeck-embed" data-id="5d8f859e5d5d4865b867d5e4b1b69f68" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 </div>
 
-Video TBD
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/2ybZcLXbJp8" loading="lazy" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### References
  - "Understanding and Detecting Software Upgrade Failures in Distributed Systems" [paper](https://dl.acm.org/doi/10.1145/3477132.3483577)
