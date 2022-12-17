@@ -10,7 +10,7 @@ You can checkout [my talks](/talks) or list of resources on [testing distributed
 
 * Professional [profile on LinkedIn](https://www.linkedin.com/in/asatarin/)
 * Twitter [@asatarin](https://twitter.com/asatarin)
-
+* Mastodon <a rel="me" href="https://discuss.systems/@asatarin">https://discuss.systems/@asatarin</a>
 
 ## Bio
 
