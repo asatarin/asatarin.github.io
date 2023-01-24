@@ -10,9 +10,9 @@ paper for distributed systems [reading group](http://charap.co/category/reading-
 
 ### Paper
 "How to fight production incidents?: an empirical study on a large-scale cloud service" 
-by Supriyo Ghosh, Manish Shetty, Chetan Bansal, Suman Nath
+by Supriyo Ghosh, Manish Shetty, Chetan Bansal, Suman Nath.
 
-Presented at [SoCC 2022](https://dl.acm.org/doi/proceedings/10.1145/3542929).
+Paper published in [SoCC 2022 proceedings](https://dl.acm.org/doi/proceedings/10.1145/3542929).
 
 #### Paper Abstract
 Production incidents in today's large-scale cloud services can be extremely expensive in terms of customer 
