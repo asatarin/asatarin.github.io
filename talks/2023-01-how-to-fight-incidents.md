@@ -34,3 +34,6 @@ Video TBD
 
 ### References
  - "How to fight production incidents?: an empirical study on a large-scale cloud service" [paper](https://dl.acm.org/doi/10.1145/3542929.3563482)
+ - [Slides](https://acmsocc.org/2022/assets/slides/95.pdf) for the talk presented at SOCC 2022 by the authors
+ - Overview talk on [“Understanding and Detecting Software Upgrade Failures in Distributed Systems”](https://asatarin.github.io/talks/2022-09-upgrade-failures-in-distributed-systems/) paper
+ - Overview talk on [“Understanding, Detecting and Localizing Partial Failures in Large System Software”](https://asatarin.github.io/talks/2022-05-understanding-partial-failures/) paper
