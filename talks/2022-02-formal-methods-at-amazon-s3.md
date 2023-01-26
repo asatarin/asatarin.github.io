@@ -47,7 +47,7 @@ features and properties as ShardStore has evolved.
  - "Using lightweight formal methods to validate a key-value storage node in Amazon S3" 
 [paper](https://dl.acm.org/doi/abs/10.1145/3477132.3483540)
  - [Reading Group. Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3](http://charap.co/reading-group-using-lightweight-formal-methods-to-validate-a-key-value-storage-node-in-amazon-s3/) blog post from [Aleksey Charapko](http://charap.co/about-me/) on the reading group meeting
- - [Testing Distributed Systems](https://asatarin.github.io/testing-distributed-systems/) — if you are interested 
+ - [Testing Distributed Systems](/testing-distributed-systems/) — if you are interested 
 in approaches to testing distributed systems, there is curated list I maintain
  - [Talk](https://youtu.be/YdxvOPenjWI) at SOSP 2021
  - [Blog post](http://muratbuffalo.blogspot.com/2021/10/using-lightweight-formal-methods-to.html) on the paper 
