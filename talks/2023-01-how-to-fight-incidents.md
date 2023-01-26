@@ -42,6 +42,7 @@ Video TBD
  - [Slides](https://acmsocc.org/2022/assets/slides/95.pdf) for the talk presented at SOCC 2022 by the authors
  - Overview talk on [“Understanding and Detecting Software Upgrade Failures in Distributed Systems”](2022-09-upgrade-failures-in-distributed-systems/) paper
  - Overview talk on [“Understanding, Detecting and Localizing Partial Failures in Large System Software”](2022-05-understanding-partial-failures/) paper
+ - "Simple Testing Can Prevent Most Critical Failures" [paper](https://www.usenix.org/conference/osdi14/technical-sessions/presentation/yuan)
  - Supriyo Ghosh`s [personal website](https://sites.google.com/site/supriyophdsmu/) and [Twitter](https://mobile.twitter.com/supriyo_ai)
  - Manish Shetty`s [personal website](https://manishshettym.github.io/) and [Twitter](https://mobile.twitter.com/slimshetty_)
  - Chetan Bansal`s [page](https://www.microsoft.com/en-us/research/people/chetanb/) on Microsoft Research website
