@@ -54,4 +54,4 @@ DUPChecker has been requested by HBase developers to be integrated into their to
  - [DUPChecker tool code](https://github.com/jwjwyoung/DUPChecker)
  - [Jepsen.io](https://jepsen.io/)
  - "Simple Testing Can Prevent Most Critical Failures" [paper](https://www.usenix.org/conference/osdi14/technical-sessions/presentation/yuan)
- - Curated list of resources on [testing distributed systems](https://asatarin.github.io/testing-distributed-systems/)
+ - Curated list of resources on [testing distributed systems](/testing-distributed-systems/)
