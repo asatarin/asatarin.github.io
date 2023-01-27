@@ -34,12 +34,15 @@ and provide guidance on how to tackle complex incidents through automation or te
 <script async class="speakerdeck-embed" data-id="81e6da6877c5410eb0780b44698f11b0" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 </div>
 
-
-Video TBD 
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/j6Z-TawfQns" loading="lazy" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ### References
  - "How to fight production incidents?: an empirical study on a large-scale cloud service" [paper](https://dl.acm.org/doi/10.1145/3542929.3563482)
  - [Slides](https://acmsocc.org/2022/assets/slides/95.pdf) for the talk presented at SOCC 2022 by the authors
+ - [Reading Group. How to fight production incidents?](http://charap.co/reading-group-how-to-fight-production-incidents-an-empirical-study-on-a-large-scale-cloud-service/) 
+blog post by [Aleksey Charapko](http://charap.co/about-me/) on the meeting with overview of the discussion
  - Overview talk on [“Understanding and Detecting Software Upgrade Failures in Distributed Systems”](/talks/2022-09-upgrade-failures-in-distributed-systems/) paper
  - Overview talk on [“Understanding, Detecting and Localizing Partial Failures in Large System Software”](/talks/2022-05-understanding-partial-failures/) paper
  - "Simple Testing Can Prevent Most Critical Failures" [paper](https://www.usenix.org/conference/osdi14/technical-sessions/presentation/yuan)
