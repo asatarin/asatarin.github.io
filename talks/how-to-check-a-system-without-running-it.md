@@ -23,7 +23,7 @@ increase system stability and availability in production.
 [Download slides in Russian (PDF)](/assets/talks/talk-how-to-check-a-system-without-running-it.pdf)
 
 <div class="video-container">
-<script async class="speakerdeck-embed" data-slide="2" data-id="19ab7d275dd446b38197481cb7541961" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+<script defer class="speakerdeck-embed" data-slide="2" data-id="19ab7d275dd446b38197481cb7541961" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 </div>
 
 <div class="video-container">
