@@ -30,7 +30,7 @@ Attendees will learn how and what was tested by Andrey along Yandex team and wha
 [Download slides in Russian (PDF)](/assets/talks/talk-testing-distributed-systems.pdf)
 
 <div class="video-container">
-<script async class="speakerdeck-embed" data-slide="2" data-id="8fbb5337e106474e9753c5359a663239" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+<script defer class="speakerdeck-embed" data-slide="2" data-id="8fbb5337e106474e9753c5359a663239" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 </div>
 
 <div class="video-container">
