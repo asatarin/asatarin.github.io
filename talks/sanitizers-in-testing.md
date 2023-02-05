@@ -22,7 +22,7 @@ what they can do, and how to use them in your project.
 [Download slides in Russian (PDF)](/assets/talks/talk-sanitizers-in-testing.pdf)
 
 <div class="video-container">
-<script async class="speakerdeck-embed" data-slide="2" data-id="bcb48dac52af45049d477d8ab9d4b389" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+<script defer class="speakerdeck-embed" data-slide="2" data-id="bcb48dac52af45049d477d8ab9d4b389" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 </div>
 
 <div class="video-container">
