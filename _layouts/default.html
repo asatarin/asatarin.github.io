@@ -18,12 +18,13 @@
 
     <section class="main-content">
       {% include anchor_headings.html html=content beforeHeading=true anchorBody="<span class='anchor'>#</span>" anchorAttrs="tabindex='-1'" %}
-    </section>
+      
+      <footer class="site-footer">
+        {% include footer.html %}
+        {% include counter.html %}
+      </footer>
 
-    <footer class="site-footer">
-      {% include footer.html %}
-      {% include counter.html %}
-    </footer>
+    </section>
 
   </body>
 </html>
