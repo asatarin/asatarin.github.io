@@ -54,6 +54,10 @@ blog post by [Aleksey Charapko](http://charap.co/about-me/) on the meeting with 
 
 ### Transcript
 
+{% comment %}
+Draft transcript https://docs.google.com/document/d/1Y5gXyjd5Lt_Plzmw3FKc2RPY_IZoNdcwi5DVex4hfoo/edit
+{% endcomment %}
+
 Please note that this AI-generated video transcript may contain inaccuracies or omissions. 
 I encourage you to use it as a reference only and verify information with the original video if needed.
 
