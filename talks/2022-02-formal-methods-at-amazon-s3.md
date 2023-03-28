@@ -60,7 +60,7 @@ Draft transcript https://docs.google.com/document/d/1EYTEZysRqwiSs4ehm-BGzF-17FO
 {% endcomment %}
 
 Please note that this AI-generated video transcript may contain inaccuracies or omissions. 
-I encourage you to use it as a reference only and verify information with the original video if needed.
+I encourage you to use it as a reference only and verify information with the original video if needed.
 
 <hr>
 
