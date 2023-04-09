@@ -34,3 +34,6 @@ permalink: /:year/:title/
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
+  
+kramdown:
+  strict_mode: true
