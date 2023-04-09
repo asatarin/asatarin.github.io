@@ -1,6 +1,7 @@
 ---
 title: Understanding Partial Failures in Large Systems
-description: Presentation on "Understanding, Detecting and Localizing Partial Failures in Large System Software" paper for distributed systems reading group.
+description: Presentation on "Understanding, Detecting and Localizing Partial Failures in Large System Software" paper
+for distributed systems reading group.
 date: 2022-05-25
 image: /assets/thumbnails/2022-05-understanding-partial-failures.jpg
 layout: talk
@@ -45,8 +46,8 @@ unknown, confirmed partial failure bug in the latest version of ZooKeeper.
 
 ### References
 
--
-Paper ["Understanding, Detecting and Localizing Partial Failures in Large System Software"](https://www.usenix.org/conference/nsdi20/presentation/lou)
+- Paper
+  ["Understanding, Detecting and Localizing Partial Failures in Large System Software"](https://www.usenix.org/conference/nsdi20/presentation/lou)
 - [Talk at NSDI 2020](https://youtu.be/FZj_5fNZfcI)
 - [Post](https://blog.acolyer.org/2020/03/16/omega-gen/) from The Morning Paper blog
 
