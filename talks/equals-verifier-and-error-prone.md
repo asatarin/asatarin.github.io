@@ -6,15 +6,17 @@ image: /assets/thumbnails/2018-equals-verifier-and-error-prone.jpg
 layout: talk
 ---
 
-Presented in Saint Petersburg in May 2018 at [Heisenbug](https://2018.heisenbug-piter.ru/en/talks/2018/spb/6qwtgffkk0y8gw4yg6q6cy/) 
+Presented in Saint Petersburg in May 2018
+at [Heisenbug](https://2018.heisenbug-piter.ru/en/talks/2018/spb/6qwtgffkk0y8gw4yg6q6cy/)
 conference. Video and slides are in Russian.
 
 ### Abstract
-Best kind of tests are ones that cost almost nothing, yet find defects. 
-We’ll talk about two Java tools that are close to this ideal. 
-First tool is [EqualsVerifier](http://jqno.nl/equalsverifier/) library, 
-which helps with testing equals() and hashCode() contracts. 
-The second tool is [ErrorProne](http://errorprone.info/) 
+
+Best kind of tests are ones that cost almost nothing, yet find defects.
+We’ll talk about two Java tools that are close to this ideal.
+First tool is [EqualsVerifier](http://jqno.nl/equalsverifier/) library,
+which helps with testing equals() and hashCode() contracts.
+The second tool is [ErrorProne](http://errorprone.info/)
 from Google — a compile-time checker for common mistakes in your code.
 
 This talk will be useful for testers and Java developers.
@@ -30,6 +32,7 @@ This talk will be useful for testers and Java developers.
 </div>
 
 ### References
+
 - [EqualsVerifier](http://jqno.nl/equalsverifier/)
 - [“Not all equals methods are created equal”](https://youtu.be/pNJ_O10XaoM) by Jan Ouwens
 - [How to Write an Equality Method in Java](https://www.artima.com/lejava/articles/equality.html)

@@ -19,6 +19,7 @@ You can checkout [my talks](/talks) or list of resources on [testing distributed
 ## Bio
 
 #### English
+
 Andrey is a Staff Software Engineer at Google in the Core Data organization, 
 where he is responsible for engineering productivity for petabyte scale 
 OLAP/query processing systems. He is an active participant in the distributed 
@@ -29,6 +30,7 @@ an online multiplayer game at Mail.ru, and a foreign exchange pricing service a
 He is interested in building large scale distributed databases and backend systems.
 
 #### Russian
+
 Андрей является ведущим разработчиком в Google в организации Core Data, 
 где отвечает за продуктивность разработчиков OLAP/систем обработки запросов 
 петабайтного масштаба. Является активным участником сообщества распределенных 
