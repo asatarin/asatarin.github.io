@@ -15,7 +15,7 @@ description: Public talks and interviews given by Andrey Satarin on various tech
 
 - [Heisenbug Show Interview](2020-09-heisenbug-show/) (September, 2020)
 - [Hydra Heads Interview](2020-06-hydra-heads-interview/) (June, 2020)
-- [EqualsVerifier, ErrorProne and All the Others](equals-verifier-and-error-prone/) (May, 2018)
-- [How to Check a System Without Running It](how-to-check-a-system-without-running-it/) (December, 2017)
-- [Wash Your Hands Before You Eat, or Sanitizers in Testing](sanitizers-in-testing/) (July, 2017)
-- [Testing Distributed Systems](testing-distributed-systems/) (December, 2016)
+- [EqualsVerifier, ErrorProne and All the Others](2018-05-equals-verifier-and-error-prone/) (May, 2018)
+- [How to Check a System Without Running It](2017-12-how-to-check-a-system-without-running-it/) (December, 2017)
+- [Wash Your Hands Before You Eat, or Sanitizers in Testing](2017-07-sanitizers-in-testing/) (July, 2017)
+- [Testing Distributed Systems](2016-12-testing-distributed-systems/) (December, 2016)
