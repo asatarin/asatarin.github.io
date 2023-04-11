@@ -37,13 +37,9 @@ features and properties as ShardStore has evolved.
 
 [Download slides (PDF)](/assets/talks/2022-02-formal-methods-at-amazon-S3.pdf)
 
-<div class="video-container">
-<script defer class="speakerdeck-embed" data-id="3b0d36b7552f4643b240cc599491e25b" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
-</div>
+{% include speakerdeck.html data_id="3b0d36b7552f4643b240cc599491e25b" %}
 
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/fAYNN2MmOvk" loading="lazy" frameborder="0" allowfullscreen></iframe>
-</div>
+{% include youtube.html video_id="fAYNN2MmOvk" %}
 
 ### References
 

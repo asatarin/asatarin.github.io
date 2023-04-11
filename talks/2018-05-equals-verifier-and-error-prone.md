@@ -23,13 +23,9 @@ This talk will be useful for testers and Java developers.
 
 [Download slides in Russian (PDF)](/assets/talks/talk-equalsverifier-and-errorprone.pdf)
 
-<div class="video-container">
-<script defer class="speakerdeck-embed" data-id="d8ba17b409c147aa8c59377ecf5d17ef" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
-</div>
+{% include speakerdeck.html data_id="d8ba17b409c147aa8c59377ecf5d17ef" %}
 
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/jeCpYOEuL64" loading="lazy" frameborder="0" allowfullscreen></iframe>
-</div>
+{% include youtube.html video_id="jeCpYOEuL64" %}
 
 ### References
 

@@ -23,13 +23,9 @@ what they can do, and how to use them in your project.
 
 [Download slides in Russian (PDF)](/assets/talks/talk-sanitizers-in-testing.pdf)
 
-<div class="video-container">
-<script defer class="speakerdeck-embed" data-slide="2" data-id="bcb48dac52af45049d477d8ab9d4b389" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
-</div>
+{% include speakerdeck.html slide="2" data_id="bcb48dac52af45049d477d8ab9d4b389" %}
 
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/Aeu7abIKgGs" loading="lazy" frameborder="0" allowfullscreen></iframe>
-</div>
+{% include youtube.html video_id="Aeu7abIKgGs" %}
 
 ### References
 

@@ -9,9 +9,7 @@ layout: talk
 An interview I gave while promoting [Hydra conference](https://hydraconf.com/), on the topics of distributed systems,
 Hydra and other things (in Russian).
 
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/BP00xihSQo8" loading="lazy" frameborder="0" allowfullscreen></iframe>
-</div>
+{% include youtube.html video_id="BP00xihSQo8" %}
 
 ### References
 

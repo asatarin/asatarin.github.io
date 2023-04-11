@@ -40,13 +40,9 @@ DUPChecker has been requested by HBase developers to be integrated into their to
 
 [Download slides (PDF)](/assets/talks/2022-09-upgrade-failures-in-distributed-systems.pdf)
 
-<div class="video-container">
-<script defer class="speakerdeck-embed" data-id="5d8f859e5d5d4865b867d5e4b1b69f68" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
-</div>
+{% include speakerdeck.html data_id="5d8f859e5d5d4865b867d5e4b1b69f68" %}
 
-<div class="video-container">
-<iframe id="player" src="https://www.youtube.com/embed/2ybZcLXbJp8?enablejsapi=1" loading="lazy" frameborder="0" allowfullscreen></iframe>
-</div>
+{% include youtube.html video_id="2ybZcLXbJp8" %}
 
 ### References
 
