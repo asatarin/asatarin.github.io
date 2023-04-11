@@ -45,7 +45,7 @@ DUPChecker has been requested by HBase developers to be integrated into their to
 </div>
 
 <div class="video-container">
-<iframe src="https://www.youtube.com/embed/2ybZcLXbJp8?enablejsapi=1" loading="lazy" frameborder="0" allowfullscreen></iframe>
+<iframe id="player" src="https://www.youtube.com/embed/2ybZcLXbJp8?enablejsapi=1" loading="lazy" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ### References
