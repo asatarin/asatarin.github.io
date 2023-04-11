@@ -106,6 +106,7 @@ a {
 span.timecode {
   color: $body-link-color;
   text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     text-decoration: none; border-bottom: thin dashed;
