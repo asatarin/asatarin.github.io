@@ -11,12 +11,14 @@
   }
 
   function onPlayerReady(event) {
-    const spans = document.querySelectorAll('span.timecode');
-    spans.forEach(span => {
-      span.addEventListener('click', () => {
-        player.seekTo(convertTimeToSeconds(span.textContent));
-      });
-    });
+  }
+
+  function timecodeClick(event) {
+    if (typeof player === 'undefined') {
+      return;
+    }
+    const span = event.target;
+    player.seekTo(convertTimeToSeconds(span.textContent));
   }
 
   function convertTimeToSeconds(timeString) {
@@ -24,4 +26,5 @@
     const totalSeconds = minutes * 60 + seconds;
     return totalSeconds;
   }
+
 </script>
