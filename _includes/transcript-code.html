@@ -22,8 +22,9 @@
   }
 
   function convertTimeToSeconds(timeString) {
-    const [hours = 0, minutes, seconds] = timeString.split(':').map(time => parseInt(time));
-    return hours * 3600 + minutes * 60 + seconds;
+    const [minutes, seconds] = timeString.split(':').map(time => parseInt(time));
+    const totalSeconds = minutes * 60 + seconds;
+    return totalSeconds;
   }
 
 </script>
