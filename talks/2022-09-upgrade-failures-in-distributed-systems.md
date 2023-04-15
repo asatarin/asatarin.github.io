@@ -77,6 +77,8 @@ So let's go. A rough outline of the talk: I'm going to give an introduction to t
 on severity and root causes of upgrade failures, discuss testing and detecting those failures, some conclusions, and in
 the end, I'm going to give some personal experience of me doing upgrade testing for a distributed system.
 
+#### Introduction
+
 {% include timecode.html time="0:42" %}
 Let's start with the introduction. What are upgrade failures? In the paper, we describe them as failures that occur
 during an upgrade. So, it's not some configuration change; it's not a bug in the new version of the software you just
@@ -103,6 +105,8 @@ systems and prevent them from happening in production.
 These are the systems they analyzed, and these are the bugs they looked at from their bug trackers of the corresponding
 systems. Overall, it's about 100 bugs, more than that even, and this is where all the findings come from, just
 basically, I assume, from reading and analyzing those bugs.
+
+#### Finding on Severity and Root Causes
 
 {% include timecode.html time="2:28" %}
 Let's talk about the findings they have on severity, root causes, and some other aspects of those failures. First of
@@ -162,6 +166,8 @@ Uh, almost all of those upgrades are deterministic, so you don't need to find an
 conditions and things like that. If you can drive the system into that behavior with the workload, you can observe those
 with pretty high confidence.
 
+#### Testing and Detecting
+
 {% include timecode.html time="6:10" %}
 So the next part of the paper is kind of testing and detecting how concurrent systems approach the testing for upgrade
 failures and how authors propose to do that in a more systematic way.
@@ -179,6 +185,8 @@ exposing the system to a variety of workloads during the upgrade.
 Also, they noticed that there is no mechanism to systematically explore the whole space of upgrades, which includes
 different versions, different configurations, and different update scenarios, like either stopping a full stop upgrade
 or rolling upgrade. So those are not exposed in a systematic way.
+
+#### DUPTester
 
 {% include timecode.html time="7:10" %}
 Uh, and their proposed solution is two tools. First of those tools is Dub tester. So Dub tester is a distributed system
@@ -233,6 +241,8 @@ to me also implies they're not exactly unit tests because first of all, it persi
 they work at some kind of API where that system actually makes sense and not some internal things which are not
 translatable and not guaranteed between the versions.
 
+#### DUPChecker
+
 {% include timecode.html time="10:10" %}
 The next tool they talk about is DubChecker, which is targeting specifically the syntax of data post-utilization
 libraries and enum types.
@@ -273,6 +283,8 @@ Flow analysis if that.
 {% include timecode.html time="12:06" %}
 Both those conditions are true, they again report it as error to developers. This covers enum specifically.
 
+#### Conclusions
+
 {% include timecode.html time="12:15" %}
 So overall conclusions from the paper. First of all, this is the first in-depth analysis as long as like authors, uh,
 aware and as I'm aware of upgrade failures in the service systems. And they found like that those figures have severe
@@ -286,6 +298,8 @@ incompatibility is actually bugs, but they don't provide the number of what the 
 {% include timecode.html time="12:58" %}
 Specifically, Apache hbased team requested Double Checker to be a part of their overall testing pipeline so they want to
 prevent those incompatibilities in the future.
+
+#### Personal Experience and Commentary
 
 {% include timecode.html time="13:09" %}
 With that, I kind of want to transition from discussing the paper to my personal experience and commentary in the paper
