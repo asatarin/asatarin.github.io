@@ -21,7 +21,7 @@ from Google — a compile-time checker for common mistakes in your code.
 
 This talk will be useful for testers and Java developers.
 
-[Download slides in Russian (PDF)](/assets/talks/talk-equalsverifier-and-errorprone.pdf)
+[Download slides in Russian (PDF)](/assets/talks/2018-05-talk-equalsverifier-and-errorprone.pdf)
 
 {% include speakerdeck.html data_id="d8ba17b409c147aa8c59377ecf5d17ef" %}
 
