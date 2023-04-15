@@ -64,6 +64,8 @@ I encourage you to use it as a reference only and verify information with the or
 
 <hr>
 
+#### Introduction
+
 {% include timecode.html time="0:05" %}
 Hello everyone, my name is Andrey Satarin.
 
@@ -80,6 +82,8 @@ properties they're looking for.
 Different approaches and different lenses they look at validating, such as conformance checking, checking crash
 consistency, checking concurrent executions, and some other properties they look at in the system. Overall experience
 and lessons from that work.
+
+#### Introduction and ShardStore
 
 {% include timecode.html time="0:50" %}
 S3 is like a key value object storage provided by Amazon suite, and the core of the S3 service are storage node
@@ -107,6 +111,8 @@ the external guarantees this short store provides.
 In terms of the stock short store, it's basically based on the large log structures merch tree. Data is stored in
 chunks, chunks are stored in extents, and that's everything stored on disk obviously. So on the right, there is a
 picture from the paper itself.
+
+#### Validating a Storage System
 
 {% include timecode.html time="3:26" %}
 First of all, they look at the core properties which are consistency and durability. Other things like
@@ -140,6 +146,8 @@ That idea of using the reference model as a mock also helps to keep it up to dat
 if you need to implement a new API, basically you have to implement the new API in a mock in the reference model because
 you want to use it in some other test as a mock.
 
+#### Conformance Checking
+
 {% include timecode.html time="6:14" %}
 For conformance checking, it's like the first step of providing durability, which is sequential execution with no
 crashes. For that, they basically use property-based testing, which is, in a few words, it's like applying random
@@ -165,6 +173,8 @@ against the model so like when this certain operation crashed we basically have 
 says like don't basically says don't compare the crashed operations to the reference model, and some things like
 resource exhaustion is specifically out of scope for property-based testing because it's kind of hard to extend the
 model to those accidental complexity of things without uh making it more complicated than it should be.
+
+#### Checking Crash Consistency
 
 {% include timecode.html time="8:34" %}
 So crash consistency which is again this is like sequential execution with the presence of crashes so the test
@@ -210,6 +220,8 @@ They also tried to do more fine-grain crashes like the block level, so not at in
 grain things. But the outcome was that they didn't uncover any new bugs, and because the state space is vastly larger,
 it's just way slower. So this is not the default for how they run tests because it just was not beneficial.
 
+#### Checking Concurrent Executions
+
 {% include timecode.html time="12:27" %}
 The third lens the way they look at durability is checking concurrent executions without any crashes. So there
 are no crashes in this, and the main property they check here for is linearizability, and they use actual model check
@@ -223,6 +235,8 @@ They kind of both together provide the sound scalability trade-off so like you c
 histories in Loom, making sure that they're correct, but like at a larger scale with more iterations, a longer histories
 you have to do like a shuttle model checker, which does not provide a full guarantee but still explores the state space.
 
+#### Other Properties
+
 {% include timecode.html time="14:06" %}
 Other properties they looked at in the system which are also desirable is the absence of undefeated behavior.
 For that, there are Rust ecosystem tools like Mirror Interpreter and some other Rust compiler dynamic tools which
@@ -234,6 +248,8 @@ So one of the things they used is a Crux symbolic execution engine, which is for
 ecosystem, and that helps to prove panic freedom of serialization code but on top of that, they also use fuzzing
 extensively to kind of like the way fuzzing works with sterilization code to make sure that like there are no crashes on
 desirable behaviors and stuff like that.
+
+#### Experience and Lessons
 
 {% include timecode.html time="15:01" %}
 Uh, so what are the overall lessons from that work and experience?
