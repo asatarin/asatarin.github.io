@@ -70,6 +70,8 @@ I encourage you to use it as a reference only and verify information with the o
 
 <hr>
 
+#### Introduction
+
 {% include timecode.html time="0:05" %}
 Hi everyone! Today, I’m going to be talking about this paper, “How to Find Production Incidents: Empirical Study”.
 
