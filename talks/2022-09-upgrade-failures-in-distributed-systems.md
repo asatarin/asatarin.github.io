@@ -68,6 +68,8 @@ I encourage you to use it as a reference only and verify information with the o
 
 <hr>
 
+#### Introduction
+
 {% include timecode.html time="0:05" %}
 Hello everyone, my name is Andrey Satarin, and I'm going to be talking about the paper "Understanding and Detecting
 Software Upgrade Failures in Distributed Systems."
@@ -76,8 +78,6 @@ Software Upgrade Failures in Distributed Systems."
 So let's go. A rough outline of the talk: I'm going to give an introduction to the paper, talk about findings they have
 on severity and root causes of upgrade failures, discuss testing and detecting those failures, some conclusions, and in
 the end, I'm going to give some personal experience of me doing upgrade testing for a distributed system.
-
-#### Introduction
 
 {% include timecode.html time="0:42" %}
 Let's start with the introduction. What are upgrade failures? In the paper, we describe them as failures that occur
