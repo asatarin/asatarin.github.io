@@ -7,7 +7,7 @@ description: Personal Website
 Private notes https://docs.google.com/document/d/15TvHbeZGgTvKGpxWFxH84Cm9LXXmIF8botfuBHAPBJA/edit#
 {% endcomment %}
 
-You can checkout [my talks](/talks) or list of resources on [testing distributed systems](/testing-distributed-systems) I maintain.
+You can check out [my talks](/talks) or list of resources on [testing distributed systems](/testing-distributed-systems) I maintain.
 
 
 ## Contacts
