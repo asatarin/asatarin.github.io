@@ -195,7 +195,7 @@ congested, or you are out of disk space and that blocks your writes, for example
 of timeline. Right, I don't think there is a definite threshold.
 
 {% include timecode.html time="9:30" %}
-Murat
+[Murat Demirbas](https://twitter.com/muratdemirbas):
 Okay, good. Thanks
 
 {% include timecode.html time="9:36" %}
