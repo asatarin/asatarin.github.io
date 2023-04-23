@@ -67,6 +67,8 @@ I encourage you to use it as a reference only and verify information with the o
 
 <hr>
 
+#### Introduction
+
 {% include timecode.html time="0:09" %}
 Hello everyone.
 My name is Andrey Satarin. I'm going to be talking about this paper, "Understanding, Detecting, and Localizing Partial
@@ -76,6 +78,8 @@ Failures in Large System Software."
 Rough outline following the paper: we're gonna be talking about what even is partial failure, how we can catch partial
 failure, watchdogs, how the proposed method of generating those watchdogs in the paper is with the tool called OmegaGen,
 evaluation of this approach, and overall conclusions for the paper.
+
+#### Understanding Partial Failures
 
 {% include timecode.html time="0:45" %}
 So, what even are partial failures?
@@ -174,6 +178,8 @@ this point, they're only interested in detecting and localizing those.
 So how do we catch partial failures? The proposed approach is watchdogs, something running at runtime to catch these
 failures.
 
+#### Catching Partial Failures with Watchdogs
+
 {% include timecode.html time="8:23" %}
 [Murat Demirbas](https://twitter.com/muratdemirbas):
 Andrey, Rohan asked a good question in the chat. Are temporary errors considered as partial failures? The finding seems
@@ -235,6 +241,8 @@ a main program with different modules, such as a request listener and snapshot m
 checkers, where each checker mimics the behavior of a certain module or thread. The context is basically information
 copied from the main program to those checkers.
 
+#### Generating Watchdogs with Omegagen
+
 {% include timecode.html time="13:26" %}
 Omegagen is the tool they're talking about, which generates these watchdogs.
 
@@ -280,7 +288,15 @@ average time. If it drifts slowly, they will detect that too, if there is just d
 slower pace.
 
 {% include timecode.html time="18:32" %}
-This is all driven to decide when to kill the primary. It's actually to detect partial failures, not necessarily to kill
+But it's not hitting the threshold for individual operation yet, so all your writes suddenly, instead of three
+milliseconds, are one second. It will also impact your program, but you will not detect it with a static threshold.
+
+{% include timecode.html time="18:45" %}
+[Pat Helland](https://twitter.com/pathelland):
+And this is all driven to decide when to kill the primary?
+
+{% include timecode.html time="18:49" %}
+It's actually to detect partial failures, not necessarily to kill
 the program. They report it to the operator, as they don't talk about recovery in this context.
 
 {% include timecode.html time="19:16" %}
@@ -295,6 +311,8 @@ failed.
 
 {% include timecode.html time="20:15" %}
 But they just mention that as one of the approaches for the future, I guess.
+
+#### Evaluation
 
 {% include timecode.html time="20:22" %}
 For the evaluation stage, they ask several questions: Does this work for large software? Can we actually detect and
@@ -342,14 +360,37 @@ The median detection time is five seconds, which is incredibly fast. However, th
 alarm ratio and detection time. For example, what if the detection time was a minute, but the false alarm ratio was an
 order of magnitude better?
 
+{% include timecode.html time="24:35" %}
+The actual false alarm ratios are like that, so this is the table from the paper. The first row is watchdogs, the second
+row, watchdogs_v, is watchdogs validators.
+
+{% include timecode.html time="25:47" %}
+So, validators, as I said previously, basically, the default validator is just to rerun the same operation. So, if it
+was a slow rate, we rerun the rate and see if it's still slow.
+
+{% include timecode.html time="25:59" %}
+Or, I think they mentioned sometimes they do more, kind of manually written validators for some systems, but they don't
+provide a lot of details on that.
+
 {% include timecode.html time="26:15" %}
 The lowest false alarm ratio was 0.01%, which means one in every 10,000 checks would be a false alarm. This equates to
 roughly eight false alarms per day, which could be considered a high number in real-world scenarios. This issue could be
 addressed by running checks less frequently or by further reducing the false alarm ratio.
 
+{% include timecode.html time="26:45" %}
+[Pat Helland](https://twitter.com/pathelland):
+And that's the real problem with fail-fast, with detecting and killing and replacing in a timely fashion because as the
+behavior of the systems gets less prompt with everything, it's not a synchronous network, it's not pulsing, you know,
+this many times a second.
+Then, knowing when it's just sick versus when it's really dead gets harder and harder, and hence there's pressure to not
+make a rapid decision because of the inaccuracy of a rapid decision.
+Yeah, but you're right, I mean, the false alarm ratio should be related to the rapidity of the check.
+
 {% include timecode.html time="27:12" %}
 The false alarm ratio should be related to the frequency of the checks and the comprehensiveness of the validators. They
 don't mention if the retry recheck is done right away or if there is a grace period to allow the system to recover.
+
+#### Conclusions
 
 {% include timecode.html time="27:48" %}
 In conclusion, the researchers studied 100 real-world partial failures in popular software like Zookeeper and Hadoop.
@@ -359,9 +400,9 @@ precision than just identifying a slow process. The paper also revealed a new pa
 confirmed and fixed by the Zookeeper team.
 
 {% include timecode.html time="28:25" %}
-And they also talk in the paper; they actually exposed a new partial failure in Zookeeper. So it's not just the old 
-stuff they were able to reproduce; they found a new bug. My understanding is it was confirmed by the Zookeeper team 
-and was also fixed. So, not only were old failures reproduced, but new ones were also discovered and reported as 
+And they also talk in the paper; they actually exposed a new partial failure in Zookeeper. So it's not just the old
+stuff they were able to reproduce; they found a new bug. My understanding is it was confirmed by the Zookeeper team
+and was also fixed. So, not only were old failures reproduced, but new ones were also discovered and reported as
 actual partial failures during their experiments. With that. Yeah, I'm done. Thank you.
 
 {% include transcript-code.html %}
