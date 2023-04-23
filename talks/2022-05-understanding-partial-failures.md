@@ -364,3 +364,4 @@ stuff they were able to reproduce; they found a new bug. My understanding is it 
 and was also fixed. So, not only were old failures reproduced, but new ones were also discovered and reported as 
 actual partial failures during their experiments. With that. Yeah, I'm done. Thank you.
 
+{% include transcript-code.html %}
