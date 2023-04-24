@@ -10,20 +10,21 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
 
-    <section class="page-header">
+    <header class="page-header" role="banner">
       {% include navigation.html %}
       <h1 class="page-title">{{ page.title | default: site.github.repository_name }}</h1>
-    </section>
+    </header>
 
-    <section class="main-content">
+    <main class="main-content" role="main">
       {% include anchor_headings.html html=content beforeHeading=true anchorBody="<span class='anchor'>#</span>" anchorAttrs="tabindex='-1'" %}
       
       <footer class="site-footer">
         {% include footer.html %}
         {% include counter.html %}
       </footer>
-    </section>
+    </main>
 
   </body>
 </html>
