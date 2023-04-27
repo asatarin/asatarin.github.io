@@ -292,8 +292,8 @@ discovered even before code review. So before anyone looked at the code, people 
 discovered certain bugs. And the continuous integration, the validation system, so like because the model runs in the
 tests and also used in mocks and other tasks, it helps to keep it up to date with regards to API and some kind
 of fine-grained details because if they diverge, you basically see it through tests if you run them continuously, and
-that's also a great benefit. And the model is executable, so it's not like a model in some different code, they both -
-the reference model and the implementation are both in Rust, so like I presume they live together somewhere in the source
+that's also a great benefit. And the model is executable, so it's not like a model in some different code, they 
+both — the reference model and the implementation are both in Rust, so like I presume they live together somewhere in the source
 code.
 
 {% include timecode.html time="16:41" %}
