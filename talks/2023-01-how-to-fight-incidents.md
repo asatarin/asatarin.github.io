@@ -91,7 +91,7 @@ those categories to see what the main trends and conclusions are, of course.
 #### Methodology
 
 {% include timecode.html time="1:01" %}
-So, the methodology - where does that data come from, and what do they do with this incident report? All the
+So, the methodology — where does that data come from, and what do they do with this incident report? All the
 incident reports come from a single, at least user-facing service, Microsoft Teams. I’ve seen there are more than one
 service behind that, and they analyzed and studied 152 different reports.
 
@@ -112,7 +112,7 @@ that, or error rate. But still, an impact doesn’t mean it is visible to all th
 they’re still limited.
 
 {% include timecode.html time="2:31" %}
-So, what did they look at? They looked at the root causes - what is the actual cause of the incident, and they only
+So, what did they look at? They looked at the root causes — what is the actual cause of the incident, and they only
 assigned one particular category as the root cause for an incident.
 
 {% include timecode.html time="2:59" %}
