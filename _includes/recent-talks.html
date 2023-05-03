@@ -1,0 +1,12 @@
+#### Recent Talks
+
+<ul>
+  {% assign recent_talks = site.pages | where: "layout", "talk" | sort: "date" | reverse %}
+  {% for post in recent_talks limit:4 %}
+    {% if post.url != page.url %}
+      <li>
+        <a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y"" }}) <br/>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
