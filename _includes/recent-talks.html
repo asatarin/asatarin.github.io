@@ -1,5 +1,5 @@
 <br>
-<p>Recent Talks:</p>
+<p>Recent talks:</p>
 <ul>
   {% assign recent_talks = site.pages | where: "layout", "talk" | sort: "date" | reverse %}
   {% for post in recent_talks limit:4 %}
