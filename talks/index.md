@@ -24,7 +24,7 @@ description: Public talks and interviews given by Andrey Satarin on various tech
 <ul> 
   {% for post in all_talks %}
     {% assign year_published = post.date | date: '%Y' %}
-    {% if year_published > border_year %}
+    {% if year_published < border_year %}
       <li>
         <a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y"" }}) <br/>
       </li>
