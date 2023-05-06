@@ -3,19 +3,31 @@ title: Public Talks
 description: Public talks and interviews given by Andrey Satarin on various tech subjects
 ---
 
+{% assign all_talks = site.pages | where: "layout", "talk" | sort: "date" | reverse %}
+{% assign border_year = "2021" %}
+
 ### English
 
-- [How to Fight Production Incidents?](2023-01-how-to-fight-incidents/) (January 2023)
-- [Understanding Upgrade Failures in Distributed Systems](2022-09-upgrade-failures-in-distributed-systems/) (September
-  2022)
-- [Understanding Partial Failures in Large Systems](2022-05-understanding-partial-failures/) (May 2022)
-- [Formal Methods at Amazon S3](2022-02-formal-methods-at-amazon-s3/) (February 2022)
+<ul> 
+  {% for post in all_talks %}
+    {% assign year_published = post.date | date: '%Y' %}
+    {% if year_published >= border_year %}
+      <li>
+        <a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y"" }}) <br/>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
 
 ### Russian
 
-- [Heisenbug Show Interview](2020-09-heisenbug-show/) (September 2020)
-- [Hydra Heads Interview](2020-06-hydra-heads-interview/) (June 2020)
-- [EqualsVerifier, ErrorProne and All the Others](2018-05-equals-verifier-and-error-prone/) (May 2018)
-- [How to Check a System Without Running It](2017-12-how-to-check-a-system-without-running-it/) (December 2017)
-- [Wash Your Hands Before You Eat, or Sanitizers in Testing](2017-07-sanitizers-in-testing/) (July 2017)
-- [Testing Distributed Systems](2016-12-testing-distributed-systems/) (December 2016)
+<ul> 
+  {% for post in all_talks %}
+    {% assign year_published = post.date | date: '%Y' %}
+    {% if year_published > border_year %}
+      <li>
+        <a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y"" }}) <br/>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
