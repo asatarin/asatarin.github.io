@@ -92,7 +92,7 @@ store is the new key value storage node which is slowly, as at the time of the p
 production to replace the previous version.
 
 {% include timecode.html time="1:18" %}
-Overall, it's roughly a thousand forty thousand lines of code in Rust. It has a concurrent implementation and
+Overall, it's roughly forty thousand lines of code in Rust. It has a concurrent implementation and
 it should provide crash consistency properties which complicates implementation and that's the
 goal of the kind of verifying that storage to check for those properties.
 
