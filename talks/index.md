@@ -13,7 +13,7 @@ description: Public talks and interviews given by Andrey Satarin on various tech
     {% assign year_published = post.date | date: '%Y' %}
     {% if year_published >= border_year %}
       <li>
-        <a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y"" }}) <br/>
+        <a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y" }}) <br/>
       </li>
     {% endif %}
   {% endfor %}
@@ -26,7 +26,7 @@ description: Public talks and interviews given by Andrey Satarin on various tech
     {% assign year_published = post.date | date: '%Y' %}
     {% if year_published < border_year %}
       <li>
-        <a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y"" }}) <br/>
+        <a href="{{ site.baseurl }}{{ post.url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y" }}) <br/>
       </li>
     {% endif %}
   {% endfor %}
