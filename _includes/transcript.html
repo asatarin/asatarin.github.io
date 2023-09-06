@@ -1,9 +1,9 @@
+{% capture transcript_text_md %}{% include_relative {{ include.filename }} %}{% endcapture %}
+
 <details style="display: list-item; list-style-type: disclosure-closed;">
-  <summary>
-    {{ include.summary | markdownify }}
-  </summary>
+  <summary>Click to expand transcript</summary>
   <hr>
-  {{ include.details | markdownify }}
+  {{ transcript_text_md | markdownify }}
 </details>
 
 {% include transcript-code.html %}
