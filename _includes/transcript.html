@@ -1,0 +1,9 @@
+<details style="display: list-item; list-style-type: disclosure-closed;">
+  <summary>
+    {{ include.summary | markdownify }}
+  </summary>
+  <hr>
+  {{ include.details | markdownify }}
+</details>
+
+{% include transcript-code.html %}
