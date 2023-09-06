@@ -61,11 +61,4 @@ and provide guidance on how to tackle complex incidents through automation or te
 
 ### Transcript
 
-{% comment %}
-Draft transcript https://docs.google.com/document/d/1Y5gXyjd5Lt_Plzmw3FKc2RPY_IZoNdcwi5DVex4hfoo/edit
-{% endcomment %}
-
-Please note that this AI-generated video transcript may contain inaccuracies or omissions.
-I encourage you to use it as a reference only and verify information with the original video if needed.
-
 {% include transcript.html filename="2023-01-how-to-fight-incidents-transcript.md" %}
