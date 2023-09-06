@@ -14,7 +14,7 @@ conference. Video and slides are in Russian.
 
 As the saying goes, “with great power comes great responsibility”.
 C++ is a language with great expression power and vast capabilities.
-One have to pay for this capabilities with possible defects,
+One have to pay for these capabilities with possible defects,
 which are absent in programs written in managed languages.
 
 Sanitizers are wonderful tools, which will help you find complex

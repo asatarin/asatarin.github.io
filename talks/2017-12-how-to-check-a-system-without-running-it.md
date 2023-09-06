@@ -31,12 +31,12 @@ increase system stability and availability in production.
 
 ### References
 
-- [Three days that shoked us in 2013](https://habrahabr.ru/company/odnoklassniki/blog/268413/) in Russian
+- [Three days that shocked us in 2013](https://habrahabr.ru/company/odnoklassniki/blog/268413/) in Russian
 - ["Paxos Made Live – An Engineering Perspective"](https://blog.acolyer.org/2015/03/05/paxos-made-live/)
 - ["Early detection of configuration errors to reduce failure damage"](https://blog.acolyer.org/2016/11/29/early-detection-of-configuration-errors-to-reduce-failure-damage/)
 - [Gixy — open source tool from Yandex to make your Nginx configuration safe](https://habrahabr.ru/company/yandex/blog/327590/)
   in Russian
 - ["Configuration testing for Java developers: a case study"](https://youtu.be/Tk_nmV-mWOA) — talk
   by [Ruslan Cheremin](https://twitter.com/dj_begemot) on practical application of these ideas implemented in Java (in
-  Russian). Full talk [transcipt](https://habr.com/company/jugru/blog/427487/)
+  Russian). Full talk [transcript](https://habr.com/company/jugru/blog/427487/)
   and [slides](https://2018.heisenbug-piter.ru/talks/2018/spb/3pnf97jpummk4yeociqwi0/) are also published (in Russian).

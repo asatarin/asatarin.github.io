@@ -49,7 +49,7 @@ DUPChecker has been requested by HBase developers to be integrated into their to
 - "Understanding and Detecting Software Upgrade Failures in Distributed
   Systems" [paper](https://dl.acm.org/doi/10.1145/3477132.3483577)
 - [Video](https://youtu.be/29-isLcDtL0) from SOSP 2021
-- [Reference respository](https://github.com/zlab-purdue/ds-upgrade) for the paper
+- [Reference repository](https://github.com/zlab-purdue/ds-upgrade) for the paper
 - [DUPTester tool code](https://gitlab.dsrg.utoronto.ca/zhuqi/DUPTester)
 - [DUPChecker tool code](https://github.com/jwjwyoung/DUPChecker)
 - [Jepsen.io](https://jepsen.io/)

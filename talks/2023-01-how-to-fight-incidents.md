@@ -27,7 +27,7 @@ mitigate them. To better understand the problems, we carefully study hundreds of
 incidents and their postmortems in Microsoft-Teams, a large-scale distributed cloud based service used
 by hundreds of millions of users. We answer: (a) why the incidents occurred and how they were resolved,
 (b) what the gaps were in current processes which caused delayed response, and (c) what automation could
-help make the services resilient. Finally, we uncover interesting insights by a novel multi-dimensional
+help make the services resilient. Finally, we uncover interesting insights by a novel multidimensional
 analysis that correlates different troubleshooting stages (detection, root-causing and mitigation),
 and provide guidance on how to tackle complex incidents through automation or testing at different granularity.
 
