@@ -3,8 +3,8 @@ I encourage you to use it as a reference only and verify information with the o
 
 {% capture transcript_text_md %}{% include_relative {{ include.filename }} %}{% endcapture %}
 
-<details style="display: list-item; list-style-type: disclosure-closed;">
-  <summary>Click to expand transcript</summary>
+<details class="transcript">
+  <summary class="transcript-summary">Click to expand transcript</summary>
   <hr>
   {{ transcript_text_md | markdownify }}
 </details>

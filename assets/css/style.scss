@@ -113,3 +113,12 @@ span.timecode {
     text-decoration: none; border-bottom: thin dashed;
   }
 }
+
+.transcript-summary {
+  text-align: center;
+  border-color: $body-text-color;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.3rem;
+}
+
