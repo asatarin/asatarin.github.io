@@ -21,6 +21,9 @@ social:
 feed:
   path: /test-feed.xml
   posts_limit: 20
+  tags:
+    except:
+      - draft
 
 defaults:
   - 
