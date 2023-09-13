@@ -21,10 +21,10 @@ about existing limitations and their impact on functionality.
 Issues will be covered:
 
 1. How distributed systems are different from centralized systems?
-1. What does it all mean for testing?
-1. What properties and characteristics must be checked in distributed systems and how to do it?
-1. Which approaches to testing of distributed systems are there and what problems do they solve?
-1. What problems do remain unresolved?
+2. What does it all mean for testing?
+3. What properties and characteristics must be checked in distributed systems and how to do it?
+4. Which approaches to testing of distributed systems are there and what problems do they solve?
+5. What problems do remain unresolved?
 
 The talk is built on an example of persistent distributed queue, which is being developed at Yandex.
 Attendees will learn how and what was tested by Andrey along Yandex team and what results were obtained.
