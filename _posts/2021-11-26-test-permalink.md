@@ -6,6 +6,7 @@ date: 2021-11-26
 image: /assets/thumbnails/2018-equals-verifier-and-error-prone.jpg
 layout: talk
 permalink: /talks/test-permalink/
+sitemap: false
 ---
 
 Test Permalink

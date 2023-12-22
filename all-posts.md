@@ -1,5 +1,6 @@
 ---
 title: List of all the posts
+sitemap: false
 ---
 
 ### 2021

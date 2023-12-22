@@ -36,9 +36,12 @@ defaults:
 
 permalink: /:year/:title/
 
+url: "https://asatarin.github.io" # the base hostname & protocol for the sitemap
+
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-sitemap
   
 kramdown:
   strict_mode: true
