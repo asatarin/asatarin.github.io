@@ -37,6 +37,7 @@ defaults:
       path: "/**/*.transcript.md"
     values:
       published: false
+      sitemap: false
 
 permalink: /:year/:title/
 
