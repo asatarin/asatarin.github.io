@@ -2,4 +2,8 @@
 
 set -e
 
-awesome_bot --white-list "www.amazon.com,dl.acm.org" --allow 999 --allow-dupe --allow-redirect $(find /github/workspace/ -name "*.md")
+awesome_bot \
+  --white-list "www.amazon.com,dl.acm.org,docs.google.com" \
+  --allow 999 \
+  --allow-dupe \
+  --allow-redirect $(find /github/workspace/ -name "*.md")
