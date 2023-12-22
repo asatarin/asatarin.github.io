@@ -55,4 +55,4 @@ features and properties as ShardStore has evolved.
 
 ### Transcript
 
-{% include transcript.html filename="2022-02-formal-methods-at-amazon-s3-transcript.md" %}
+{% include transcript.html filename="2022-02-formal-methods-at-amazon-s3.transcript.md" %}

@@ -62,4 +62,4 @@ and provide guidance on how to tackle complex incidents through automation or te
 
 ### Transcript
 
-{% include transcript.html filename="2023-01-how-to-fight-incidents-transcript.md" %}
+{% include transcript.html filename="2023-01-how-to-fight-incidents.transcript.md" %}

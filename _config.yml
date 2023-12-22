@@ -33,6 +33,10 @@ defaults:
       path: ""
     values:
       image: /assets/thumbnails/default-thumbnail.png
+  - scope:
+      path: "/**/*.transcript.md"
+    values:
+      published: false
 
 permalink: /:year/:title/
 

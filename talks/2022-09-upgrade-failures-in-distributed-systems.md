@@ -59,4 +59,4 @@ DUPChecker has been requested by HBase developers to be integrated into their to
 
 ### Transcript
 
-{% include transcript.html filename="2022-09-upgrade-failures-in-distributed-systems-transcript.md" %}
+{% include transcript.html filename="2022-09-upgrade-failures-in-distributed-systems.transcript.md" %}

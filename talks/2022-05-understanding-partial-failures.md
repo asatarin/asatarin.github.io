@@ -58,4 +58,4 @@ Cachin, Rachid Guerraoui, Luís Rodrigues.
 
 ### Transcript
 
-{% include transcript.html filename="2022-05-understanding-partial-failures-transcript.md" %}
+{% include transcript.html filename="2022-05-understanding-partial-failures.transcript.md" %}
