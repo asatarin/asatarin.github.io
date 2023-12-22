@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 {% comment %}
 Draft transcript https://docs.google.com/document/d/1BE5hWA1gmZMKmd8ciQnO2zqMux7ye20Ek_fg1M2GII8/edit#
 {% endcomment %}
