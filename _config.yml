@@ -21,11 +21,8 @@ social:
     - https://asatarin.github.io/
 
 feed:
-  path: /test-feed.xml
+  path: /feed.xml
   posts_limit: 20
-  tags:
-    except:
-      - draft
 
 defaults:
   - 
