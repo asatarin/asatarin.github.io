@@ -7,7 +7,7 @@ layout: talk
 ---
 
 Presented in Moscow in December 2017
-at [Heisenbug](https://2017.heisenbug-moscow.ru/talks/2017/msk/79fuksrzakwwqu4cmikw62/) conference. Video and slides are
+at [Heisenbug](https://heisenbug.ru/en/) conference. Video and slides are
 in Russian.
 
 ### Abstract

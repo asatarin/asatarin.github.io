@@ -7,7 +7,7 @@ layout: talk
 ---
 
 Presented in Saint-Petersburg in June 2017
-at [Heisenbug](http://2017.heisenbug-piter.ru/en/talks/wash-your-hands-before-eating-or-sanitizer-in-testing/)
+at [Heisenbug](https://heisenbug.ru/en/)
 conference. Video and slides are in Russian.
 
 ### Abstract
