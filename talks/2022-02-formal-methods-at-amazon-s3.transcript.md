@@ -5,7 +5,6 @@ Draft transcript https://docs.google.com/document/d/1EYTEZysRqwiSs4ehm-BGzF-17FO
 #### Introduction
 
 {% include timecode.html time="0:05" %}
-
 Hello, everyone.
 
 My name is Andrey Satarin.
@@ -26,7 +25,6 @@ So introduction.
 #### Introduction and ShardStore
 
 {% include timecode.html time="0:50" %}
-
 S3 is like a key value object storage provided by Amazon S3, and the core of S3 service are storage not servers, which
 basically are servers storing the actual data apart from like index and other control plane stuff.
 
@@ -39,7 +37,6 @@ It has concurrent implementation and responsible, like it should provide crash c
 implementation.
 
 {% include timecode.html time="1:30" %}
-
 And like that's the goal of the kind of verifying that storage to check for those properties.
 
 So the other goals is basically API correctness, like does API does whatever it's supposed to be doing, puts
@@ -59,7 +56,6 @@ They're willing to accept weaker guarantees at the expense of like using, but us
 larger histories or larger scale systems or bigger APIs, and things like that.
 
 {% include timecode.html time="2:40" %}
-
 So that's like, the idea is not to have like a fully verified storage, the idea is to have like some kind of trade
 off between verifying correctness and having scalable way to verify it.
 
@@ -72,7 +68,6 @@ So because shard store writes to several extents at the time, at the moment, it 
 than one write log and that complicates crash consistency.
 
 {% include timecode.html time="3:20" %}
-
 And as I mentioned before, there is a garbage collection and other internal processes also complicates things.
 And the idea is to validate that.
 
@@ -89,7 +84,6 @@ Other good properties to have in production like lack of absence of undefined be
 crashing, which are like desirable in operation.
 
 {% include timecode.html time="4:04" %}
-
 Also there, but not like the main focus.
 So the other one of the other goals is to have all the results of that outlive involvement of a formal method expert.
 So like basically, they don't want to have team of formal meta experts supporting this forever.
@@ -108,7 +102,6 @@ Concurrent execution with crashes is specifically out of scope of that paper.
 So they don't talk about that, but all the others are covered.
 
 {% include timecode.html time="5:06" %}
-
 So I'm just going to go through like sections of the go with the way they presented here.
 
 So the kind of thing they use a lot of to check for those properties is a reference model, which is basically
@@ -128,7 +121,6 @@ because you want to use it in some other test as a mock.
 #### Conformance Checking
 
 {% include timecode.html time="6:10" %}
-
 So conformance checking.
 
 It's like the first step of providing durability, which is sequential execution with no crashes.
@@ -146,7 +138,6 @@ But they mentioned that only do this if there's like strong quantitative evidenc
 because otherwise you might bake certain assumptions you have of the implementation into the system.
 
 {% include timecode.html time="07:17" %}
-
 And that's kind of their idea of avoiding doing that to not bake assumptions in the test themselves, because that kind
 of will be self-validating the system in a way, in a bad way.
 
@@ -166,7 +157,6 @@ So like when this certain operation crashed, we basically have a certain we have
 basically says don't compare the crashed operations to the reference model.
 
 {% include timecode.html time="8:17" %}
-
 And some things like resource exhaustion is specifically out of scope for property based testing, because it's kind of
 hard to extend the model to those accidental complexity things without making it more complicated than it should be.
 
@@ -186,7 +176,6 @@ First writing chunk data to extend and then updating index entry, and then updat
 point to the index data.
 
 {% include timecode.html time="9:24" %}
-
 Those three operations kind of presented as a dependency graph internally, well, at least in the model.
 And the IO schedule is responsible for persisting those dependencies in the correct order, which is basically the lower
 ones and then the ones depend on that.
@@ -202,7 +191,6 @@ So there's like one LSM tree metadata update for several puts, even though obvio
 data updates internally.
 
 {% include timecode.html time="10:28" %}
-
 So in the whole complexity of IO scheduler and providing correctness guarantees come from kind of that correctly
 persisting this dependency graph.
 
@@ -219,7 +207,6 @@ So these are like the properties they check in the system in the presence of cra
 So for that, they need to extend the property-based reference model.
 
 {% include timecode.html time="11:25" %}
-
 The way they do it, the reference model and test themselves is basically adding new operations to the alphabet or the
 operations available for property-based tests, things like dirty reboot, index flush.
 
@@ -241,7 +228,6 @@ For concurrent executions.
 So basically, we covered sequential execution, sequential execution with crashes.
 
 {% include timecode.html time="12:35" %}
-
 The third lens, the way they look on durability, is the check-in concurrent executions with no crashes.
 So there are no crashes in this.
 And the main property they check here for is linearizability.
@@ -259,7 +245,6 @@ And again, because loom is slower but provides soundness guarantees, but the shu
 a guarantee, they kind of both together provide the soundness scalability trade-off.
 
 {% include timecode.html time="13:47" %}
-
 So you can validate the sharder histories in loom, making sure that they're correct and sound.
 But at the larger scale with more iterations, longer histories, you have to do like a shuttle model checker, which does
 not provide a full guarantee but still explores the state space.
@@ -275,7 +260,6 @@ So one of the things they used is a Crux symbol execution engine, which is, for 
 ecosystem.
 
 {% include timecode.html time="14:42" %}
-
 And that helps to prove panic freedom of serialization code.
 But on top of that, they also used fuzzing extensively to kind of like the way fuzzing works with serialization code to
 make sure that there are no crashes on desirable behaviors and stuff like that.
@@ -292,7 +276,6 @@ these are still experts in a shard store, but not formal method experts, contrib
 So there was some handing over support of the model, for sure, from experts to the actual development team.
 
 {% include timecode.html time="15:50" %}
-
 Benefits they cite are like early detection.
 They mentioned several bugs, at least one or two, basically discovered even before code review.
 So before anyone looked at the code, people were running tests locally and discovered certain bugs.
@@ -315,7 +298,6 @@ cache, and they fine-tuned it with the bias, changing the cache size to kind of 
 the future they uncover bugs in there.
 
 {% include timecode.html time="17:30" %}
-
 There's also some kind of code which I think is fair to call accidental complexity of gluing shard store with S3, so
 they mentioned routing and parsing S3 messages itself, and that's a pretty big chunk as far as I understand, and that's
 not covered because it does not contribute to durability and consistency properties they were looking specifically for,
@@ -326,7 +308,6 @@ provided for control playing, or which are not covered for whatever reason in th
 the APIs are covered.
 
 {% include timecode.html time="18:20" %}
-
 With this, I have a shameless plug.
 
 If you're interested in testing things like that, distributed systems and storage systems have a list of the things
