@@ -39,4 +39,4 @@ increase system stability and availability in production.
 - ["Configuration testing for Java developers: a case study"](https://youtu.be/Tk_nmV-mWOA) — talk
   by [Ruslan Cheremin](https://twitter.com/dj_begemot) on practical application of these ideas implemented in Java (in
   Russian). Full talk [transcript](https://habr.com/company/jugru/blog/427487/)
-  and [slides](https://2018.heisenbug-piter.ru/talks/2018/spb/3pnf97jpummk4yeociqwi0/) are also published (in Russian).
+  and [slides](https://assets.ctfassets.net/ut4a3ciohj8i/HcZWuiIEg0ESicwEGWQM0/d0d76e5edb016747d1a6a3fba032ddb2/_______________________________________________________________________________________________-__________________________.pdf) are also published (in Russian).
