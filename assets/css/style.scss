@@ -94,6 +94,9 @@ a {
   width: 100%;
   overflow: hidden;
   box-shadow: rgb(220, 220, 220) 1px 5px 20px;
+  @media print {
+    display: none;
+  }
 }
 
 .video-container iframe, .video-container object, .video-container embed {
@@ -125,3 +128,9 @@ span.timecode {
   margin-right: auto;
 }
 
+.print-content {
+  display: none;
+  @media print {
+    display: block;
+  }
+}
