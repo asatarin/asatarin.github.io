@@ -37,7 +37,10 @@ features and properties as ShardStore has evolved.
 
 [Download slides (PDF)](/assets/talks/2022-02-formal-methods-at-amazon-S3.pdf)
 
-{% include speakerdeck.html data_id="3b0d36b7552f4643b240cc599491e25b" %}
+{% include speakerdeck.html
+data_id="3b0d36b7552f4643b240cc599491e25b"
+print_alt_url = "https://speakerdeck.com/asatarin/formal-methods-at-amazon-s3"
+%}
 
 {% include youtube.html video_id="fAYNN2MmOvk" %}
 

@@ -31,7 +31,10 @@ Attendees will learn how and what was tested by Andrey along Yandex team and wha
 
 [Download slides in Russian (PDF)](/assets/talks/2016-12-talk-testing-distributed-systems.pdf)
 
-{% include speakerdeck.html slide="2" data_id="8fbb5337e106474e9753c5359a663239" %}
+{% include speakerdeck.html
+slide="2" data_id="8fbb5337e106474e9753c5359a663239"
+print_alt_url = "https://speakerdeck.com/asatarin/tiestirovaniie-raspriedieliennykh-sistiem"
+%}
 
 {% include youtube.html video_id="h8RV4JfSovg" %}
 

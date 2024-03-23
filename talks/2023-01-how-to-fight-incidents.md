@@ -33,7 +33,10 @@ and provide guidance on how to tackle complex incidents through automation or te
 
 [Download slides (PDF)](/assets/talks/2023-01-how-to-fight-production-incidents.pdf)
 
-{% include speakerdeck.html data_id="81e6da6877c5410eb0780b44698f11b0" %}
+{% include speakerdeck.html
+data_id="81e6da6877c5410eb0780b44698f11b0"
+print_alt_url = "https://speakerdeck.com/asatarin/how-to-fight-production-incidents"
+%}
 
 {% include youtube.html video_id="j6Z-TawfQns" %}
 
@@ -44,7 +47,8 @@ and provide guidance on how to tackle complex incidents through automation or te
 - [Slides](https://acmsocc.org/2022/assets/slides/95.pdf) for the talk presented at SOCC 2022 by the authors
 - [Reading Group. How to fight production incidents?](http://charap.co/reading-group-how-to-fight-production-incidents-an-empirical-study-on-a-large-scale-cloud-service/)
   blog post by [Aleksey Charapko](http://charap.co/about-me/) on the meeting with overview of the discussion
-- Paper review by Cindy Sridharan in her [blog](https://systemsdistributed.substack.com/p/how-to-fight-production-incidents)
+- Paper review by Cindy Sridharan in
+  her [blog](https://systemsdistributed.substack.com/p/how-to-fight-production-incidents)
 - Overview talk
   on [“Understanding and Detecting Software Upgrade Failures in Distributed Systems”](/talks/2022-09-upgrade-failures-in-distributed-systems/)
   paper

@@ -25,7 +25,10 @@ increase system stability and availability in production.
 
 [Download slides in Russian (PDF)](/assets/talks/2017-12-talk-how-to-check-a-system-without-running-it.pdf)
 
-{% include speakerdeck.html slide="2" data_id="19ab7d275dd446b38197481cb7541961" %}
+{% include speakerdeck.html
+slide="2" data_id="19ab7d275dd446b38197481cb7541961"
+print_alt_url = "https://speakerdeck.com/asatarin/kak-provierit-sistiemu-nie-zapuskaia-ieio-gieizienbagh-2017"
+%}
 
 {% include youtube.html video_id="KaeEjsAjV6A" %}
 
