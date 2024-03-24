@@ -42,4 +42,5 @@ print_alt_url = "https://speakerdeck.com/asatarin/kak-provierit-sistiemu-nie-zap
 - ["Configuration testing for Java developers: a case study"](https://youtu.be/Tk_nmV-mWOA) — talk
   by [Ruslan Cheremin](https://twitter.com/dj_begemot) on practical application of these ideas implemented in Java (in
   Russian). Full talk [transcript](https://habr.com/company/jugru/blog/427487/)
-  and [slides](https://assets.ctfassets.net/ut4a3ciohj8i/HcZWuiIEg0ESicwEGWQM0/d0d76e5edb016747d1a6a3fba032ddb2/_______________________________________________________________________________________________-__________________________.pdf) are also published (in Russian).
+  and [slides](https://assets.ctfassets.net/ut4a3ciohj8i/HcZWuiIEg0ESicwEGWQM0/d0d76e5edb016747d1a6a3fba032ddb2/_______________________________________________________________________________________________-__________________________.pdf)
+  are also published (in Russian).

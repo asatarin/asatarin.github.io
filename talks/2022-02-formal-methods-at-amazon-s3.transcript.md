@@ -72,6 +72,7 @@ And as I mentioned before, there is a garbage collection and other internal proc
 And the idea is to validate that.
 
 #### Validating a Storage System
+
 So what kind of properties?
 
 What's their approach on validating this kind of system?
