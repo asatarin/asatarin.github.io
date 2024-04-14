@@ -40,6 +40,8 @@ Our work has prevented 16 issues from reaching production, including subtle cras
 concurrency problems, and has been extended by non-formal-methods experts to check new
 features and properties as ShardStore has evolved.
 
+### Materials
+
 [Download slides (PDF)](/assets/talks/2022-02-formal-methods-at-amazon-S3.pdf)
 
 {% include speakerdeck.html

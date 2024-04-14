@@ -38,6 +38,8 @@ watchdogs can detect 20 cases with a median detection time of 4.2 seconds, and
 pinpoint the failure scope for 18 cases. The generated watchdogs also expose an
 unknown, confirmed partial failure bug in the latest version of ZooKeeper.
 
+### Materials
+
 [Download slides (PDF)](/assets/talks/2022-05-understanding-partial-failures.pdf)
 
 {% include speakerdeck.html

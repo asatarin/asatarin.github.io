@@ -35,6 +35,8 @@ by minimizing the blast radius of individual, regional, and global failure event
 key tradeoffs in various hardware offloading solutions; and (iv) identifying the pros/cons of the alternative solutions
 and explaining why seemingly promising ideas would not work in practice.
 
+### Materials
+
 Slides TBD.
 
 Video TBD.

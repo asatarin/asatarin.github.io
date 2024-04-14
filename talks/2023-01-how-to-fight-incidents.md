@@ -35,6 +35,8 @@ help make the services resilient. Finally, we uncover interesting insights by a 
 analysis that correlates different troubleshooting stages (detection, root-causing and mitigation),
 and provide guidance on how to tackle complex incidents through automation or testing at different granularity.
 
+### Materials
+
 [Download slides (PDF)](/assets/talks/2023-01-how-to-fight-production-incidents.pdf)
 
 {% include speakerdeck.html

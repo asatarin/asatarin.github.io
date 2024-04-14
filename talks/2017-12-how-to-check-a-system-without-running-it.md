@@ -23,6 +23,8 @@ how far it was useful for our project.
 This talk will be helpful for those who want to learn an easy way to
 increase system stability and availability in production.
 
+### Materials
+
 [Download slides in Russian (PDF)](/assets/talks/2017-12-talk-how-to-check-a-system-without-running-it.pdf)
 
 {% include speakerdeck.html

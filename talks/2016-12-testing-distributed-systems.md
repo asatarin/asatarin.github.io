@@ -34,6 +34,8 @@ Issues will be covered:
 The talk is built on an example of persistent distributed queue, which is being developed at Yandex.
 Attendees will learn how and what was tested by Andrey along Yandex team and what results were obtained.
 
+### Materials
+
 [Download slides in Russian (PDF)](/assets/talks/2016-12-talk-testing-distributed-systems.pdf)
 
 {% include speakerdeck.html

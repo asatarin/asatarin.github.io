@@ -21,6 +21,8 @@ Sanitizers are wonderful tools, which will help you find complex
 defects in C++ programs. I’ll talk about these tools,
 what they can do, and how to use them in your project.
 
+### Materials
+
 [Download slides in Russian (PDF)](/assets/talks/2017-07-talk-sanitizers-in-testing.pdf)
 
 {% include speakerdeck.html

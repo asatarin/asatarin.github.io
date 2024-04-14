@@ -43,6 +43,8 @@ and applied a series of static checkers DUPChecker that discovered
 over 800 cross-version data-format incompatibilities that can lead to upgrade failures.
 DUPChecker has been requested by HBase developers to be integrated into their toolchain.
 
+### Materials
+
 [Download slides (PDF)](/assets/talks/2022-09-upgrade-failures-in-distributed-systems.pdf)
 
 {% include speakerdeck.html
