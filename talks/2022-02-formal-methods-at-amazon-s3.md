@@ -1,16 +1,21 @@
 ---
+
+# @formatter:off
 title: Formal Methods at Amazon S3
-description: Presentation on "Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3" paper for distributed systems reading group.
+description: >
+  Presentation on "Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3" paper for
+  distributed systems reading group.
 date: 2022-02-02
 image: /assets/thumbnails/2022-02-formal-methods-at-amazon-s3.jpg
 layout: talk
+# @formatter:on
 ---
 
 {% comment %}
 Comments and feedback for the talk https://docs.google.com/document/d/1k0MLqGJOKMozLoWKEvPwXCzOiTRuMd9Orw9zT0eDpic/edit#
 {% endcomment %}
 
-This is a talk on "Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3"
+This is a talk on "Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3"
 paper for distributed systems [reading group](http://charap.co/category/reading-group/)
 lead by [Aleksey Charapko](https://twitter.com/AlekseyCharapko).
 
