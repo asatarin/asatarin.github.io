@@ -7,13 +7,11 @@ description: >
   systems reading group.
 date: 2024-05-02
 layout: talk
-published: false
-sitemap: false
 # @formatter:on
 ---
 
 This is a talk on "What's the Story in EBS Glory: Evolutions and Lessons in Building Cloud Block Store"
-paper for distributed systems [reading group](http://charap.co/category/reading-group/).
+paper for [distributed systems reading group](http://charap.co/category/reading-group/).
 
 ### Paper
 
@@ -45,5 +43,6 @@ Video TBD.
 
 - "What's the Story in EBS Glory: Evolutions and Lessons in Building Cloud Block
   Store" [paper](https://www.usenix.org/conference/fast24/presentation/zhang-weidong)
-- ["What's the Story in EBS Glory"](https://youtu.be/37X8vCuLDRg) presentation video from FAST 2024
+- ["What's the Story in EBS Glory"](https://youtu.be/37X8vCuLDRg) presentation video
+  from [FAST 2024](https://www.usenix.org/conference/fast24/technical-sessions)
 
