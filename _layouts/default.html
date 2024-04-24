@@ -19,10 +19,11 @@
       <h1 class="page-title">{{ page.title | default: site.github.repository_name }}</h1>
     </header>
 
+    <div class="print-content">
+      Self link — <a href="{{ page.url | absolute_url }}">{{ page.url | absolute_url }}</a>
+    </div>
+
     <main class="main-content" role="main">
-      <div class="print-content">
-        Self link — <a href="{{ page.url | absolute_url }}">{{ page.url | absolute_url }}</a>
-      </div>
 
       {% include anchor_headings.html html=content beforeHeading=true anchorBody="<span class='anchor'>#</span>" anchorAttrs="tabindex='-1'" %}
 
