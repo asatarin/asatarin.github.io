@@ -48,4 +48,5 @@ Video TBD.
   Store" [paper](https://www.usenix.org/conference/fast24/presentation/zhang-weidong)
 - ["What's the Story in EBS Glory"](https://youtu.be/37X8vCuLDRg) presentation video
   from [FAST 2024](https://www.usenix.org/conference/fast24/technical-sessions)
-
+- [Formal Methods at Amazon S3](2022-02-formal-methods-at-amazon-s3.md) — I gave an overview talk on one of the papers
+  referenced
