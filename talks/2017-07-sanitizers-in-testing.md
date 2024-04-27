@@ -26,7 +26,7 @@ what they can do, and how to use them in your project.
 [Download slides in Russian (PDF)](/assets/talks/2017-07-talk-sanitizers-in-testing.pdf)
 
 {% include speakerdeck.html
-slide="2" data_id="bcb48dac52af45049d477d8ab9d4b389"
+slide = "2" data_id = "bcb48dac52af45049d477d8ab9d4b389"
 print_alt_url = "https://speakerdeck.com/asatarin/moitie-ruki-pieried-iedoi-ili-sanitaiziery-v-tiestirovanii"
 %}
 

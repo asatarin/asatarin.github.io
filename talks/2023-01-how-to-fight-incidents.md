@@ -40,7 +40,7 @@ and provide guidance on how to tackle complex incidents through automation or te
 [Download slides (PDF)](/assets/talks/2023-01-how-to-fight-production-incidents.pdf)
 
 {% include speakerdeck.html
-data_id="81e6da6877c5410eb0780b44698f11b0"
+data_id = "81e6da6877c5410eb0780b44698f11b0"
 print_alt_url = "https://speakerdeck.com/asatarin/how-to-fight-production-incidents"
 %}
 

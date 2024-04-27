@@ -26,7 +26,7 @@ This talk will be useful for testers and Java developers.
 [Download slides in Russian (PDF)](/assets/talks/2018-05-talk-equalsverifier-and-errorprone.pdf)
 
 {% include speakerdeck.html
-data_id="d8ba17b409c147aa8c59377ecf5d17ef"
+data_id = "d8ba17b409c147aa8c59377ecf5d17ef"
 print_alt_url = "https://speakerdeck.com/asatarin/equalsverifier-errorprone-i-vsie-vsie-vsie-gieizienbagh-pitier-2018"
 %}
 
