@@ -48,5 +48,9 @@ Video TBD.
   Store" [paper](https://www.usenix.org/conference/fast24/presentation/zhang-weidong)
 - ["What's the Story in EBS Glory"](https://youtu.be/37X8vCuLDRg) presentation video
   from [FAST 2024](https://www.usenix.org/conference/fast24/technical-sessions)
+- [More Than Capacity: Performance-oriented Evolution of Pangu in Alibaba](https://www.usenix.org/conference/fast23/presentation/li-qiang-deployed) —
+  distributed file system Pangu is used as a foundation for EBS in Alibaba Cloud
 - [Formal Methods at Amazon S3](2022-02-formal-methods-at-amazon-s3.md) — I gave an overview talk on one of the papers
   referenced
+- [Millions of Tiny Databases](https://www.usenix.org/conference/nsdi20/presentation/brooker) — paper on AWS EBS control
+  plane configuration database
