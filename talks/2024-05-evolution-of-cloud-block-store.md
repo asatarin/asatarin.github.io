@@ -38,7 +38,12 @@ and explaining why seemingly promising ideas would not work in practice.
 
 ### Materials
 
-Slides TBD.
+[Download slides (PDF)](/assets/talks/2024-05-evolution-of-cloud-block-store.pdf)
+
+{% include speakerdeck.html
+data_id = "8216f588ffd84b66a6fd545b6adb0f1a"
+print_alt_url = "https://speakerdeck.com/asatarin/evolution-of-cloud-block-store"
+%}
 
 Video TBD.
 
