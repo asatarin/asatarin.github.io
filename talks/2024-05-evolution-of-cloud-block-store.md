@@ -7,6 +7,7 @@ description: >
   systems reading group.
 date: 2024-05-02
 layout: talk
+image: /assets/thumbnails/2024-05-evolution-of-cloud-block-store.png
 # @formatter:on
 ---
 
