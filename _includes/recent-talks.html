@@ -1,5 +1,4 @@
-<br>
-<p>Recent talks:</p>
+<p>Recent talks:
 <ul>
   {% assign recent_talks = site.pages | where: "layout", "talk" | sort: "date" | reverse %}
   {% assign limit_num = {{ include.limit | default: 4 }} %}
@@ -11,3 +10,4 @@
     {% endif %}
   {% endfor %}
 </ul>
+</p>
