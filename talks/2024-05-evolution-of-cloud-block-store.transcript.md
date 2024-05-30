@@ -11,7 +11,7 @@ This is a paper from Alibaba about their Cloud Blockstore.
 
 #### Outline
 
-So the rough outline, I'm going to be talking about the evolution of their service from version 1 to version 3 and
+The rough outline, I'm going to be talking about the evolution of their service from version 1 to version 3 and
 there's also EBSX, which is slightly different.
 I'll talk about what that is.
 Their discussion about elasticity in latency and throughput and how they address those challenges, challenges
@@ -19,19 +19,19 @@ availability, quite important for any cloud service out there and overall conclu
 
 #### Cloud Block Store
 
-So what is even the Cloud Blockstore also known as Elastic Blockstore?
+What is even the Cloud Blockstore also known as Elastic Blockstore?
 This is basically a persistent virtual disk in the cloud.
-So you cannot have a persistent disk in your virtual machine in the cloud because once the machine disappears, the data
-disappears. So you have to come up with something else. And something else is the Cloud Blockstore or Elastic Block
+You cannot have a persistent disk in your virtual machine in the cloud because once the machine disappears, the data
+disappears. You have to come up with something else. And something else is the Cloud Blockstore or Elastic Block
 Storage. You can attach it to a virtual machine.
 
 {% include timecode.html time="1:18" %}
 You can scale it at scale IOPS throughput capacity in a pretty wide range.
 
-So you can have a small disk, you can have a larger disk, you can scale it up online without changing anything, without
+You can have a small disk, you can have a larger disk, you can scale it up online without changing anything, without
 reattaching hardware or anything like that because it's the cloud, all those things you do through API.
 
-So that's roughly what we're talking about.
+That's roughly what we're talking about.
 And this is a service like that from Alibaba Cloud, one of the big ones, Cloud, outside of EBS specifically.
 The main focus of the, one of the main focuses of the paper is evolution of that service through years and how they
 first started and how they addressed upcoming challenges.
@@ -39,9 +39,9 @@ first started and how they addressed upcoming challenges.
 #### EBS Architecture Evolution
 
 {% include timecode.html time="1:49" %}
-So they mentioned that EBS first version came out in 2012, so pretty old.
+They mentioned that EBS first version came out in 2012, so pretty old.
 And that was based on a regular TCP protocol and was on a hard drive.
-So spinning drives pretty slow, relatively speaking.
+Spinning drives are pretty slow, relatively speaking.
 
 The next step in evolution was version two with Luna, their custom protocol for networking and based on SSDs, where one
 of the features they introduced is background erasure coding and compression to address basically storage costs or
@@ -49,11 +49,11 @@ storage efficiency.
 
 Next step is EBS3, as far as I think that's there, the latest step with additional features like foreground erasure
 coding and compression.
-So not only somewhere in the background, but also in the write path.
+Not only somewhere in the background, but also in the write path.
 And I'm going to be talking about that.
 They mentioned a feature called auto performance level, but I don't think they elaborate in the paper on what that
 actually is.
-So I'm not going to be talking about that at all.
+I'm not going to be talking about that at all.
 
 They talk about the logical failure domain, which is their response to challenges of availability.
 I'm going to be talking about that later.
@@ -67,19 +67,19 @@ And I'm going to be talking about that later.
 #### EBS1: An Initial Foray
 
 {% include timecode.html time="3:18" %}
-So what is evolution?
+What is evolution?
 What did the first version look like?
 And the first version, remember it's 2012, looked like this.
-So on the left, you have your compute, your virtual machines, which interact with the service via a block client.
+On the left, you have your compute, your virtual machines, which interact with the service via a block client.
 And VD is a virtual disk.
-So you can have a bunch of virtual disks attached to a virtual machine.
+You can have a bunch of virtual disks attached to a virtual machine.
 
 And they talk through a block client, two sides on the right, which is going to be a storage cluster where there is a
 block manager providing fault tolerance with Paxos.
 And that basically maps your virtual disk into a block server.
 
 And each virtual disk is managed by a single block server.
-So you always go for a single server for your single virtual disk.
+You always go for a single server for your single virtual disk.
 And further to the right is chunk services, which are basically storing the data.
 
 Each sub data is stored three ways replicated.
@@ -107,7 +107,7 @@ And that has certain challenges in terms of limits.
 First of all, you store data three times for replicating.
 This is pretty big overhead long term.
 There are limits in performance because as I said, every virtual disk basically goes through a single block server.
-So you are bound by the performance of that block server.
+You are bound by the performance of that block server.
 If it's not performing enough, you cannot overtake that in terms of that bottleneck.
 And there could be some hotspots because the block server is also not completely like you can have software from some
 hotspots.
