@@ -46,7 +46,7 @@ data_id = "8216f588ffd84b66a6fd545b6adb0f1a"
 print_alt_url = "https://speakerdeck.com/asatarin/evolution-of-cloud-block-store"
 %}
 
-Video TBD.
+{% include youtube.html video_id="IYMsY7Y-ePA" %}
 
 ### References
 
