@@ -60,3 +60,9 @@ print_alt_url = "https://speakerdeck.com/asatarin/evolution-of-cloud-block-store
   referenced
 - [Millions of Tiny Databases](https://www.usenix.org/conference/nsdi20/presentation/brooker) — paper on AWS EBS control
   plane configuration database
+- [The Tail at Scale](https://research.google/pubs/the-tail-at-scale/) — classical paper on improving high percentile
+  latency in distributed systems
+
+### Transcript
+
+{% include transcript.html filename="2024-05-evolution-of-cloud-block-store.transcript.md" %}
