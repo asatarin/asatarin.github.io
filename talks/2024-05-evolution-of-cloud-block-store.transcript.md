@@ -64,7 +64,7 @@ And the most recent feature they have is federated block manager, which is also 
 the control plane level for their service.
 And I'm going to be talking about that later.
 
-#### EBS1
+#### EBS1: An Initial Foray
 
 {% include timecode.html time="3:18" %}
 So what is evolution?
@@ -115,7 +115,7 @@ hotspots.
 They also found that to guarantee any kind of SLO, it's hard to do with spinning hard drives and the kernel TCP/AP.
 So they kind of do not like that architecture and that approach for those reasons.
 
-#### EBS2
+#### EBS2: Speedup with Space Efficiency
 
 {% include timecode.html time="6:09" %}
 And to address all of those, they basically come up with EBS2, which is speedup in terms of performance and improving
@@ -228,6 +228,8 @@ But network complication, it's not only your pain for more network, your through
 because every time you write something, you write way more to the network, which is one of the things they want to
 address in version 3.
 
+# EBS3: Reducing Network Amplification
+
 {% include timecode.html time="13:34" %}
 So the main goal is basically reducing that number to something more manageable for version 3.
 That's like how to reduce the network complications there.
@@ -309,6 +311,8 @@ And the last one is elasticity of capacity.
 I'm going to be talking about latency and throughput and IOPS but not capacity because they barely dedicate any space
 for capacity discussion in the paper.
 
+#### Elasticity: Latency
+
 {% include timecode.html time="19:01" %}
 So latency.
 These are their graphs for basically for latency averages on the left and high-labor latency on the write and where this
@@ -372,6 +376,8 @@ the other.
 You cannot, for example, throughput and IO where you can scale those things by throwing more hardware at a particular
 disk or spreading it out or scaling it up or allocating resources for a particular disk.
 Latency in that sense is coarsely granulated.
+
+#### Elasticity: Throughput and IOPS
 
 {% include timecode.html time="23:52" %}
 So the next challenge in elasticity is throughput and IOPS per disk.
