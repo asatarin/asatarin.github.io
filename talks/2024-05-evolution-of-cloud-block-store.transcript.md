@@ -228,7 +228,7 @@ But network complication, it's not only your pain for more network, your through
 because every time you write something, you write way more to the network, which is one of the things they want to
 address in version 3.
 
-# EBS3: Reducing Network Amplification
+#### EBS3: Reducing Network Amplification
 
 {% include timecode.html time="13:34" %}
 So the main goal is basically reducing that number to something more manageable for version 3.
