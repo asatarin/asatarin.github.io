@@ -318,13 +318,13 @@ So latency.
 These are their graphs for basically for latency averages on the left and high-labor latency on the write and where this
 latency comes from.
 There are different parts of the system and how they contribute to latency in those scenarios.
-One is block cache, first hop of the network, the block server itself, the second hop of the network, Pangoo storage,
-the disk I/O in the Pangoo itself, things like that.
+One is block cache, first hop of the network, the block server itself, the second hop of the network, Pangu storage,
+the disk I/O in the Pangu itself, things like that.
 
 Firstly, let's talk about averages.
 This is how they discuss it in the paper.
 And the thing they notice is like if you look at those colors, on average for EBS3, the network, the second hop of the
-network and the actual disk I/O on Pangoo takes a pretty big part of the latency.
+network and the actual disk I/O on Pangu takes a pretty big part of the latency.
 
 You can get rid of the first hop because it's basically hopped from a virtual machine to your service.
 But you can get rid of a second hop and this is what they're trying to do here.
@@ -336,15 +336,15 @@ Average latency, the cause of that is hardware being there, a network hop being 
 They developed EBSX, which basically stores data locally without the second hop to Pango in persistent memory, which
 completely removes the second hop and reduces latency to like an actual I/O device.
 And they still store three replicas of that because they need full tolerance and persistence and flush the data
-eventually for Pangoo for costs, reasons, and yeah, because the P memory is way more expensive than SSDs.
+eventually for Pangu for costs, reasons, and yeah, because the P memory is way more expensive than SSDs.
 
 That basically gives them this graph for EBSX.
 If you see latency compared to top is write, bottom is read path significantly better for that, but obviously costs
-are also higher because you need additional hardware and you still leverage Pangoo on the background.
+are also higher because you need additional hardware and you still leverage Pangu on the background.
 You still store basically the same amount, but on top of that, you kind of “cache” writes in persistent memory.
 
 This is an average case for basically more latency sensitive, more expensive, they called EBSX.
-Again, we completely eliminate the second hop and like Pangoo is not there, like the disk I/O is barely visible,
+Again, we completely eliminate the second hop and like Pangu is not there, like the disk I/O is barely visible,
 persistent memory on those scales.
 
 {% include timecode.html time="21:43" %}
