@@ -1,6 +1,7 @@
 ---
 title: Public Talks
 description: Public talks and interviews given by Andrey Satarin on various tech subjects
+image: /assets/thumbnails/thumbnail-talks.png
 ---
 
 {% assign all_talks = site.pages | where: "layout", "talk" | sort: "date" | reverse %}
