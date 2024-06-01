@@ -1,6 +1,6 @@
 ---
 title: Public Talks
-description: Public talks and interviews given by Andrey Satarin on various tech subjects
+description: Public talks and interviews given by Andrey Satarin on various tech subjects.
 image: /assets/thumbnails/thumbnail-talks.png
 ---
 
