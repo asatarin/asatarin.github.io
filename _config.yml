@@ -20,10 +20,6 @@ social:
     - https://discuss.systems/@asatarin
     - https://asatarin.github.io/
 
-feed:
-  path: /feed.xml
-  posts_limit: 20
-
 defaults:
   - 
     scope:
@@ -41,7 +37,6 @@ permalink: /:year/:title/
 url: "https://asatarin.github.io" # the base hostname & protocol for the sitemap
 
 plugins:
-  - jekyll-feed
   - jekyll-redirect-from
   - jekyll-sitemap
   

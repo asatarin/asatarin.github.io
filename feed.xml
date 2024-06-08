@@ -1,0 +1,63 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.lang }}">
+  <link href="{{ page.url | absolute_url }}" rel="self" type="application/atom+xml" />
+  <link href="{{ '/' | absolute_url }}" rel="alternate" type="text/html" hreflang="{{ site.lang }}"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ page.url | absolute_url | xml_escape }}</id>
+
+  {% assign title = site.title | default: site.name %}
+
+  {% if title %}
+    <title type="html">{{ title | smartify | xml_escape }}</title>
+  {% endif %}
+
+  {% if site.description %}
+    <subtitle>{{ site.description | xml_escape }}</subtitle>
+  {% endif %}
+
+  {% if site.author %}
+    <author>
+        <name>{{ site.author.name | default: site.author | xml_escape }}</name>
+    </author>
+  {% endif %}
+
+  {% assign posts = site.pages | where_exp: "page", "page.date" %}
+
+  {% unless site.show_drafts %}
+    {% assign posts = posts | where_exp: "post", "post.draft != true" %}
+  {% endunless %}
+  {% assign posts = posts | sort: "date" | reverse %}
+  {% assign posts_limit = 20 %}
+  {% for post in posts limit: posts_limit %}
+    <entry>
+      {% assign post_title = post.title | smartify | strip_html | normalize_whitespace | xml_escape %}
+
+      <title type="html">{{ post_title }}</title>
+      <link href="{{ post.url | absolute_url }}" rel="alternate" type="text/html" title="{{ post_title }}" />
+      <published>{{ post.date | date_to_xmlschema }}</published>
+      <updated>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</updated>
+      <id>{{ post.url | absolute_url | xml_escape }}</id>
+      <content type="html" xml:base="{{ post.url | absolute_url | xml_escape }}"><![CDATA[{{ post.content | strip }}]]></content>
+
+      {% assign post_author = post.author | default: post.authors[0] | default: site.author %}
+      {% assign post_author_name = post_author.name | default: post_author %}
+
+      <author>
+          <name>{{ post_author_name | default: "" | xml_escape }}</name>
+      </author>
+
+      {% assign post_summary = post.description | default: post.excerpt %}
+      {% if post_summary and post_summary != empty %}
+        <summary type="html"><![CDATA[{{ post_summary | strip_html | normalize_whitespace }}]]></summary>
+      {% endif %}
+
+      {% assign post_image = post.image | absolute_url %}
+      {% if post_image %}
+        <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" />
+        <media:content medium="image" url="{{ post_image | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" />
+      {% endif %}
+    </entry>
+  {% endfor %}
+</feed>
