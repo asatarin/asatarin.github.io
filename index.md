@@ -7,6 +7,10 @@ description: Personal Website
 Private notes https://docs.google.com/document/d/15TvHbeZGgTvKGpxWFxH84Cm9LXXmIF8botfuBHAPBJA/edit#
 {% endcomment %}
 
+## Featured
+
+{% include featured-pages-list.md %}
+
 You can check out [my talks](/talks) or list of resources on [testing distributed systems](/testing-distributed-systems)
 I maintain.
 
