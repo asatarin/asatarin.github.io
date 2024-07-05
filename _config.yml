@@ -40,6 +40,6 @@ plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
 
-markdown: kramdown
+markdown: GFM
 kramdown:
   strict_mode: true
