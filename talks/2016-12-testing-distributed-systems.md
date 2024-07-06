@@ -54,7 +54,7 @@ print_alt_url = "https://speakerdeck.com/asatarin/tiestirovaniie-raspriedielienn
   read only one paper this is the one.
 - [Inside Yandex: Data Storage and Processing Infrastructure](https://events.yandex.ru/events/meetings/15-oct-2016/) —
   several talks on data infrastructure at Yandex (in Russian)
-- [Talks by Kyle Kingsbury (Aphyr)](http://jepsen.io/talks) — if you are testing distributed systems you must be
+- [Talks by Kyle Kingsbury (Aphyr)](https://jepsen.io/talks) — if you are testing distributed systems you must be
   familiar with Kyle's work
 
 Not exactly references, but you could check out interviews with me on testing distributed

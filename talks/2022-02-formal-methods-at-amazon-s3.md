@@ -16,7 +16,7 @@ Comments and feedback for the talk https://docs.google.com/document/d/1k0MLqGJOK
 {% endcomment %}
 
 This is a talk on "Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3"
-paper for distributed systems [reading group](http://charap.co/category/reading-group/)
+paper for distributed systems [reading group](https://charap.co/category/reading-group/)
 lead by [Aleksey Charapko](https://twitter.com/AlekseyCharapko).
 
 ### Paper
@@ -55,12 +55,12 @@ print_alt_url = "https://speakerdeck.com/asatarin/formal-methods-at-amazon-s3"
 
 - "Using lightweight formal methods to validate a key-value storage node in Amazon S3"
   [paper](https://dl.acm.org/doi/abs/10.1145/3477132.3483540)
-- [Reading Group. Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3](http://charap.co/reading-group-using-lightweight-formal-methods-to-validate-a-key-value-storage-node-in-amazon-s3/)
-  blog post from [Aleksey Charapko](http://charap.co/about-me/) on the reading group meeting
+- [Reading Group. Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3](https://charap.co/reading-group-using-lightweight-formal-methods-to-validate-a-key-value-storage-node-in-amazon-s3/)
+  blog post from [Aleksey Charapko](https://charap.co/about-me/) on the reading group meeting
 - [Testing Distributed Systems](/testing-distributed-systems/) — if you are interested
   in approaches to testing distributed systems, there is curated list I maintain
 - [Talk](https://youtu.be/YdxvOPenjWI) at SOSP 2021
-- [Blog post](http://muratbuffalo.blogspot.com/2021/10/using-lightweight-formal-methods-to.html) on the paper
+- [Blog post](https://muratbuffalo.blogspot.com/2021/10/using-lightweight-formal-methods-to.html) on the paper
   from [Murat Demirbas](https://twitter.com/muratdemirbas)
 
 ### Transcript

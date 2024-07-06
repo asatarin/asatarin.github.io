@@ -37,7 +37,7 @@ conference program committee (in Russian). We talked about distributed systems a
 
 #### Books
 
-* [“Distributed systems for fun and profit”](http://book.mixu.net/distsys/single-page.html) by Mikito Takada.  
+* [“Distributed systems for fun and profit”](https://book.mixu.net/distsys/single-page.html) by Mikito Takada.  
   This short book will give you a good grasp of some theoretical concepts without going too deep. it’s a good starting
   point to dive into distributed systems.
 

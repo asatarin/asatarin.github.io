@@ -17,7 +17,7 @@ These references came up during discussion and questions.
 
 #### Books
 
-- ["Distributed systems for fun and profit"](http://book.mixu.net/distsys/single-page.html)  
+- ["Distributed systems for fun and profit"](https://book.mixu.net/distsys/single-page.html)  
   This short book will give you a good grasp of some theoretical concepts without going too deep.
   it's a good starting point to dive into distributed systems.
 

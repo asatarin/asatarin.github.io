@@ -12,7 +12,7 @@ layout: talk
 ---
 
 This is a talk on "Understanding, Detecting and Localizing Partial Failures in Large System Software"
-paper for distributed systems [reading group](http://charap.co/category/reading-group/)
+paper for distributed systems [reading group](https://charap.co/category/reading-group/)
 lead by [Aleksey Charapko](https://twitter.com/AlekseyCharapko).
 
 ### Paper

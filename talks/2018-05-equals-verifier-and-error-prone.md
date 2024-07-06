@@ -14,9 +14,9 @@ conference. Video and slides are in Russian.
 
 Best kind of tests are ones that cost almost nothing, yet find defects.
 We’ll talk about two Java tools that are close to this ideal.
-First tool is [EqualsVerifier](http://jqno.nl/equalsverifier/) library,
+First tool is [EqualsVerifier](https://jqno.nl/equalsverifier/) library,
 which helps with testing equals() and hashCode() contracts.
-The second tool is [ErrorProne](http://errorprone.info/)
+The second tool is [ErrorProne](https://errorprone.info/)
 from Google — a compile-time checker for common mistakes in your code.
 
 This talk will be useful for testers and Java developers.
@@ -34,10 +34,10 @@ print_alt_url = "https://speakerdeck.com/asatarin/equalsverifier-errorprone-i-vs
 
 ### References
 
-- [EqualsVerifier](http://jqno.nl/equalsverifier/)
+- [EqualsVerifier](https://jqno.nl/equalsverifier/)
 - [“Not all equals methods are created equal”](https://youtu.be/pNJ_O10XaoM) by Jan Ouwens
 - [How to Write an Equality Method in Java](https://www.artima.com/lejava/articles/equality.html)
-- [How Do I Correctly Implement the equals() Method?](http://www.drdobbs.com/jvm/java-qa-how-do-i-correctly-implement-th/184405053)
-- [Error Prone](http://errorprone.info/)
+- [How Do I Correctly Implement the equals() Method?](https://www.drdobbs.com/jvm/java-qa-how-do-i-correctly-implement-th/184405053)
+- [Error Prone](https://errorprone.info/)
 - [AutoValue](https://github.com/google/auto/blob/master/value/userguide/index.md) — Google way to create value objects
 - [Immutables](https://immutables.github.io/) — Java annotation processor to create value objects and more

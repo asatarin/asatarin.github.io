@@ -12,7 +12,7 @@ image: /assets/thumbnails/2024-05-evolution-of-cloud-block-store.png
 ---
 
 This is a talk on "What's the Story in EBS Glory: Evolutions and Lessons in Building Cloud Block Store"
-paper for [distributed systems reading group](http://charap.co/category/reading-group/) lead
+paper for [distributed systems reading group](https://charap.co/category/reading-group/) lead
 by [Aleksey Charapko](https://twitter.com/AlekseyCharapko).
 
 ### Paper
