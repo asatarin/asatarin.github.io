@@ -20,6 +20,12 @@ a {
   }
 }
 
+.plain {
+  &:hover {
+    border-bottom: none;
+  }
+}
+
 .page-header {
   color: $header-heading-color;
   text-align: left;
@@ -147,5 +153,31 @@ span.timecode {
     display: block;
     margin-bottom: 1rem;
     margin-top: 1rem;
+  }
+}
+
+.featured-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.featured-card {
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  @include large {
+    width: 33%;
+  }
+
+  @include medium {
+    width: 50%;
+  }
+
+  @include small {
+    width: 100%;
   }
 }

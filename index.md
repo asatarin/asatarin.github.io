@@ -9,7 +9,7 @@ Private notes https://docs.google.com/document/d/15TvHbeZGgTvKGpxWFxH84Cm9LXXmIF
 
 ## Featured
 
-{% include featured-pages-list.md %}
+{% include featured-pages-list.html %}
 
 You can check out [my talks](/talks) or list of resources on [testing distributed systems](/testing-distributed-systems)
 I maintain.
