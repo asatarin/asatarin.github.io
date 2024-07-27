@@ -11,9 +11,6 @@ Private notes https://docs.google.com/document/d/15TvHbeZGgTvKGpxWFxH84Cm9LXXmIF
 
 {% include featured-pages-list.html %}
 
-You can check out [my talks](/talks) or list of resources on [testing distributed systems](/testing-distributed-systems)
-I maintain.
-
 ### Contacts
 
 * Professional [profile on LinkedIn](https://www.linkedin.com/in/asatarin/)
