@@ -7,20 +7,20 @@ description: Personal Website
 Private notes https://docs.google.com/document/d/15TvHbeZGgTvKGpxWFxH84Cm9LXXmIF8botfuBHAPBJA/edit#
 {% endcomment %}
 
-## Featured
+### Featured
 
 {% include featured-pages-list.html %}
 
 You can check out [my talks](/talks) or list of resources on [testing distributed systems](/testing-distributed-systems)
 I maintain.
 
-## Contacts
+### Contacts
 
 * Professional [profile on LinkedIn](https://www.linkedin.com/in/asatarin/)
 * Twitter [@asatarin](https://twitter.com/asatarin)
 * Mastodon [https://discuss.systems/@asatarin](https://discuss.systems/@asatarin)
 
-## Bio
+### Bio
 
 Andrey is a Staff Site Reliability Engineer at Google, responsible for ensuring reliability of petabyte-scale
 OLAP/query processing systems, ranking among the top five in scale at Google.
