@@ -169,13 +169,7 @@ span.timecode {
   padding-top: 1em;
   padding-bottom: 1em;
 
-  @include large {
-    width: 33%;
-  }
-
-  @include medium {
-    width: 50%;
-  }
+  width: 33%;
 
   @include small {
     width: 100%;
