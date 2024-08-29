@@ -126,6 +126,14 @@ a {
   height: 100%;
 }
 
+details ::marker {
+  content: '▶';
+}
+
+details[open] ::marker {
+  content: '▼';
+}
+
 span.timecode {
   color: $body-link-color;
   text-decoration: none;
