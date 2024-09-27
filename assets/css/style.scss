@@ -176,6 +176,10 @@ span.timecode {
   padding-right: 0.6em;
   padding-top: 1em;
   padding-bottom: 1em;
+  border-style: solid;
+  border-radius: 1em;
+  border-color: $hr-border-color;
+  border-width: 1px;
 
   width: 33%;
 
