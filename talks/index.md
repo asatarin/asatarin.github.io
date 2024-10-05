@@ -10,9 +10,9 @@ image: /assets/thumbnails/thumbnail-talks.png
 ### English
 
 <ul> 
-  {% for post in all_talks -%}
-    {% assign year_published = post.date | date: '%Y' -%}
-    {% if year_published >= border_year -%}
+  {%- for post in all_talks -%}
+    {%- assign year_published = post.date | date: '%Y' -%}
+    {%- if year_published >= border_year %}
       <li>
         <a href="{{ post.url | relative_url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y" }}) <br/>
       </li>
@@ -23,9 +23,9 @@ image: /assets/thumbnails/thumbnail-talks.png
 ### Russian
 
 <ul> 
-  {% for post in all_talks -%}
-    {% assign year_published = post.date | date: '%Y' -%}
-    {% if year_published < border_year -%}
+  {%- for post in all_talks -%}
+    {%- assign year_published = post.date | date: '%Y' -%}
+    {%- if year_published < border_year %}
       <li>
         <a href="{{ post.url | relative_url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y" }}) <br/>
       </li>
