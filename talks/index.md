@@ -16,8 +16,8 @@ image: /assets/thumbnails/thumbnail-talks.png
       <li>
         <a href="{{ post.url | relative_url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y" }}) <br/>
       </li>
-    {% endif -%}
-  {% endfor -%}
+    {%- endif -%}
+  {%- endfor %}
 </ul>
 
 ### Russian
@@ -29,6 +29,6 @@ image: /assets/thumbnails/thumbnail-talks.png
       <li>
         <a href="{{ post.url | relative_url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y" }}) <br/>
       </li>
-    {% endif -%}
-  {% endfor -%}
+    {%- endif -%}
+  {%- endfor %}
 </ul>
