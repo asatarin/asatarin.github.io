@@ -2,9 +2,9 @@
     {% assign recent_talks = site.pages | where: "layout", "talk" | where_exp: "post", "post.url != page.url" %}
     {% assign recent_talks = recent_talks | sort: "date" | reverse %}
     {% assign limit_num = {{ include.limit | default: 4 }} %}
-    {% for post in recent_talks limit:limit_num %}
+    {%- for post in recent_talks limit:limit_num -%}
     <li>
         <a href="{{ post.url | relative_url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y"" }}) <br/>
     </li>
-    {% endfor %}
+    {%- endfor -%}
 </ul>
