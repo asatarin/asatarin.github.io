@@ -1,6 +1,6 @@
 ---
 title: About
-description: Personal Website
+description: Contacts and bio
 ---
 
 ### Contacts
