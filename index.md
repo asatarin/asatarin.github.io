@@ -15,4 +15,4 @@ Private notes https://docs.google.com/document/d/15TvHbeZGgTvKGpxWFxH84Cm9LXXmIF
 
 {% include recent-talks-list.html %}
 
-More public [talks](/talks/).
+All public [talks](/talks/).
