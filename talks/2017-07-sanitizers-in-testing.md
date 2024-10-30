@@ -6,20 +6,8 @@ image: /assets/thumbnails/2017-sanitizers-in-testing.jpg
 layout: talk
 ---
 
-Presented in Saint-Petersburg in June 2017
-at [Heisenbug](https://heisenbug.ru/en/)
-conference. Video and slides are in Russian.
-
-### Abstract
-
-As the saying goes, “with great power comes great responsibility”.
-C++ is a language with great expression power and vast capabilities.
-One have to pay for these capabilities with possible defects,
-which are absent in programs written in managed languages.
-
-Sanitizers are wonderful tools, which will help you find complex
-defects in C++ programs. I’ll talk about these tools,
-what they can do, and how to use them in your project.
+Presented in Saint-Petersburg in June 2017 at [Heisenbug](https://heisenbug.ru/en/) conference. Video and slides are in
+Russian.
 
 ### Materials
 
@@ -31,6 +19,17 @@ print_alt_url = "https://speakerdeck.com/asatarin/moitie-ruki-pieried-iedoi-ili-
 %}
 
 {% include youtube.html video_id="Aeu7abIKgGs" %}
+
+### Abstract
+
+As the saying goes, “with great power comes great responsibility”.
+C++ is a language with great expression power and vast capabilities.
+One have to pay for these capabilities with possible defects,
+which are absent in programs written in managed languages.
+
+Sanitizers are wonderful tools, which will help you find complex
+defects in C++ programs. I’ll talk about these tools,
+what they can do, and how to use them in your project.
 
 ### References
 
