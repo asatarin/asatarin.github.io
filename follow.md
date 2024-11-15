@@ -1,14 +1,13 @@
 ---
-title: Follow
+title: How to Follow
 description: How to follow me on the Internet
 ---
 
 ### RSS / Atom
 
-To follow RSS / Atom update feed on this website you need a feed reader. I
-recommend [https://feedly.com](https://feedly.com).
-Add any page on the website to Feedly or use direct Atom [feed]({{ '/feed.xml' | absolute_url }}) if neither works, copy
-full URL `{{ '/feed.xml' | absolute_url }}`
+To follow RSS / Atom feed on this website you need a feed reader. I recommend [Feedly](https://feedly.com).
+Add any page on the website to Feedly or use Atom [feed]({{ '/feed.xml' | absolute_url }}), if neither works,
+copy full URL `{{ '/feed.xml' | absolute_url }}`
 
 ### Other Platforms
 
