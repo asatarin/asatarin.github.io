@@ -9,6 +9,8 @@ description: Contacts and bio
 * Twitter [@asatarin](https://twitter.com/asatarin)
 * Mastodon [https://discuss.systems/@asatarin](https://discuss.systems/@asatarin)
 
+More ways to [follow](/follow/).
+
 ### Bio
 
 Andrey is a Staff Site Reliability Engineer at Google, responsible for ensuring reliability of petabyte-scale
