@@ -6,7 +6,7 @@ description: Poem about software development written by ChatGPT in the style of 
 layout: default
 date: 2023-03-25
 # @formatter:on
----[2023-03-ozymandias.md](2023-03-ozymandias.md)
+---
 
 ```
 Amidst a digital land of endless code,
