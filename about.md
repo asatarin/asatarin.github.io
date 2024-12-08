@@ -7,7 +7,7 @@ description: Contacts and bio
 
 * Profile on [LinkedIn](https://www.linkedin.com/in/asatarin/)
 * Twitter [@asatarin](https://twitter.com/asatarin)
-* Mastodon [https://discuss.systems/@asatarin](https://discuss.systems/@asatarin)
+* Bluesky [@asatarin.bsky.social](https://bsky.app/profile/asatarin.bsky.social)
 
 More ways to [follow](/follow/).
 
