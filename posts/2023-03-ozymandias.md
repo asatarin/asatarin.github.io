@@ -38,7 +38,10 @@ Of software's fleeting fame, its passing worth,\
 And strive to build, with care that will not fail,\
 A legacy that lasts beyond the earth.
 
+-----
+Poem about software development written by ChatGPT in the style of "Ozymandias" By Percy Bysshe Shelley
+
 ### References
 
-* [Ozymandias By Percy Bysshe Shelley](https://www.poetryfoundation.org/poems/46565/ozymandias)
+* ["Ozymandias" By Percy Bysshe Shelley](https://www.poetryfoundation.org/poems/46565/ozymandias)
 * A [version](https://x.com/jessejiryudavis/status/1848416115447202275) written by A. Jesse Jiryu Davis
