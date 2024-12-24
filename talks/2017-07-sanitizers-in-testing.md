@@ -41,4 +41,4 @@ what they can do, and how to use them in your project.
   talk on AddressSanitizer by Konstantin Serebryany at HighLoad 2012 in Moscow (in Russian)
 - [""go test -race" Under the Hood"](https://youtu.be/5erqWdlhQLA) by Kavya Joshi — explanation of "go race" which is
   based on ThreadSanitizer, presented at StrangeLoop 2016
-- [Konstantin Serebryany](https://research.google.com/pubs/KonstantinSerebryany.html) page at Google Research
+- [Konstantin Serebryany](https://research.google.com/pubs/KonstantinSerebryany.html?source=post_page---------------------------) page at Google Research
