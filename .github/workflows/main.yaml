@@ -7,17 +7,6 @@ on:
     branches: [ '*' ]
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v1
-      - uses: docker://dkhamsing/awesome_bot:latest
-        with:
-          entrypoint: sh
-          args: /github/workspace/.github/workflows/build.sh
-
   linkChecker:
     runs-on: ubuntu-latest
 
