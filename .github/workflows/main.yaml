@@ -12,8 +12,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - uses: docker://dkhamsing/awesome_bot:latest
-      with:
-        entrypoint: sh
-        args: /github/workspace/.github/workflows/build.sh 
+      - uses: actions/checkout@v1
+      - uses: docker://dkhamsing/awesome_bot:latest
+        with:
+          entrypoint: sh
+          args: /github/workspace/.github/workflows/build.sh
+
+  linkChecker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          fail: true
+          jobSummary: true
+          args: --base . --verbose --no-progress './**/*.md'
