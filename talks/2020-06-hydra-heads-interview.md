@@ -34,8 +34,8 @@ These references came up during discussion and questions.
 
 Paper reviews on [Amazon Aurora database](https://aws.amazon.com/rds/aurora/), with links to papers themselves:
 
-- [Amazon Aurora: design considerations for high throughput cloud-native relational databases](https://blog.acolyer.org/2019/03/25/amazon-aurora-design-considerations-for-high-throughput-cloud-native-relational-databases/)
-- [Amazon Aurora: on avoiding distributed consensus for I/Os, commits, and membership changes](https://blog.acolyer.org/2019/03/27/amazon-aurora-on-avoiding-distributed-consensus-for-i-os-commits-and-membership-changes/)
+- [Amazon Aurora: design considerations for high throughput cloud-native relational databases](https://web.archive.org/web/https://blog.acolyer.org/2019/03/25/amazon-aurora-design-considerations-for-high-throughput-cloud-native-relational-databases/)
+- [Amazon Aurora: on avoiding distributed consensus for I/Os, commits, and membership changes](https://web.archive.org/web/https://blog.acolyer.org/2019/03/27/amazon-aurora-on-avoiding-distributed-consensus-for-i-os-commits-and-membership-changes/)
 
 #### Papers
 

@@ -37,8 +37,8 @@ print_alt_url = "https://speakerdeck.com/asatarin/kak-provierit-sistiemu-nie-zap
 ### References
 
 - [Three days that shocked us in 2013](https://habrahabr.ru/company/odnoklassniki/blog/268413/) in Russian
-- ["Paxos Made Live – An Engineering Perspective"](https://blog.acolyer.org/2015/03/05/paxos-made-live/)
-- ["Early detection of configuration errors to reduce failure damage"](https://blog.acolyer.org/2016/11/29/early-detection-of-configuration-errors-to-reduce-failure-damage/)
+- ["Paxos Made Live – An Engineering Perspective"](https://web.archive.org/web/https://blog.acolyer.org/2015/03/05/paxos-made-live/)
+- ["Early detection of configuration errors to reduce failure damage"](https://web.archive.org/web/https://blog.acolyer.org/2016/11/29/early-detection-of-configuration-errors-to-reduce-failure-damage/)
 - [Gixy — open source tool from Yandex to make your Nginx configuration safe](https://habrahabr.ru/company/yandex/blog/327590/)
   in Russian
 - ["Configuration testing for Java developers: a case study"](https://youtu.be/Tk_nmV-mWOA) — talk

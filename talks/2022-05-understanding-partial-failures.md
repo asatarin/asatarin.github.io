@@ -54,7 +54,7 @@ print_alt_url = "https://speakerdeck.com/asatarin/understanding-partial-failures
 - Paper
   ["Understanding, Detecting and Localizing Partial Failures in Large System Software"](https://www.usenix.org/conference/nsdi20/presentation/lou)
 - [Talk at NSDI 2020](https://youtu.be/FZj_5fNZfcI)
-- [Post](https://blog.acolyer.org/2020/03/16/omega-gen/) from The Morning Paper blog
+- [Post](https://web.archive.org/web/https://blog.acolyer.org/2020/03/16/omega-gen/) from The Morning Paper blog
 - [Automatic Generation of Runtime Checkers for Production Distributed Systems](https://youtu.be/FI1atZ6wRoQ) — talk
   by Ryan Huang (one of the paper authors) at Strange Loop conference about this research
 
