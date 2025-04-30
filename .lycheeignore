@@ -5,3 +5,5 @@ https://www.linkedin.com/in/nikita-makarov-8075875/
 # ACM Digital Library returns 403 for robots
 https://dl.acm.org/.*
 https://scholar.google.com/.*
+https://habr.com/.*
+https://habrahabr.ru/.*

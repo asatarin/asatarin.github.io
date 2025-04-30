@@ -33,9 +33,9 @@ what they can do, and how to use them in your project.
 
 ### References
 
-- ["AddressSanitizer: A Fast Address Sanity Checker"](https://scholar.google.ru/scholar?cluster=2096653874509075773&hl=en&as_sdt=0,5)
-- ["MemorySanitizer: fast detector of uninitialized memory use in C++"](https://scholar.google.ru/scholar?cluster=3033949213014053600&hl=en&as_sdt=0,5)
-- ["ThreadSanitizer: data race detection in practice"](https://scholar.google.ru/scholar?cluster=14589555155353882213&hl=en&as_sdt=0,5)
+- ["AddressSanitizer: A Fast Address Sanity Checker"](https://scholar.google.com/scholar?cluster=2096653874509075773&hl=en&as_sdt=0,5)
+- ["MemorySanitizer: fast detector of uninitialized memory use in C++"](https://scholar.google.com/scholar?cluster=3033949213014053600&hl=en&as_sdt=0,5)
+- ["ThreadSanitizer: data race detection in practice"](https://scholar.google.com/scholar?cluster=14589555155353882213&hl=en&as_sdt=0,5)
 - [https://github.com/google/sanitizers](https://github.com/google/sanitizers)
 - [AddressSanitizer, или как сделать программы на C/С++ надежнее и безопаснее, Константин Серебряный](https://youtu.be/vKtNwALHb2k)—
   talk on AddressSanitizer by Konstantin Serebryany at HighLoad 2012 in Moscow (in Russian)
