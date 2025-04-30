@@ -45,4 +45,3 @@ Written by ChatGPT.
 ### References
 
 * ["Ozymandias" By Percy Bysshe Shelley](https://www.poetryfoundation.org/poems/46565/ozymandias)
-* A [version](https://x.com/jessejiryudavis/status/1848416115447202275) written by A. Jesse Jiryu Davis
