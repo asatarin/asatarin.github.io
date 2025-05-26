@@ -126,11 +126,11 @@ a {
   height: 100%;
 }
 
-details ::marker {
+details::marker {
   content: '▶';
 }
 
-details[open] ::marker {
+details[open]::marker {
   content: '▼';
 }
 
