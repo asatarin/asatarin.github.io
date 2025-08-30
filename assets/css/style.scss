@@ -9,7 +9,7 @@ $section-headings-color: #ba3925;
 $header-heading-color: #000;
 $hr-border-color: #cdcdcd;
 
-@import "{{ site.theme }}";
+@import "jekyll-theme-cayman";
 
 a {
   color: $body-link-color;
