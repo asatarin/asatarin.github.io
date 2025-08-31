@@ -37,7 +37,7 @@ print_alt_url = "https://speakerdeck.com/asatarin/equalsverifier-errorprone-i-vs
 - [EqualsVerifier](https://jqno.nl/equalsverifier/)
 - [“Not all equals methods are created equal”](https://youtu.be/pNJ_O10XaoM) by Jan Ouwens
 - [How to Write an Equality Method in Java](https://www.artima.com/lejava/articles/equality.html)
-- [How Do I Correctly Implement the equals() Method?](https://www.drdobbs.com/jvm/java-qa-how-do-i-correctly-implement-th/184405053)
+- [How Do I Correctly Implement the equals() Method?](https://web.archive.org/web/20250701134726/https://drdobbs.com/jvm/java-qa-how-do-i-correctly-implement-th/184405053)
 - [Error Prone](https://errorprone.info/)
 - [AutoValue](https://github.com/google/auto/blob/master/value/userguide/index.md) — Google way to create value objects
 - [Immutables](https://immutables.github.io/) — Java annotation processor to create value objects and more
