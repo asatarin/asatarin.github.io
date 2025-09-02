@@ -56,18 +56,26 @@ a {
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none; border-bottom: thin dashed;
+  }
+}
+
+.plain {
+  &:hover {
+    border-bottom: none;
   }
 }
 
 .page-header {
   color: $header-heading-color;
-  text-align: center;
-  background-color: $header-bg-color;
-  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+  text-align: left;
+  background-image: none;
+  margin: auto;
+  max-width: 64rem;
+  padding-bottom: 0rem;
 
   @include large {
-    padding: 5rem 6rem;
+    padding: 2rem 6rem 1rem;
   }
 
   @include medium {
@@ -77,6 +85,37 @@ a {
   @include small {
     padding: 2rem 1rem;
   }
+}
+
+.page-navigation {
+    text-align: right;
+    font-size: 0.8rem;
+    @media print {
+      display: none;
+    }
+}
+
+.navigation-link {
+    padding: 0em 0.5em;
+}
+
+.page-title {
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    color: $section-headings-color;
+}
+
+.page-description {
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-top: 0rem;
+}
+
+.page-date {
+    text-align: left;
+    font-size: 0.8rem;
 }
 
 .main-content {
