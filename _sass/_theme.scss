@@ -166,10 +166,9 @@ a {
 
     .anchor {
       visibility: hidden;
-
-      &:hover {
-        visibility: visible;
-      }
+    }
+    &:hover .anchor {
+      visibility: visible;
     }
   }
 
