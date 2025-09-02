@@ -2,6 +2,8 @@
 @import "variables";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
+// See for inspiration https://lyra.horse/blog/2025/08/you-dont-need-js/
+
 @mixin large {
   @media screen and (min-width: #{$large-breakpoint}) {
     @content;
