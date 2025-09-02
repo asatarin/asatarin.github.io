@@ -57,11 +57,8 @@ a {
   color: $body-link-color;
   text-decoration: none;
 
-  &:hover {
+  &:not(:has(img)) :hover {
     text-decoration: none; border-bottom: thin dashed;
-  }
-  &:has(img) :hover {
-    text-decoration: none;
   }
 }
 
