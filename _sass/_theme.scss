@@ -231,7 +231,7 @@ a {
   height: 0;
   width: 100%;
   overflow: hidden;
-  box-shadow: 1px 5px 20px;
+  box-shadow: var(--shadow-color) 1px 5px 20px;
   @media print {
     display: none;
   }
