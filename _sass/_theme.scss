@@ -5,19 +5,19 @@
 // See for inspiration https://lyra.horse/blog/2025/08/you-dont-need-js/
 
 @mixin large {
-  @media screen and (min-width: #{$large-breakpoint}) {
+  @media screen and (min-width: #{--var(large-breakpoint)}) {
     @content;
   }
 }
 
 @mixin medium {
-  @media screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint}) {
+  @media screen and (min-width: #{--var(medium-breakpoint)}) and (max-width: #{--var(large-breakpoint)}) {
     @content;
   }
 }
 
 @mixin small {
-  @media screen and (max-width: #{$medium-breakpoint}) {
+  @media screen and (max-width: #{--var(medium-breakpoint)}) {
     @content;
   }
 }
@@ -32,7 +32,7 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: $body-text-color;
+  color: --var(body-text-color);
 }
 
 #skip-to-content {
@@ -48,13 +48,13 @@ body {
     left: 10px;
     height: auto;
     width: auto;
-    background: invert($body-link-color);
-    outline: thick solid invert($body-link-color);
+    background: invert(--var(body-link-color);
+    outline: thick solid invert(--var(body-link-color));
   }
 }
 
 a {
-  color: $body-link-color;
+  color: --var(body-link-color);
   text-decoration: none;
 
   &:hover {
@@ -68,7 +68,7 @@ a {
 }
 
 .page-header {
-  color: $header-heading-color;
+  color: --var(header-heading-color);
   text-align: left;
   background-image: none;
   margin: auto;
@@ -105,7 +105,7 @@ a {
     margin-bottom: 0.1rem;
     font-size: 2rem;
     font-weight: normal;
-    color: $section-headings-color;
+    color: --var(section-headings-color);
 }
 
 .page-description {
@@ -157,7 +157,7 @@ a {
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: normal;
-    color: $section-headings-color;
+    color: --var(section-headings-color);
   }
 
   h2, h3, h4, h5, h6  {
@@ -183,8 +183,8 @@ a {
   blockquote {
     padding: 0 1rem;
     margin-left: 0;
-    color: $blockquote-text-color;
-    border-left: 0.3rem solid $border-color;
+    color: --var(blockquote-text-color);
+    border-left: 0.3rem solid --var(border-color);
 
     > :first-child {
       margin-top: 0;
@@ -199,7 +199,7 @@ a {
     height: 1px;
     padding: 0;
     margin: 1rem 0;
-    background-color: $hr-border-color;
+    background-color: --var(hr-border-color);
     border: 0;
   }
 }
@@ -254,7 +254,7 @@ details[open]::marker {
 }
 
 span.timecode {
-  color: $body-link-color;
+  color: --var(body-link-color);
   text-decoration: none;
   cursor: pointer;
 
@@ -265,7 +265,7 @@ span.timecode {
 
 .transcript-summary {
   text-align: center;
-  border-color: $body-text-color;
+  border-color: --var(body-text-color);
   border-style: solid;
   border-width: 1px;
   border-radius: 0.3rem;
@@ -297,7 +297,7 @@ span.timecode {
   padding-bottom: 1em;
   border-style: solid;
   border-radius: 1em;
-  border-color: $hr-border-color;
+  border-color: --var(hr-border-color);
   border-width: 1px;
 
   width: 32%;
