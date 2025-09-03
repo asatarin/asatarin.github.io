@@ -61,8 +61,9 @@ a {
     text-decoration: none;
     border-bottom: thin dashed;
   }
-  &:has(img)):hover {
+  &:has(img):hover {
     text-decoration: none;
+    border-bottom: none;
   }
 }
 
