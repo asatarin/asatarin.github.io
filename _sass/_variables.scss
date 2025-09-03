@@ -1,8 +1,4 @@
 :root {
-  // Breakpoints
-  --large-breakpoint: 64em !default;
-  --medium-breakpoint: 42em !default;
-
   // Headers
   --header-heading-color: #000;
   --header-bg-color: #fff;
@@ -23,5 +19,9 @@
   --table-border-color: #e9ebec;
   --hr-border-color: #cdcdcd;
 }
+
+// Breakpoints
+$large-breakpoint: 64em !default;
+$medium-breakpoint: 42em !default;
 
 
