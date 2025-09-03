@@ -9,7 +9,7 @@
   // Text
   --section-headings-color: light-dark(#ba3925, #ff7961);
   --body-text-color: light-dark(#000, #e0e0e0);
-  --shadow-color: hsl(from var(--body-text-color) h s calc(l - 20))
+  --shadow-color: hsl(from var(--body-text-color) h s calc(l - 20));
   --body-link-color: light-dark(#1e6bb8, #61a5ff);
   --blockquote-text-color: light-dark(#000, #e0e0e0);
 
