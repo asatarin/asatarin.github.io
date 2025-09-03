@@ -231,7 +231,7 @@ a {
   height: 0;
   width: 100%;
   overflow: hidden;
-  box-shadow: invert(20%) 1px 5px 20px;
+  box-shadow: 1px 5px 20px;
   @media print {
     display: none;
   }
