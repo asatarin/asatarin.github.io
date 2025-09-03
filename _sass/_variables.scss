@@ -1,23 +1,25 @@
 :root {
+  color-scheme: light dark;
+
   // Headers
-  --header-heading-color: #000;
-  --header-bg-color: #fff;
-  --header-bg-color-secondary: #155799;
+  --header-heading-color: light-dark(#000, #e0e0e0);
+  --header-bg-color: light-dark(#fff, #121212);
+  --header-bg-color-secondary: light-dark(#155799, #22385b);
 
   // Text
-  --section-headings-color: #ba3925;
-  --body-text-color: #000;
-  --body-link-color: #1e6bb8;
-  --blockquote-text-color: #000;
+  --section-headings-color: light-dark(#ba3925, #ff7961);
+  --body-text-color: light-dark(#000, #e0e0e0);
+  --body-link-color: light-dark(#1e6bb8, #61a5ff);
+  --blockquote-text-color: light-dark(#000, #e0e0e0);
 
   // Code
-  --code-bg-color: #f3f6fa;
-  --code-text-color: #567482;
+  --code-bg-color: light-dark(#f3f6fa, #2d2d2d);
+  --code-text-color: light-dark(#567482, #cccccc);
 
   // Borders
-  --border-color: #dce6f0;
-  --table-border-color: #e9ebec;
-  --hr-border-color: #cdcdcd;
+  --border-color: light-dark(#dce6f0, #424242);
+  --table-border-color: light-dark(#e9ebec, #555555);
+  --hr-border-color: light-dark(#cdcdcd, #555555);
 }
 
 // Breakpoints
