@@ -3,7 +3,7 @@
 # @formatter:off
 title: Software Ozymandias
 description: Poem about software development written by ChatGPT in the style of "Ozymandias"
-layout: default
+layout: post
 date: 2023-03-25
 # @formatter:on
 ---
