@@ -72,7 +72,7 @@ a {
   text-align: left;
   background-image: none;
   margin: auto;
-  max-width: 64rem;
+  max-width: $large-breakpoint;
   padding-bottom: 0rem;
 
   @include large {
@@ -128,7 +128,7 @@ a {
   }
 
   @include large {
-    max-width: 64rem;
+    max-width: $large-breakpoint;
     padding: 0rem 6rem;
     margin: 0 auto;
     font-size: 1.1rem;
