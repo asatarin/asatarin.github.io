@@ -1,7 +1,7 @@
 ---
 title: Posts
 description: Posts on various subjects.
-image: /assets/thumbnails/thumbnail-talks.png
+image: /assets/thumbnails/thumbnail-posts.png
 ---
 
 {% assign all_posts = site.pages | where: "layout", "post" | where_exp: "post", "post.draft != true" | sort: "date" | reverse %}

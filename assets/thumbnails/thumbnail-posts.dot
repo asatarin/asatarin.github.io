@@ -1,0 +1,37 @@
+// https://dreampuf.github.io/GraphvizOnline/
+// Run with engine "circo"
+// Favicon color #3669B2
+// Color palettes to explore:
+// https://coolors.co/3669b2-e3b505-95190c-610345-727d71
+digraph G {
+    node [colorscheme="rdylbu7"]
+    D[shape=circle label="" fillcolor="3" style="filled"]
+    A[shape=circle label="" fillcolor="1" style="filled"]
+    G[shape=circle label="" fillcolor="5" style="filled"]
+    E[shape=circle label="" fillcolor="6" style="filled"]
+    C[shape=circle label="" fillcolor="2" style="filled"]
+    B[shape=circle label="" fillcolor="4" style="filled"]
+    F[shape=circle label="" fillcolor="#3669B2" style="filled"]
+
+    A -> B[dir=none] ;
+    A -> C[dir=none] ;
+    A -> D[dir=none] ;
+    A -> E[dir=none] ;
+    A -> F[dir=none] ;
+    A -> G[dir=none] ;
+    B -> C[dir=none] ;
+    B -> D[dir=none] ;
+    B -> E[dir=none] ;
+    B -> F[dir=none] ;
+    B -> G[dir=none] ;
+    C -> D[dir=none] ;
+    C -> E[dir=none] ;
+    C -> F[dir=none] ;
+    C -> G[dir=none] ;
+    D -> E[dir=none] ;
+    D -> F[dir=none] ;
+    D -> G[dir=none] ;
+    E -> F[dir=none] ;
+    E -> G[dir=none] ;
+    F -> G[dir=none] ;
+}
