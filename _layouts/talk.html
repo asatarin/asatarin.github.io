@@ -1,38 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang }}">
-  <head>
-    <meta charset="UTF-8">
-    {% seo %}
-    {% include head-common.html %}
-  </head>
-  <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
-
-    <header class="page-header" role="banner">
-      {% include navigation.html %}
-      <h1 class="page-title">{{ page.title | default: site.github.repository_name }}</h1>
-      <h2 class="page-description">{{ site.author.name | default: site.github.project_tagline }} 
-        (<a href="https://twitter.com/{{ site.author.twitter }}">@{{ site.author.twitter }}</a>)
-      </h2>
-      <div class="page-date"><time datetime="{{ page.date }}">{{ page.date | date_to_long_string }}</time></div>
-    </header>
-
-    <div class="print-content">
-      Self link — <a href="{{ page.url | absolute_url }}">{{ page.url | absolute_url }}</a>
-    </div>
-
-    <main id="content" class="main-content" role="main">
-
-      {% include anchor_headings.html html=content beforeHeading=true anchorBody="<span class='anchor'>#</span>" anchorAttrs="tabindex='-1'" %}
-
-      <hr>
-      <footer class="site-footer">
-        {% include footer.html %}
-        {% include recent-talks.html %}
-        {% include license.html %}
-        {% include counter.html %}
-      </footer>
-    </main>
-
-  </body>
-</html>
+---
+layout: default
+type: talk
+---
+{{ content }}
