@@ -24,4 +24,3 @@ jobs:
             --max-retries 5
             --no-progress
             './**/*.md'
-            './**/*.html'
