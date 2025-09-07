@@ -17,4 +17,11 @@ jobs:
         with:
           fail: true
           jobSummary: true
-          args: --base . --verbose --max-concurrency 1 --no-progress './**/*.md'
+          args: >-
+            --base .
+            --verbose 
+            --max-concurrency 5 
+            --max-retries 5
+            --no-progress
+            './**/*.md'
+            './**/*.html'
