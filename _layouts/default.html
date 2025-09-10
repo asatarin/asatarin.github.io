@@ -10,6 +10,7 @@
 
     <header class="page-header" role="banner">
       {% include navigation.html %}
+      <h1 class="page-title">{{ page.title | default: site.github.repository_name }}</h1>
       {%- if page.layout == 'talk' %}
       <h2 class="page-description">{{ site.author.name | default: site.github.project_tagline }}
         (<a href="https://twitter.com/{{ site.author.twitter }}">@{{ site.author.twitter }}</a>)
