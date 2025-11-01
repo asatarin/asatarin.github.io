@@ -16,10 +16,12 @@ More ways to [follow](/follow/).
 Andrey is a Staff Site Reliability Engineer at Google, responsible for ensuring reliability of petabyte-scale
 OLAP/query processing systems, ranking among the top five in scale at Google.
 He is an active participant in the distributed systems community and has served on the program
-committee of the Hydra conference.
+committee of the [Hydra conference](https://hydraconf.com/).
 
-Previously, Andrey worked on Amazon Aurora at Amazon Web Services, a distributed
-SQL database at Yandex, cloud antivirus detection system at Kaspersky Lab,
-an online multiplayer game at Mail.ru, and a low latency foreign exchange pricing service at Deutsche Bank.
+Previously, Andrey worked on [Amazon Aurora](https://aws.amazon.com/rds/aurora/) at Amazon Web
+Services, [YDB](https://ydb.tech/) a distributed SQL database at
+Yandex, [Astrea](https://www.kaspersky.com/enterprise-security/wiki-section/products/big-data-the-astraea-technology)
+cloud malware detection system at Kaspersky Lab, an online multiplayer game at Mail.ru, and a low latency foreign
+exchange pricing service at Deutsche Bank.
 
-He is interested in building large scale distributed databases and backend systems.
+He is interested in building large scale distributed databases, data processing and backend systems.
