@@ -20,7 +20,7 @@ committee of the [Hydra conference](https://hydraconf.com/).
 
 Previously, Andrey worked on [Amazon Aurora](https://aws.amazon.com/rds/aurora/) at Amazon Web
 Services, [YDB](https://ydb.tech/) a distributed SQL database at
-Yandex, [Astrea](https://www.kaspersky.com/enterprise-security/wiki-section/products/big-data-the-astraea-technology)
+Yandex, [Astraea](https://www.kaspersky.com/enterprise-security/wiki-section/products/big-data-the-astraea-technology)
 cloud malware detection system at Kaspersky Lab, an online multiplayer game at Mail.ru, and a low latency foreign
 exchange pricing service at Deutsche Bank.
 
