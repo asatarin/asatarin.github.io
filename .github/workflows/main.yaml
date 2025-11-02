@@ -18,7 +18,7 @@ jobs:
           fail: true
           jobSummary: true
           args: >-
-            --base ${{ github.workspace }}
+            --root-dir ${{ github.workspace }}
             --verbose 
             --max-concurrency 5 
             --max-retries 5
