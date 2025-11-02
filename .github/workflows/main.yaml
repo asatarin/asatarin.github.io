@@ -18,7 +18,7 @@ jobs:
           fail: true
           jobSummary: true
           args: >-
-            --base .
+            --root-dir .
             --verbose 
             --max-concurrency 5 
             --max-retries 5
