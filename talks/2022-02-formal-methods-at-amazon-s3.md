@@ -6,7 +6,7 @@ description: >
   Presentation on "Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3" paper for
   distributed systems reading group.
 date: 2022-02-02
-image: /assets/thumbnails/2022-02-formal-methods-at-amazon-s3.jpg
+image: /assets/thumbnails/2022-02-formal-methods-at-amazon-s3.webp
 layout: talk
 # @formatter:on
 ---

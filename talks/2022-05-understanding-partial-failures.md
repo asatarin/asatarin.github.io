@@ -6,7 +6,7 @@ description: >
   Presentation on "Understanding, Detecting and Localizing Partial Failures in Large System Software" paper for
   distributed systems reading group.
 date: 2022-05-25
-image: /assets/thumbnails/2022-05-understanding-partial-failures.jpg
+image: /assets/thumbnails/2022-05-understanding-partial-failures.webp
 layout: talk
 # @formatter:on
 ---

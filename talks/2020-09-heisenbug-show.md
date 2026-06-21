@@ -2,7 +2,7 @@
 title: Heisenbug Show Interview
 description: Interview with Andrey Satarin for Heisenbug Show
 date: 2020-09-22
-image: /assets/thumbnails/2020-09-heisenbug-show.jpg
+image: /assets/thumbnails/2020-09-heisenbug-show.webp
 layout: talk
 ---
 

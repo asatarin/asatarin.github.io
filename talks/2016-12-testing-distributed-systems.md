@@ -6,7 +6,7 @@ description: >
   Presented in Moscow in December 2016 at Heisenbug conference and in Yekaterinburg in April 2017. Video and
   slides are in Russian.
 date: 2016-12-10
-image: /assets/thumbnails/2016-testing-distributed-systems.jpg
+image: /assets/thumbnails/2016-testing-distributed-systems.webp
 layout: talk
 # @formatter:on
 ---

@@ -2,7 +2,7 @@
 title: Hydra Heads Interview
 description: Interview with Andrey Satarin for Hydra Conference 2020.
 date: 2020-06-17
-image: /assets/thumbnails/2020-06-hydra-heads-interview.jpg
+image: /assets/thumbnails/2020-06-hydra-heads-interview.webp
 layout: talk
 ---
 
