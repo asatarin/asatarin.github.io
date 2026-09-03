@@ -9,7 +9,7 @@ Hello, everyone.
 
 My name is Andrey Satarin.
 
-I'm going to be talking about the paper using lightweight formal methods to validate key value storage not in Amazon S3.
+I'm going to be talking about the paper using lightweight formal methods to validate key value storage node in Amazon S3.
 
 So let's start.
 
@@ -25,7 +25,7 @@ So introduction.
 #### Introduction and ShardStore
 
 {% include timecode.html time="0:50" %}
-S3 is like a key value object storage provided by Amazon S3, and the core of S3 service are storage not servers, which
+S3 is like a key value object storage provided by Amazon S3, and the core of S3 service are storage node servers, which
 basically are servers storing the actual data apart from like index and other control plane stuff.
 
 So the shard store is a new key value storage node, which is slowly at the time of the paper publication is rolling out
@@ -40,7 +40,7 @@ implementation.
 And like that's the goal of the kind of verifying that storage to check for those properties.
 
 So the other goals is basically API correctness, like does API does whatever it's supposed to be doing, puts
-put and gets, return the results, they should be returning.
+and gets, return the results, they should be returning.
 
 Crash consistency on disk is a big thing because system is responsible for that.
 
@@ -59,7 +59,7 @@ larger histories or larger scale systems or bigger APIs, and things like that.
 So that's like, the idea is not to have like a fully verified storage, the idea is to have like some kind of trade
 off between verifying correctness and having scalable way to verify it.
 
-In terms of the shard store, it's basically based on the large log structures, merge tree, data is stored in chunks,
+In terms of the shard store, it's basically based on the large log-structured merge tree, data is stored in chunks,
 chunks are stored in extents, and that's everything is stored on disk, obviously.
 
 So on the right, there is a picture from the paper itself.
@@ -68,7 +68,7 @@ So because shard store writes to several extents at the time, at the moment, it 
 than one write log and that complicates crash consistency.
 
 {% include timecode.html time="3:20" %}
-And as I mentioned before, there is a garbage collection and other internal processes also complicates things.
+And as I mentioned before, there is a garbage collection and other internal processes also complicate things.
 And the idea is to validate that.
 
 #### Validating a Storage System
@@ -87,17 +87,17 @@ crashing, which are like desirable in operation.
 {% include timecode.html time="4:04" %}
 Also there, but not like the main focus.
 So the other one of the other goals is to have all the results of that outlive involvement of a formal method expert.
-So like basically, they don't want to have team of formal meta experts supporting this forever.
+So like basically, they don't want to have team of formal methods experts supporting this forever.
 They want to like hand off it to the development team.
 So this is why they go in with a lightweight approach to formal methods.
-Part of the other reasons I mentioned before.
+Apart from other reasons I mentioned before.
 
 So what about durability?
 Like the main thing, basically they view it through three different lens, like split it in three different lenses, which
 is kind of like matrix two by two with sequential execution and concurrent execution and the presence or absence of
 crashes.
 
-So this gives us like sequential crash free execution covered in a section four or sequential execution with crashes or
+So this gives us like sequential crash free execution covered in section four or sequential execution with crashes or
 concurrent and crash free.
 Concurrent execution with crashes is specifically out of scope of that paper.
 So they don't talk about that, but all the others are covered.
@@ -106,9 +106,9 @@ So they don't talk about that, but all the others are covered.
 So I'm just going to go through like sections of the go with the way they presented here.
 
 So the kind of thing they use a lot of to check for those properties is a reference model, which is basically
-implementation of the same API as a shard store provides in Rust, but way simplified.
+implementation of the same API as the shard store provides in Rust, but way simplified.
 So it's like 1% of the size of the actual implementation.
-So it's like several orders of one simpler because it does not care about certain other implementation details like
+So it's like several orders of magnitude simpler because it does not care about certain other implementation details like
 failures, probably performance, other things.
 
 And this reference model was used as a mock in other tests, like probably large scale tests where you don't need
@@ -125,8 +125,8 @@ because you want to use it in some other test as a mock.
 So conformance checking.
 
 It's like the first step of providing durability, which is sequential execution with no crashes.
-For that, they basically use property based testing, which is in a few words is like applying random operations to the
-system and validating that it does not violate certain variants.
+For that, they basically use property based testing, which is in a few words like applying random operations to the
+system and validating that it does not violate certain invariants.
 
 In this case, invariant is that like implementation refines the reference model.
 So it doesn't do anything the model does not do.
@@ -135,7 +135,7 @@ bias.
 So kind of like not provide those operations uniformly randomly, but like some kind of bias them towards more
 interesting, more complicated operations to steer a system in interesting states.
 
-But they mentioned that only do this if there's like strong quantitative evidence for the benefit of that biasing,
+But they mentioned that they only do this if there's like strong quantitative evidence for the benefit of that biasing,
 because otherwise you might bake certain assumptions you have of the implementation into the system.
 
 {% include timecode.html time="07:17" %}
@@ -151,7 +151,7 @@ The model is also extended later with the failure injection.
 
 And there are certain failures they extend to, which is a fail stop crash covered in the crash consistency part.
 
-Disk I/O errors, which basically the way they do is relax the model to allow like more to allow relaxed checking
+Disk I/O errors, which basically the way they do it is relax the model to allow like more to allow relaxed checking
 against the model.
 
 So like when this certain operation crashed, we basically have a certain we have the check, which says like don't
@@ -164,7 +164,7 @@ hard to extend the model to those accidental complexity things without making it
 #### Checking Crash Consistency
 
 So crash consistency, which is again, it's like sequential execution with presence of crashes.
-So the test system still controls every operation and still execute them sequentially.
+So the test system still controls every operation and still executes them sequentially.
 But some operations are basically crashes.
 And the crash consistency is the primary motivations of this effort, because like systems crash, and you still want to
 provide durability guarantees in the presence of those crashes.
@@ -173,16 +173,16 @@ And that's kind of the main goal of the shard store in the S3 as a system, becau
 for storing data on disks.
 
 So to talk about this, we need to talk about write path, which basically includes three steps.
-First writing chunk data to extend and then updating index entry, and then updating metadata over LSM to do this to
-point to the index data.
+First writing chunk data to extent and then updating index entry, and then updating metadata over LSM to do this to
+point to the new index data.
 
 {% include timecode.html time="9:24" %}
 Those three operations kind of presented as a dependency graph internally, well, at least in the model.
-And the IO schedule is responsible for persisting those dependencies in the correct order, which is basically the lower
+And the IO scheduler is responsible for persisting those dependencies in the correct order, which is basically the lower
 ones and then the ones depend on that.
 
 So like, the dependencies only persisted if the previous dependency is already persisted.
-So in the paper, they present this picture of the dependency graph of three boot operations.
+So in the paper, they present this picture of the dependency graph of three put operations.
 So on the bottom of the picture, there are writes to the chunks, so shard data written to the chunk.
 And then on top of those operations, which depend on the writes, which is index update, and then the LSM metadata
 update.
@@ -192,7 +192,7 @@ So there's like one LSM tree metadata update for several puts, even though obvio
 data updates internally.
 
 {% include timecode.html time="10:28" %}
-So in the whole complexity of IO scheduler and providing correctness guarantees come from kind of that correctly
+So the whole complexity of IO scheduler and providing correctness guarantees come from kind of that correctly
 persisting this dependency graph.
 
 So for validating that, they're looking for two properties, basically persistence.
@@ -202,7 +202,7 @@ So if it's persisted, it's persisted basically.
 
 And the forward progress basically says like, if we do proper non-crash shutdown, in this case, every operation
 dependency must be persisted.
-So basically, operations succeeded, and we should see all the dependency persisted and the actual result of the
+So basically, operation succeeded, and we should see all the dependency persisted and the actual result of the
 operation.
 So these are like the properties they check in the system in the presence of crashes.
 So for that, they need to extend the property-based reference model.
@@ -219,7 +219,7 @@ implementation.
 
 They also tried to do more fine-grained crashes, like the block level.
 So not at index level or coarse-grained things.
-But the outcome was that they didn't cover any new bugs.
+But the outcome was that they didn't uncover any new bugs.
 And because the state space is vastly larger, it's just way slower.
 So this is not the default for how they run tests because it just was not beneficial.
 
@@ -229,48 +229,48 @@ For concurrent executions.
 So basically, we covered sequential execution, sequential execution with crashes.
 
 {% include timecode.html time="12:35" %}
-The third lens, the way they look on durability, is the check-in concurrent executions with no crashes.
+The third lens, the way they look on durability, is checking concurrent executions with no crashes.
 So there are no crashes in this.
 And the main property they check here for is linearizability.
-And they use actual model check-in here, apart from all the previous approaches, which use property-based testing.
+And they use actual model checking here, apart from all the previous approaches, which use property-based testing.
 This is more towards the actual formal verification of the system.
 
-And for that, they use two model checkers, the loom, the one I understand was already present.
+And for that, they use two model checkers, Loom, the one I understand was already present.
 So there's some model checker from a Rust ecosystem.
-And the shuttle model checker with probabilistic algorithms, the one they implemented, I assume specifically for that
+And Shuttle model checker with probabilistic algorithms, the one they implemented, I assume specifically for that
 work.
-So there are handwritten harnesses to validate key properties as linearizability and durability, I guess.
+So there are handwritten harnesses to validate key properties like linearizability and durability, I guess.
 Maybe just linearizability because there are no crashes.
 
-And again, because loom is slower but provides soundness guarantees, but the shuttle is faster but does not provide such
+And again, because Loom is slower but provides soundness guarantees, but Shuttle is faster but does not provide such
 a guarantee, they kind of both together provide the soundness scalability trade-off.
 
 {% include timecode.html time="13:47" %}
-So you can validate the sharder histories in loom, making sure that they're correct and sound.
-But at the larger scale with more iterations, longer histories, you have to do like a shuttle model checker, which does
+So you can validate the shorter histories in Loom, making sure that they're correct and sound.
+But at the larger scale with more iterations, longer histories, you have to do like a Shuttle model checker, which does
 not provide a full guarantee but still explores the state space.
 
 #### Other Properties
 
 So other properties they looked at in the system, which are also desirable, is absence of undefined behavior.
 
-For that, there is a Rust ecosystem tools like MIR interpreter and some other Rust compiler dynamic tools, which
+For that, there is a Rust ecosystem tools like Miri interpreter and some other Rust compiler dynamic tools, which
 basically help to avoid undefined behavior in the Rust code.
-The other thing is serialization they looked at because this thing stalks the network and serializes stuff.
-So one of the things they used is a Crux symbol execution engine, which is, for instance, also part of the Rust
+The other thing is serialization they looked at because this thing talks to the network and serializes stuff.
+So one of the things they used is a Crux symbolic execution engine, which is, for instance, also part of the Rust
 ecosystem.
 
 {% include timecode.html time="14:42" %}
 And that helps to prove panic freedom of serialization code.
 But on top of that, they also used fuzzing extensively to kind of like the way fuzzing works with serialization code to
-make sure that there are no crashes on desirable behaviors and stuff like that.
+make sure that there are no crashes on undesirable behaviors and stuff like that.
 
 #### Experience and Lessons
 
 So what are the overall lessons from that work?
 And experience.
-So they mentioned that the development of the reference model to roughly two people for nine months, and those were a
-formal method to experts, so people who like experts in specific area formal methods.
+So they mentioned that the development of the reference model took roughly two people for nine months, and those were a
+formal methods experts, so people who are experts in specific area formal methods.
 
 And later in the kind of lifetime of the system at the time of the publication of the paper, non-experts, but I assume
 these are still experts in a shard store, but not formal method experts, contributed roughly 18% of the model code.
@@ -288,7 +288,7 @@ tests if you run them continuously, and that's also a great benefit.
 
 And the model is executable.
 So it's not like a model in some different code.
-The reference model and the implementation are both rust, so I presume they live together somewhere in the source code.
+The reference model and the implementation are both Rust, so I presume they live together somewhere in the source code.
 There are some limitations to this approach.
 So there are some issues with evaluating the coverage for property-based tests.
 
@@ -304,14 +304,14 @@ they mentioned routing and parsing S3 messages itself, and that's a pretty big c
 not covered because it does not contribute to durability and consistency properties they were looking specifically for,
 so that's kind of outside of that, but still important in actual production system.
 
-And the EPI surface of shard store is actually larger than the cover in the tests because there are certain APIs
-provided for control playing, or which are not covered for whatever reason in the reference model, so not even all
+And the API surface of shard store is actually larger than they cover in the tests because there are certain APIs
+provided for control plane, or which are not covered for whatever reason in the reference model, so not even all
 the APIs are covered.
 
 {% include timecode.html time="18:20" %}
 With this, I have a shameless plug.
 
-If you're interested in testing things like that, distributed systems and storage systems have a list of the things
+If you're interested in testing things like that, distributed systems and storage systems, I have a list of the things
 different companies do, and it's like papers, blog posts, videos, it's there, pretty comprehensive, and that's the end
 of the talk.
 
