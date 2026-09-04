@@ -5,7 +5,7 @@ Draft transcript https://docs.google.com/document/d/1Y5gXyjd5Lt_Plzmw3FKc2RPY_IZ
 #### Introduction
 
 {% include timecode.html time="0:05" %}
-Hi everyone! Today, I’m going to be talking about this paper, “How to Find Production Incidents: Empirical Study”.
+Hi everyone! Today, I’m going to be talking about this paper, “How to Fight Production Incidents: An Empirical Study on a Large-Scale Cloud Service”.
 
 {% include timecode.html time="0:13" %}
 Links and slides will be on that link, and all the references and all this stuff, and the video too.
@@ -13,7 +13,7 @@ Links and slides will be on that link, and all the references and all this stuff
 {% include timecode.html time="0:21" %}
 So, a quick outline following the paper: first, we’re going to talk about the methodology the author used to study
 those incidents. They looked into root causes and mitigation strategies. They looked into delays, what caused those
-delays in terms of detecting, reposing, and actually acting in mitigation. They have some lessons learned, which they
+delays in terms of detecting, triaging, and actually acting in mitigation. They have some lessons learned, which they
 analyzed from the actual on-call engineers who wrote reports.
 
 {% include timecode.html time="0:50" %}
@@ -34,11 +34,11 @@ didn’t have the full post-mortem report with all the details they needed for a
 
 {% include timecode.html time="1:43" %}
 Even though all of those reports are incidents of high severity, there’s still a breakdown between the different
-severities. There’s just one, I assume, large-scale incident, that’s Sub-Zero. Thirty percent of all the incidents, like
+severities. There’s just one, I assume, large-scale incident, that’s Sev-0. Thirty percent of all the incidents, like
 40-50, all those were Severity 1, and the rest of them were Severity 2.
 
 {% include timecode.html time="2:09" %}
-Any incident included in the study has to impact either an internal service or have a dimension impact on several
+Any incident included in the study has to impact either an internal service or have an impact on several
 tenants or customers. But I assume “impact” doesn’t mean downtime; it could be maybe increased latency or things like
 that, or error rate. But still, an impact doesn’t mean it is visible to all the users or very negatively perceived, but
 they’re still limited.
@@ -66,8 +66,8 @@ The overall goal is to find what lessons to take away from this and how to impro
 in general.
 
 {% include timecode.html time="4:11" %}
-So, as I mentioned before, it is just a study of one floor service even though it consists of many services like
-databases and other things. But there is some versatility, so it is only Microsoft Teams. If you’re running a service
+So, as I mentioned before, it is just a study of one large service even though it consists of many services like
+databases and other things. But there is some specificity, so it is only Microsoft Teams. If you’re running a service
 which has nothing similar to Microsoft Teams or like a messaging service, those results might not directly apply.
 
 {% include timecode.html time="4:45" %}
@@ -86,7 +86,7 @@ case.
 
 {% include timecode.html time="5:31" %}
 So, what about root causes? Basically, the paper presents all the information in breakdowns between different root
-causes, like the Codex 27. It kind of reads a little bit as a statistical report of sorts. It may be a little bit harder
+causes, like code bugs: 27. It kind of reads a little bit as a statistical report of sorts. It may be a little bit harder
 to digest, but they also list 15 or 16 findings in a more narrative way.
 
 {% include timecode.html time="6:04" %}
@@ -102,8 +102,8 @@ plenty of errors coming from things you’re not changing in your version contro
 
 {% include timecode.html time="7:20" %}
 Regarding mitigation steps, there are a lot of different strategies. The most popular one being rollback. They list
-specifically what they mean by interchange and increasing capacity and things like that. External fix, I think, applies
-to some of the services you rely on, like dependency and configuration seeks and conflicts. An on-call fix is something
+specifically what they mean by infra change and increasing capacity and things like that. External fix, I think, applies
+to some of the services you rely on, like dependency, and config fix or code fix. An on-call fix is something
 like what an on-call engineer does, some kind of manual process.
 
 {% include timecode.html time="8:01" %}
@@ -113,12 +113,12 @@ itself.
 
 {% include timecode.html time="8:18" %}
 So even though 40% of incidents were caused by code or configuration bugs, 80% of those were mitigated without any
-code or configuration blocks. I assume because the strategies are kind of faster, they don’t involve a deployment cycle.
-That makes, or the same overall back. This is why Canada, I think they mentioned it in one of the other findings, where
+code or configuration bugs. I assume because the strategies are kind of faster, they don’t involve a deployment cycle.
+That makes, or the same overall back. This is why, kind of, I think they mentioned it in one of the other findings, where
 rollback is a popular strategy because it’s pretty quick. The rollback and the infrastructure change, because they’re
-quick, they do account for about 40% of incidence mitigation. Just because you don’t go through more labor cycles of
-contributions fixing forward with the code pixel, conflict figs, and reviewing it, presumably, and rolling it forward or
-through your deployment system, which takes time then.
+quick, they do account for about 40% of incident mitigation. Just because you don’t go through the more laborious cycle of
+fixing forward with a code fix or config fix, and reviewing it, presumably, and rolling it forward through your
+deployment system, which takes time then.
 
 #### What Causes Delays in Response?
 
@@ -130,80 +130,76 @@ mentioned that their bugs specifically are hard to monitor, so it’s hard to co
 various bugs the system has. And it also makes it sound complicated in resolution.
 
 {% include timecode.html time="10:16" %}
-Yeah, and things like configuration ticks and Cloud picks take longer time. Again, it corresponds with one of the
+Yeah, and things like configuration fix and code fix take longer time. Again, it corresponds with one of the
 previous findings. It’s just easier to roll back, usually if you can do that. Obviously, not every system can do that if
-you change the data underneath, and you can’t roll back with all other scale services. Usually, keep that option open
-for basically any change you can just because it is so convenient to have options to roll back. Galaxy has something to
+you change the data underneath, and you can’t roll back with all large-scale services. Usually, keep that option open
+for basically any change you can just because it is so convenient to have options to roll back. Alexey has something to
 say about that in terms of metastability and things like that, but rollback is still a popular resolution.
 
 {% include timecode.html time="11:11" %}
-Detection value is basically why we lose not detected issue incidents faster? Things like not failing at all. So,
-I guess I’m not actually sure what they mean by that not failing category. I guess there is no detection except maybe
-the user or option system. Other popular ones are like lack of monitors or Telemetry coverage, which also causes a
-delay. Basically, some of the things which indicate that your system isn’t having an incident that’s just not covered by
-monitors for whatever reason or in any other telemetry, and that makes it harder to deduct and delays any kind of
-resolution. Mitigation failure categories, so like.
+Detection delay is basically: why did we not detect incidents faster? Things like not failing at all — so,
+I guess I’m not actually sure what they mean by that "not failing" category. I guess there is no detection except maybe
+the user reporting it. Other popular ones are lack of monitors or telemetry coverage, which also causes a
+delay. Basically, some of the things which indicate that your system is having an incident are just not covered by
+monitors for whatever reason or in any other telemetry, and that makes it harder to detect and delays resolution.
 
 {% include timecode.html time="11:49" %}
-And that makes it harder to deduce and delays any kind of resolution. Mitigation failure categories, so what cost
-mitigation to get delayed and fail? These are sometimes related to procedures, so not just systems themselves but also
-procedures which are kind of like part of the socio technical system but not code or anything like that. Sometimes it is
-just delays in deployment and a lot of times it’s unclear 27% of times they just on call Engineers who wrote the report
-don’t know what caused the delay mitigation.
+Mitigation delay categories: what caused mitigation to get delayed and fail? These are sometimes related to procedures,
+so not just systems themselves but also procedures which are part of the sociotechnical system, not code or anything
+like that. Sometimes it is just delays in deployment, and a lot of times it’s unclear: 27% of the time, on-call
+engineers who wrote the report don’t know what caused the delay in mitigation.
 
 {% include timecode.html time="12:38" %}
 This kind of tells us that this whole thing is pretty complicated in terms of figuring out what actually causes
-those things because even on-call engineers who had way more contacts in the particular incident still don’t have enough
+those things because even on-call engineers who had way more context in the particular incident still don’t have enough
 information to make that call.
 
 {% include timecode.html time="12:59" %}
-As I mentioned, like 30% of those are not caused by any systems itself but by some kind of documentation
-procedures. This is one of the funniest and manual deployment stuff so there’s opportunity for automation, opportunity
-for improvement even without changing the code or like I guess except the manual deployment investing in tools, but you
-can still have improved time to mitigate by changing the communication procedures or improving those.
+As I mentioned, like 30% of those are not caused by any system itself but by some kind of documentation or
+procedures. This is one of the findings, and manual deployment steps, so there’s opportunity for automation, opportunity
+for improvement even without changing the code or investing heavily in tools, but you can still have improved time to
+mitigate by changing the communication procedures or improving those.
 
 #### Lessons Learnt
 
 {% include timecode.html time="13:34" %}
-Overall, Lessons Learned, basically this is not what odd as part of this and this is not what authors like kind of
-learn from all incidents, this is what they aggregated across different categories of incidents what actual on-call
-Engineers put in the Lessons Learned category for specific incident and then they aggregated them in different
-categories to see like what are the and excuse me I need to fix that.
+Overall, Lessons Learned: basically, this is not what authors learned from all incidents, this is what they aggregated
+across different categories of incidents — what actual on-call engineers put in the Lessons Learned category for specific
+incidents and then aggregated in different categories to see what the main lessons are.
 
 {% include timecode.html time="14:07" %}
-So yeah, Lessons Learned is the main driver is manual tests, and so basically testing is still a big theme and I
+So yeah, in Lessons Learned the main driver is manual tests, and so basically testing is still a big theme and I
 think it gets even more important later when they mention other points in other findings. Sometimes it’s just unclear
-what the lesson is from the incident. Sometimes they need a test or configuration test or manual test or improve in
-alerting triaging things like that automated deployment.
+what the lesson is from the incident. Sometimes they need a test or configuration test or manual test or improvement in
+alerting, triaging, and automated deployment.
 
 {% include timecode.html time="14:44" %}
-So yes, improving testing was a popular choice so this had like testing is important figuring out before figuring
-out that the system is broken before production is important but like unfortunately Papercut doesn’t go into the details
-like what kind of testing is helpful there are some other papers who will which are like focused specifically on
-incidents caused by bugs and how to address those but that paper is more high level I guess and it doesn’t go into
-detail in actually how to improve the testing just as like yes on-call engineers think that in a lot of incidents
-testing and detecting issues with the system earlier in a cycle before it gets deployed to production is important but
-they don’t talk much or at all about what kind of testing and how to prevent those incidents with specific tasks.
+So yes, improving testing was a popular choice: figuring out that the system is broken before production is important.
+Unfortunately, the paper doesn’t go into the details of what kind of testing is helpful. There are some other papers
+focused specifically on incidents caused by bugs and how to address those, but this paper is more high level and
+doesn’t go into detail on actually how to improve testing. On-call engineers think that in a lot of incidents, testing
+and detecting issues with the system earlier in the cycle before it gets deployed to production is important, but they
+don’t talk much or at all about what kind of testing and how to prevent those incidents with specific tests.
 
 {% include timecode.html time="15:39" %}
-They basically have just two categories of test: regular test and configuration test. Configuration test is also a
-liquid pretty vast category and can look completely different depending on what you’re targeting. So yeah, overall
-improved testing you improve monitoring things like that.
+They basically have just two categories of tests: regular tests and configuration tests. Configuration testing is also
+like a pretty vast category and can look completely different depending on what you’re targeting. So yeah, overall,
+improve testing, improve monitoring, things like that.
 
 {% include timecode.html time="16:04" %}
-It’s like the “lost and learn” category.
+That's like the “lessons learned” category.
 
 {% include timecode.html time="16:07" %}
-Investing in automating mitigation, and again, I’m clear, it’s a pretty large category here, 37.
+Investing in automating mitigation, and again, unclear is a pretty large category here, 37%.
 
 {% include timecode.html time="16:19" %}
-Which means, like, engineers do not only see the clear lesson from an incident on how to avoid it, or mitigate or
+Which means on-call engineers do not always see a clear lesson from an incident on how to avoid it, or mitigate or
 resolve it faster in the future.
 
 {% include timecode.html time="16:37" %}
 So yeah, overall, kind of like 20% of feedback indicated that just behavioral change or documentation training
-might improve incident management. So this is one of the major categories. Basically, you can improve 20% resolution of
-your incidents with some kind of better documentation, better incident training, things like that.
+might improve incident management. So this is one of the major categories. Basically, you can improve the resolution of
+20% of your incidents with better documentation, better incident training, things like that.
 
 {% include timecode.html time="17:03" %}
 It could be considered, I guess, less investment than in the systems if you want to build resilience.
@@ -234,8 +230,8 @@ helpful, unlike, for example, the “Simple Testing” paper where they talk in 
 and some other papers too, where incidents were caused by bugs and how to address those bugs with tests.
 
 {% include timecode.html time="18:38" %}
-Here, it’s just like, yeah, 70% of incidents are of normal dollars, improved testing rather than monitoring. So,
-monitors for code blocks are hard to build, and it’s better to detect code issues even before code reaches production.
+Here, for 70% of incidents of code bugs, on-call engineers wanted improved testing rather than monitoring. Monitors for
+code bugs are hard to build, and it’s better to detect code issues even before code reaches production.
 
 {% include timecode.html time="19:01" %}
 Monitoring, on the other hand, with related services, should be improved because you cannot test your way out of
@@ -247,15 +243,15 @@ This is why you kind of need to improve monitoring and observability coverage ac
 
 {% include timecode.html time="19:38" %}
 Again, more testing. Everyone likes more testing. So, configuration bugs are mitigated with rollbacks, and these
-are usually recent changes. Configuration bugs are either, they don’t, I guess, they don’t lie dormant for a long time,
-they either cause incidents, right away, or they just make changes.
+are usually recent changes. Configuration bugs, I guess, don’t lie dormant for a long time; they either cause incidents
+right away, or they just get rolled back.
 
 {% include timecode.html time="20:05" %}
 So, they do talk about that, that you probably shouldn’t invest in rigorous configuration testing, but again, they
 don’t elaborate on what that actually looks like and what the gaps are.
 
 {% include timecode.html time="20:27" %}
-Incidents with manual effort and improvements in training are important. Some automation for reducing manual
+Incidents with manual effort and improvements in incident training are important. Some automation for reducing manual
 effort is needed, because on-call fatigue was recognized as one of the issues here too.
 
 {% include timecode.html time="20:45" %}
@@ -282,7 +278,7 @@ reliability. Even though those are, in my opinion, kind of high level, they don�
 testing, integration, and how to actually achieve that.
 
 {% include timecode.html time="22:11" %}
-But it’s still valuable information for improving documentation or listening. I guess it’s going to be pretty hard
+But it’s still valuable information for improving documentation or training. I guess it’s going to be pretty hard
 to figure out, especially in general terms, what kind of documentation needs to be improved.
 
 {% include timecode.html time="22:25" %}
@@ -295,8 +291,8 @@ doing the same things they talked about in the paper. So, they did roll back the
 mitigation strategy.
 
 {% include timecode.html time="22:57" %}
-The database network is not the most popular root cause, but it is definitely a separate category there. It was
-kind of interesting to analyze based on the very limited information in a tweet about what’s going on.
+Network is not the most popular root cause, but it is definitely a separate category there. It was kind of
+interesting to analyze based on the very limited information in a tweet about what’s going on.
 
 {% include timecode.html time="23:18" %}
 And they’re saying that they’re monitoring, so monitoring is again mentioned as one of the important things to

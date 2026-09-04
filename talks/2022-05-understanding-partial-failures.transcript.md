@@ -32,15 +32,15 @@ Failure Hierarchy:
 
 {% include timecode.html time="1:32" %}
 The simplest one is a fail-stop — your process stops and never restarts again. Something more elaborate is
-fail-recover, where the process stops, recovers, and continues with some lost state. A mission failure is where not only
-that can happen, but you can also lose some packages or request responses. And the biggest of all, the Byzantine
+fail-recover, where the process stops, recovers, and continues with some lost state. An omission failure is where not only
+that can happen, but you can also lose some packets or request responses. And the biggest of all, the Byzantine
 failure, is when the process can do whatever it can, even actively have malicious behavior, trying to basically destroy
 your system from within.
 
 {% include timecode.html time="2:10" %}
 So, the way I understood it, they don't mention it in the system itself, the partial failure falls somewhere between
-Byzantine and omission failure, because some of them could be seen as a mission of certain packages. For example, your
-compaction fails, so you cannot do writes, and that means obviously all the write packages for write operations are
+Byzantine and omission failure, because some of them could be seen as an omission of certain packets. For example, your
+compaction fails, so you cannot do writes, and that means obviously all the write packets for write operations are
 lost. But the system itself can still process reads, but some of those failures are even more complex, so they can
 exhibit somewhat Byzantine failures.
 
@@ -55,8 +55,8 @@ how to systematically detect and localize those failures at runtime?
 {% include timecode.html time="3:09" %}
 So, let's dive deep into what they're actually describing. They researched five different distributed systems,
 well-known, established, mature distributed systems over a wide range of dates, and they found 20 cases for each, 20
-partial failure cases for each of those systems, overall 100 partial failures, and they kind of study what's in this, on
-those sales, how they exhibit in the system.
+partial failure cases for each of those systems, overall 100 partial failures, and they kind of study what's in this, in
+those failures, how they exhibit in the system.
 
 {% include timecode.html time="3:36" %}
 Findings 1-2:
@@ -84,10 +84,14 @@ In the paper, they talk about the partial failures as localized to a single node
 in that sense.
 
 {% include timecode.html time="5:34" %}
-The definition of a partial failure is a failure where it doesn't crash, but some functionality is lost.
+The definition of a partial failure is a failure where the process doesn't crash, but some functionality is lost. For
+example, if compaction or snapshotting fails, you can no longer perform writes. The process is still alive because only
+one thread died, rather than crashing the whole process due to a programming error. Or something is just slow: writing
+to disk takes a long time because the disk is congested, exhibiting slowness for that functionality, while reads can
+still be served at normal speed from an in-memory cache. So what a partial failure means is very system-specific.
 
 {% include timecode.html time="6:35" %}
-Findings 6-7:
+Findings 3-5:
 
 {% include timecode.html time="6:38" %}
 Finding three is that roughly 50% of them are liveness violations, so those are somewhat easy to detect and
@@ -98,6 +102,8 @@ data loss, corruption – those you cannot detect easily with any simple check. 
 system's guarantees and deeper semantics.
 
 {% include timecode.html time="7:24" %}
+Findings 6-7:
+
 Finding six is that 70% of those failures are specific to environments, so there's something happening at runtime. So we
 cannot iron them out with any amount of testing, basically, unless we try to do some kind of live testing. What authors
 advocate is that we need runtime checking because we will not be able to iron out all the various runtime scenarios at
@@ -117,8 +123,8 @@ failures.
 
 {% include timecode.html time="8:23" %}
 [Murat Demirbas](https://twitter.com/muratdemirbas):
-Andrey, Rohan asked a good question in the chat. Are temporary errors considered as partial failures? The finding seems
-to suggest that maybe the temporal errors are also partial failures, but 68% of the partial failures are sticky rather
+Andrey, Rohan asked a good question in the chat. Are temporary errors considered as partial failures? Finding seven seems
+to suggest that maybe the temporary errors are also partial failures, but 68% of the partial failures are sticky rather
 than temporary. Is that right or do we make a distinction?
 
 {% include timecode.html time="8:30" %}
@@ -176,15 +182,15 @@ a main program with different modules, such as a request listener and snapshot m
 checkers, where each checker mimics the behavior of a certain module or thread. The context is basically information
 copied from the main program to those checkers.
 
-#### Generating Watchdogs with Omegagen
+#### Generating Watchdogs with OmegaGen
 
 {% include timecode.html time="13:26" %}
-Omegagen is the tool they're talking about, which generates these watchdogs.
+OmegaGen is the tool they're talking about, which generates these watchdogs.
 
 Generating Watchdogs:
 
 {% include timecode.html time="13:36" %}
-To generate a watchdog with Omegagen, there are certain steps you need to take. First, they identify long-running
+To generate a watchdog with OmegaGen, there are certain steps you need to take. First, they identify long-running
 methods, like while loops, because this is where the main method of the program resides. Second, they locate vulnerable
 operations, such as writing to disk or a socket, but not something like computation in memory, like sorting. Third, they
 reduce the main program by throwing out everything except those vulnerable operations. Then, they encapsulate the
@@ -200,27 +206,31 @@ signals.
 
 {% include timecode.html time="16:04" %}
 Basically, on the right side, we have the checker, which does a simple write with the same arguments copied from the
-main program. This is how Omegagen works, and I'll talk about how it doesn't ruin the program in the process of
+main program. This is how OmegaGen works, and I'll talk about how it doesn't ruin the program in the process of
 generating those watchdogs.
 
 {% include timecode.html time="16:25" %}
 So, after we've caught the faults, we need to validate the impact. Is this actually just a single slow disk operation,
-or is it some kind of trend? They have a validation step after each alert internally in the Omegagen generated set. The
+or is it some kind of trend? They have a validation step after each alert internally in the OmegaGen generated set. The
 default validation is basically to rerun the check, trying to write or read again to see if it's still slow or just some
 intermittent issue.
 
 {% include timecode.html time="16:57" %}
-There are tools to allow developers to manually extend those validations. One of the parts Omegagen has to do is prevent
+There are tools to allow developers to manually extend those validations. One of the parts OmegaGen has to do is prevent
 side effects, because we're trying to mimic exactly the same operation with the same parameters. They redirect writes so
 that instead of writing to the same file on the local file system, they write to a different test file. They still write
 the same data, so if they write a megabyte in the main program, they will write a megabyte of data in the watchdog, just
 in a different file.
 
 {% include timecode.html time="17:55" %}
-It is definitely a sample, and the purpose is to get a sense of what the performance ought to be in the primary system.
-They have a hard threshold of four seconds for timeout as their liveness threshold, but they also look at the drift of
-average time. If it drifts slowly, they will detect that too, if there is just degradation of disk or network at a
-slower pace.
+[Pat Helland](https://twitter.com/pathelland):
+Just to test timing, or they will actually write there instead of the original place it lives?
+
+{% include timecode.html time="18:00" %}
+They will write to a test file, so that there's going to be two writes. It is definitely a sample, and the purpose is to
+get a sense of what the performance ought to be in the primary system. They have a hard threshold of four seconds for
+timeout as their liveness threshold, but they also look at the drift of average time. If it drifts slowly, they will
+detect that too, if there is just degradation of disk or network at a slower pace.
 
 {% include timecode.html time="18:32" %}
 But it's not hitting the threshold for individual operation yet, so all your writes suddenly, instead of three
@@ -235,13 +245,13 @@ It's actually to detect partial failures, not necessarily to kill
 the program. They report it to the operator, as they don't talk about recovery in this context.
 
 {% include timecode.html time="19:16" %}
-With reads, they do item potential wrappers, so the main program reads the stuff in the buffer, and the checker reads it
+With reads, they do idempotent wrappers, so the main program reads the stuff in the buffer, and the checker reads it
 from the buffer to simulate the read while also looking at the timings.
 
 {% include timecode.html time="19:34" %}
 For socket operations, they just turn them into pings to avoid side effects. Another approach they suggest, although not
-in great detail, is to apply Omegagen to an external storage system if you write to it. In theory, your fault detection
-can talk to the Omegagen watchers on the other side and decide if it failed for your use case or if it completely
+in great detail, is to apply OmegaGen to an external storage system if you write to it. In theory, your fault detection
+can talk to the OmegaGen watchers on the other side and decide if it failed for your use case or if it completely
 failed.
 
 {% include timecode.html time="20:15" %}
@@ -267,13 +277,27 @@ program to know it's slow. They were also effective against safety issues, which
 with exceptions or errors. However, they may not be effective against silent issues, as you need to understand the deep
 semantics of the program to know the data is corrupted.
 
+Andrey, question: how are they able to reproduce real-world failures? That's an almost impossible task in distributed
+systems, that's very, very hard.
+
 {% include timecode.html time="22:29" %}
-It took them a week on average to reproduce each failure. They ran the system with 22 real-world failures, where a
-single slow node could slow down the entire system due to partial failure. They injected the fault as described in the
-bug report, possibly with some trial and error or timing guesses.
+They mentioned that for every failure, it took them a week on average to reproduce it. They ran the system with 22
+real-world failures, where a single slow node could slow down the entire system due to partial failure. They injected the
+fault as described in the bug report, possibly with some trial and error and timing guesses.
+
+[Pat Helland](https://twitter.com/pathelland):
+And then they rerun it with that slowdown that the thing postulated caused the failure, and they see this from their
+OmegaGen checkers?
+
+Yes, that's the way I understood it.
+
+[Pat Helland](https://twitter.com/pathelland):
+So the broad idea is you get something up in the wild, hopefully, that knows normal responsiveness and says, "This is
+kind of smelling bad, I think I should raise an alarm"?
 
 {% include timecode.html time="23:28" %}
-So, for detection, 20 out of 22 failures were detected, which is pretty good.
+Yes, I'm going to talk about that a little later too. So for detection, 20 out of 22 failures were detected, which is
+pretty good.
 
 {% include timecode.html time="23:49" %}
 For localization, they mentioned that out of those 20 detected failures, they managed to directly point to the
@@ -283,7 +307,10 @@ in the main program.
 
 {% include timecode.html time="24:13" %}
 For seven of those cases, the problematic code was either within the same function or along the call chain. This is much
-better than just saying the system is slow or the writes are slow, which could happen for many different reasons.
+better than just saying the system is slow or the writes are slow, which could happen for many different reasons,
+because the write pipeline is just a huge amount of work in the system itself, compared to probe and signal detectors
+where they can tell you the process is slow or large-level APIs like writing key-values to your key-value store is slow.
+Those basically give you very little localization in terms of where the error is coming from.
 
 {% include timecode.html time="24:54" %}
 They also looked at false alarms and calculated the false alarm ratio as the total number of false failure reports
@@ -295,13 +322,13 @@ The median detection time is five seconds, which is incredibly fast. However, th
 alarm ratio and detection time. For example, what if the detection time was a minute, but the false alarm ratio was an
 order of magnitude better?
 
-{% include timecode.html time="24:35" %}
+{% include timecode.html time="25:35" %}
 The actual false alarm ratios are like that, so this is the table from the paper. The first row is watchdogs, the second
 row, watchdogs_v, is watchdogs validators.
 
 {% include timecode.html time="25:47" %}
 So, validators, as I said previously, basically, the default validator is just to rerun the same operation. So, if it
-was a slow rate, we rerun the rate and see if it's still slow.
+was a slow write, we rerun the write and see if it's still slow.
 
 {% include timecode.html time="25:59" %}
 Or, I think they mentioned sometimes they do more, kind of manually written validators for some systems, but they don't
@@ -323,7 +350,9 @@ Yeah, but you're right, I mean, the false alarm ratio should be related to the r
 
 {% include timecode.html time="27:12" %}
 The false alarm ratio should be related to the frequency of the checks and the comprehensiveness of the validators. They
-don't mention if the retry recheck is done right away or if there is a grace period to allow the system to recover.
+don't mention if the retry recheck is done right away or if there is a grace period to allow the system to recover,
+because two subsequent writes can definitely be slow if they're separated by a few seconds during an intermittent error,
+and a few seconds later it's all good.
 
 #### Conclusions
 
@@ -331,8 +360,7 @@ don't mention if the retry recheck is done right away or if there is a grace per
 In conclusion, the researchers studied 100 real-world partial failures in popular software like Zookeeper and Hadoop.
 They created the tool OmegaGen to generate watchdogs from the code. The generated watchdogs detected 20 out of 22
 partial failures they tried to reproduce and pinpointed the scope for almost all of them (18 out of 20) with more
-precision than just identifying a slow process. The paper also revealed a new partial failure in Zookeeper, which was
-confirmed and fixed by the Zookeeper team.
+precision than just identifying a slow process.
 
 {% include timecode.html time="28:25" %}
 And they also talk in the paper; they actually exposed a new partial failure in Zookeeper. So it's not just the old

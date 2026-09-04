@@ -40,7 +40,7 @@ These are the systems they analyzed, and these are the bugs they looked at from 
 systems. Overall, it's about 100 bugs, more than that even, and this is where all the findings come from, just
 basically, I assume, from reading and analyzing those bugs.
 
-#### Finding on Severity and Root Causes
+#### Findings on Severity and Root Causes
 
 {% include timecode.html time="2:28" %}
 Let's talk about the findings they have on severity, root causes, and some other aspects of those failures. First of
@@ -65,7 +65,7 @@ paper is that we need to get better at testing for those upgrades, and we need t
 find those before they make it to release, which the authors are working towards
 
 {% include timecode.html time="4:00" %}
-About two-thirds of those are, uh, up retailers are caused by data syntax or semantics, and those are roughly split 6 to
+About two-thirds of those upgrade failures are caused by data syntax or semantics, and those are roughly split 6 to
 4 between persistent data and network messages. And two-thirds of those are pure syntax, and one-third is semantic
 difference. So even though the syntax of the data is the same, it's just interpreted differently between different
 versions.
@@ -74,7 +74,7 @@ versions.
 That comes later when they try to address those issues.
 
 {% include timecode.html time="4:31" %}
-Uh, so some of the percentage of those syntax and compatibles are coming from serialization libraries, like Protobuf or
+Uh, so some of the percentage of those syntax incompatibilities are coming from serialization libraries, like Protobuf or
 Thrift, where you just describe the message in a special language, and that means you can automatically detect those
 incompatibilities versus trying to build some kind of a solution for every way to serialize. So that makes it easier to
 scale in terms of, like, if you build solutions for Protobuf or Thrift, you can apply it to a lot of different systems.
@@ -83,11 +83,11 @@ scale in terms of, like, if you build solutions for Protobuf or Thrift, you can 
 Which they did, and later talked about that.
 
 {% include timecode.html time="5:07" %}
-Uh, in general, or about on with all the upgraded errors you look at, only none of them require more than three nodes.
-So three nodes are enough to trigger all the upgrade values in all the systems they looked at.
+In general, out of all the upgrade failures they looked at, none of them require more than three nodes.
+So three nodes are enough to trigger all the upgrade failures in all the systems they looked at.
 
 {% include timecode.html time="5:22" %}
-And that corresponds to some other finding from a paper on general defects in the super system, which is called "Simple
+And that corresponds to some other finding from a paper on general defects in distributed systems, which is called "Simple
 testing can prevent most critical failures." Pretty well-known paper from 2014, where they found that 98% of all the
 failures in distributed systems are guaranteed to be observed in no more than three nodes.
 
@@ -96,14 +96,14 @@ So that's an important result and kind of makes it easier for us to test. We don
 that.
 
 {% include timecode.html time="5:51" %}
-Uh, almost all of those upgrades are deterministic, so you don't need to find any kind of special databases or timing
+Uh, almost all of those upgrades are deterministic, so you don't need to find any kind of special data races or timing
 conditions and things like that. If you can drive the system into that behavior with the workload, you can observe those
 with pretty high confidence.
 
 #### Testing and Detecting
 
 {% include timecode.html time="6:10" %}
-So the next part of the paper is kind of testing and detecting how concurrent systems approach the testing for upgrade
+So the next part of the paper is kind of testing and detecting how current systems approach the testing for upgrade
 failures and how authors propose to do that in a more systematic way.
 
 {% include timecode.html time="6:25" %}
@@ -123,7 +123,7 @@ or rolling upgrade. So those are not exposed in a systematic way.
 #### DUPTester
 
 {% include timecode.html time="7:10" %}
-Uh, and their proposed solution is two tools. First of those tools is Dub tester. So Dub tester is a distributed system
+Uh, and their proposed solution is two tools. First of those tools is DUPTester. So DUPTester is a distributed system
 upgrade tester.
 
 {% include timecode.html time="7:23" %}
@@ -135,12 +135,12 @@ As I mentioned before, the workload challenge, and they mentioned that in the pa
 the workload challenge.
 
 {% include timecode.html time="7:52" %}
-So the way the Dub tester works with this challenge is they have two approaches.
+So the way DUPTester works with this challenge is they have two approaches.
 
 {% include timecode.html time="7:58" %}
-First of all is we're using stress tests, and that's relatively straightforward. You just run your system and adopt
-tester in the containers environment across three nodes, and you run your stress test against that system while adopted
-through exercises upgrades in a systematic way.
+First of all is reusing stress tests, and that's relatively straightforward. You just run your system and DUPTester
+in a containerized environment across three nodes, and you run your stress test against that system while DUPTester
+exercises upgrades in a systematic way.
 
 {% include timecode.html time="8:12" %}
 And you look for all those crashes or catastrophic failures and things like that, which are hard to miss.
@@ -150,20 +150,20 @@ The other approach is using unit tests, and there are some tricks that I'm going
 what's with the unit tests?
 
 {% include timecode.html time="8:32" %}
-The way they propose to reuse unit tests in AdoptTester is by having two strategies.
+The way they propose to reuse unit tests in DUPTester is by having two strategies.
 
 {% include timecode.html time="8:39" %}
 First of all, automatically translate the unit tests into client-side scripts. So if you have some tests, this is kind
 of like why I put unit testing in quotes, because to me, that heavily implies that those unit tests are not actually
-unit tests. The tests exercise the system at a pretty high level, very close to its public KPI or external API, and this
-is why you can translate them into clients and scripts.
+unit tests. The tests exercise the system at a pretty high level, very close to its public API or external API, and this
+is why you can translate them into client-side scripts.
 
 {% include timecode.html time="9:05" %}
 So they're more like integration or end-to-end tests, if you will.
 
 {% include timecode.html time="9:10" %}
 The example they give is a standard unit test where it exercises some operations, and you can translate them. In their
-case, in AdoptTester, it's Python, so they actually translate Java into Python, making those tests in Python.
+case, in DUPTester, it's Python, so they actually translate Java into Python, making those tests in Python.
 
 {% include timecode.html time="9:27" %}
 So there are no guarantees to translate all of your unit tests, and it needs help from developers to map those
@@ -178,11 +178,11 @@ translatable and not guaranteed between the versions.
 #### DUPChecker
 
 {% include timecode.html time="10:10" %}
-The next tool they talk about is DubChecker, which is targeting specifically the syntax of data post-utilization
+The next tool they talk about is DUPChecker, which is targeting specifically the syntax of data cross-serialization
 libraries and enum types.
 
 {% include timecode.html time="10:22" %}
-So DubChecker targets two types of syntax incompatibilities in the system, specifically syntax, not semantics, of the
+So DUPChecker targets two types of syntax incompatibilities in the system, specifically syntax, not semantics, of the
 data, and just two types, but those turn out to be enough to cover a lot of ground.
 
 {% include timecode.html time="10:42" %}
@@ -206,31 +206,26 @@ get persisted. In this case, that's for Java, and in this particular case, they 
 API to write Java data.
 
 {% include timecode.html time="11:51" %}
-And then, if there are any additions or deletions to those enums and index, these are those enums that
-
-{% include timecode.html time="11:59" %}
-All the things they find for they can find from data.
-
-{% include timecode.html time="12:03" %}
-Flow analysis if that.
+And then, if there are any additions or deletions to those enums and the index of the enum gets persisted — so not just
+a string representation, but the index of the enum itself — and all those things they can find from dataflow analysis.
 
 {% include timecode.html time="12:06" %}
-Both those conditions are true, they again report it as error to developers. This covers enum specifically.
+If both of those conditions are true, they again report it as an error to developers. This covers enums specifically.
 
 #### Conclusions
 
 {% include timecode.html time="12:15" %}
 So overall conclusions from the paper. First of all, this is the first in-depth analysis as long as like authors, uh,
-aware and as I'm aware of upgrade failures in the service systems. And they found like that those figures have severe
+aware and as I'm aware of upgrade failures in distributed systems. And they found that those failures have severe
 consequences compared to general bug population.
 
 {% include timecode.html time="12:37" %}
-They developed the Dot Tester tool and found new 20 new upgrade failures in four systems, and Dub Checker found around
-800 more than 800 incompatibilities across seven systems. Two of those systems confirmed that all of those
-incompatibility is actually bugs, but they don't provide the number of what the number was for those.
+They developed the DUPTester tool and found 20 new upgrade failures in four systems, and DUPChecker found more than 800
+incompatibilities across seven systems. Two of those systems confirmed that all of those incompatibilities are actually
+bugs, but they don't provide the number of what the number was for those.
 
 {% include timecode.html time="12:58" %}
-Specifically, Apache hbased team requested Double Checker to be a part of their overall testing pipeline so they want to
+Specifically, the Apache HBase team requested DUPChecker to be a part of their overall testing pipeline, so they want to
 prevent those incompatibilities in the future.
 
 #### Personal Experience and Commentary
@@ -240,78 +235,78 @@ With that, I kind of want to transition from discussing the paper to my personal
 about upgrade testing.
 
 {% include timecode.html time="13:23" %}
-First of all, they don't like I guess talk a lot about correctness on the upgrade path because we're using stress tests
-or region unit tests where they say run it on version one and started on version two does not imply that the results
-they the system returns enough scenarios actually get validated that they're correct. So traditionally stress tests
-don't have correct installation, so as long because we imply that the system works correctly, we just want to, we're
-interested in its performance.
+First of all, they don't, I guess, talk a lot about correctness on the upgrade path, because reusing stress tests or
+reusing unit tests where they say run it on version one and start it on version two does not imply that the results the
+system returns in those scenarios actually get validated to be correct. Traditionally, stress tests don't have
+correctness validation, because we imply that the system works correctly, and we're just interested in its performance.
 
 {% include timecode.html time="13:57" %}
-All the correctness for distributed systems specifically implies correctness with failures in the testing scenario. It
-means field injection in the real world, it means nodes failing, networks failing, things like that.
+Correctness for distributed systems specifically implies correctness under failures in the testing scenario. It means
+fault injection in the real world; it means nodes failing, networks failing, things like that.
 
 {% include timecode.html time="14:09" %}
 They also do not discuss a lot of rollback. They mentioned it like for one bug, but I think testing system upgrade
-definitely implies testing rollback because that's the other aspect of rolling like working the system actually in
-production and operating it. And that's kind of to me it's missing in that paper.
+definitely implies testing rollback because that's the other aspect of running the system in production and operating it.
+And that's kind of missing in that paper to me.
 
 {% include timecode.html time="14:35" %}
-Regarding correctness, if we look at the system as a black box with version one in there, all the nodes running, and
-everything happening, everything working, the system exposes some side of invariance to its customer and there's no
-break. But if we actually add version two and do an upgrade, so this is like in this example who's going to be a rolling
-upgrade, that means the system's kind of looking differently internally but for external observant, those in the same
-invariants system provides, they still hold, and the system must guarantee those. Otherwise, because for external
-Observer they don't see the difference between this version and this version, they don't know if you're deploying. At
-least like modern systems and do that you don't put maintenance notice saying like we're going to have we're going to
-experience failures in the database, that's not what systems strive to do these days. So for external Observer, there is
-no difference.
+Regarding correctness, if we look at the system as a black box with version one, all the nodes running and everything
+working, the system exposes some set of invariants to its customers. But if we actually add version two and do an upgrade
+— in this example, a rolling upgrade — that means the system looks different internally, but for an external observer,
+the same invariants the system provides must still hold, and the system must guarantee those. An external observer
+doesn't see the difference between versions; they don't know if you're deploying. At least modern systems don't put up
+maintenance notices saying, "We're going to experience failures in the database" — that's not what systems strive to do
+these days. So for an external observer, there is no difference.
 
 {% include timecode.html time="15:48" %}
-Basically, my point here is that invariants during upgrade and invariance during the normal operation are exactly the
-same. So it means you can actually reuse a correctness test you already have presumably for the system, like for example
-Cassandra, where you have correctness tests which are jobs and like with fault injection, you can use the same test to
-test the system as a black box. So the way Jepsen does it.
+Basically, my point here is that invariants during upgrade and invariants during normal operation are exactly the
+same. So it means you can actually reuse a correctness test you already have, presumably, for the system — like for
+example Cassandra, where you have correctness tests which are Jepsen-like with fault injection. You can use the same
+test to test the system as a black box, the way Jepsen does it.
 
 {% include timecode.html time="16:03" %}
 And you don't need to use stress tests.
 
 {% include timecode.html time="16:05" %}
-And those tests guarantee correctness, that's also a guarantee that they also check for correctness behavior during
-execution. So if your system returns an incorrect result, do an upgrade not just crashes, not those 70% of easy to
-detect failures, but something more subtle like returning correct result, you can also detect those. Because you're
-using correctness, which actually validates those and also using fault injection, because this is what Jobson likes to
-do.
+And those tests guarantee correctness; they also check for correct behavior during execution. So if your system returns
+an incorrect result during an upgrade, not just crashes — not those 70% of easy-to-detect failures, but something more
+subtle like returning an incorrect result — you can also detect those. Because you're using correctness validation and
+also using fault injection, because this is what Jepsen likes to do.
 
 {% include timecode.html time="16:36" %}
-The other aspect I mentioned before is upgrade and rollback, so we do need to in real world we do need to test both
-upgrade and rollback because rollback is an operation that might happen and arguably, those rollback tasks are getting
-exercises even less frequently, so it's more important to test them in some kind of adversarial conditions like with
-failure injections.
+The other aspect I mentioned before is upgrade and rollback. In the real world, we do need to test both upgrade and
+rollback, because rollback is an operation that might happen and arguably, those rollback tests are getting exercised
+even less frequently, so it's more important to test them in adversarial conditions like with fault injection.
 
 {% include timecode.html time="17:15" %}
 And also, because we're talking specifically about upgrade bugs, that means the probability of exposing those bugs,
-especially on the field injection, where the whole scenario becomes even more probabilistic than before, we need to have
+especially under fault injection where the whole scenario becomes even more probabilistic than before, we need to have
 increased mixed version time. Because that directly corresponds to how many bugs we can expose. The more we can keep the
-system in the mixed diversion situation where we have version one and version two, I'm talking specifically about the
-rollback rolling upgrades scenario, obviously because full stop upgrade is less interesting. So, we need to maximize
-that mixed version time.
+system in the mixed-version situation where we have version one and version two — I'm talking specifically about the
+rolling upgrade scenario, obviously, because a full-stop upgrade is less interesting — we need to maximize that mixed
+version time.
 
 {% include timecode.html time="17:58" %}
 So the way I previously did upgrade testing in practice was have a basically infinite cycle of upgrades and rollbacks so
-the system goes through all the states infinitely, obviously in practice they're not internet, you have some kind of
-time budget like 24 hours or 48 hours or whatever your release cadence is, things like that, and these are the most
-important States in this. So you want to schedule those upgrades and rolling upgrades in a way that maximizes time of
-upgrade and rollback where the system actually run into versions concurrently.
+the system goes through all the states infinitely. Obviously in practice they're not infinite; you have some kind of
+time budget like 24 hours or 48 hours or whatever your release cadence is. So you want to schedule those upgrades and
+rolling upgrades in a way that maximizes time of upgrade and rollback where the system actually runs two versions
+concurrently.
+
+And as I mentioned before, you can use not just stress tests as the paper suggests, but also your correctness validation
+tests with fault injection, because in the real world, failures in distributed systems do not stop when you do an
+upgrade. They will happen, and you do need to exercise those code paths during an upgrade in both versions or mixed
+versions. This is the cycle of upgrade and rollback where you test both upgrade and rollback operations between version
+one and version two and correctness during that execution.
 
 {% include timecode.html time="19:00" %}
-Um, so overall, that's kind of my additional conclusion number two, is that there's certainly value in it, research and
+So overall, that's kind of my additional conclusion number two, is that there's certainly value in the research and
 ideas presented in the paper. I liked how they reuse stress tests, obviously. The findings are very valuable because
 they give quantitative data about upgrade failures compared to all the other bugs in the system. But I think there are
-additional ways where we can improve upgrade testing for distributed system versus compared to what they authors
-propose, and I think thinking of the system during upgrade as thinking of the system during normal operation is the
-valuable approach, like treating as a black box with invariance the way Japan does is a valuable approach to testing,
-which is like a basically well-known thing as a black box testing in approach. Um, we wet with that.
+additional ways where we can improve upgrade testing for distributed systems compared to what the authors propose, and I
+think thinking of the system during upgrade as thinking of the system during normal operation is a valuable approach,
+like treating it as a black box with invariants the way Jepsen does.
 
 {% include timecode.html time="19:49" %}
-I thank you for your attention and I'm up for the discussion.
+With that, I thank you for your attention, and I'm open for discussion.
 

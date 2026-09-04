@@ -5,8 +5,8 @@ Draft transcript https://docs.google.com/document/d/1wLbqJ_H0ts5_ntrsGlUamvwwNjS
 #### Introduction
 
 {% include timecode.html time="0:09" %}
-Hello everybody, my name is Andrey Satarin and I'm going to be talking about this paper, “What's the story in EBS Glory:
-Evolution and the Lessons Learning in Building Cloud Blockstore”.
+Hello everybody, my name is Andrey Satarin and I'm going to be talking about this paper, “What's the Story in EBS Glory:
+Evolutions and Lessons in Building Cloud Block Store”.
 This is a paper from Alibaba about their Cloud Blockstore.
 
 #### Outline
@@ -109,10 +109,10 @@ This is pretty big overhead long term.
 There are limits in performance because as I said, every virtual disk basically goes through a single block server.
 You are bound by the performance of that block server.
 If it's not performing enough, you cannot overtake that in terms of that bottleneck.
-And there could be some hotspots because the block server is also not completely like you can have software from some
+And there could be some hotspots because the block server is also not completely like you can suffer from some
 hotspots.
 
-They also found that to guarantee any kind of SLO, it's hard to do with spinning hard drives and the kernel TCP/AP.
+They also found that to guarantee any kind of SLO, it's hard to do with spinning hard drives and the kernel TCP/IP.
 They kind of do not like that architecture and that approach for those reasons.
 
 #### EBS2: Speedup with Space Efficiency
@@ -129,40 +129,40 @@ Instead of having consensus, you just defer to Pangu, who is the leader now and 
 They don't implement Paxos in their own services.
 Basically they have like whatever, etcd/chubby zookeeper implemented in Pangu.
 
-They also changed the lock structure design of their block servers.
+They also changed the log-structured design of their block servers.
 Basically instead of having in place updates for writes, they turn them into appends and I'll talk about that later a
 bit.
 
 {% include timecode.html time="7:11" %}
 That splits traffic in your front end traffic for client IO, where like client actually writes the writes and
 that traffic originates from the client and the background, which is garbage collection and compression to turn out
-those lock structured, like basically merge those lock structured, whatever, SS tables or whatever they call them.
+those log-structured, like basically merge those log-structured, whatever, SSTables or whatever they call them.
 
 Basically your logs into more read-optimized things.
-And now they have failover at the granular of a segment instead of virtual disk.
+And now they have failover at the granularity of a segment instead of virtual disk.
 They introduced this concept of a segment.
 
 The cluster changes into a different architecture.
-Now computers at the top and storage at the bottom as it should be.
+Now compute is at the top and storage is at the bottom as it should be.
 Compute clusters, now each virtual disk has a concept of a segment and each block server manages one segment instead
 of one virtual disk.
 
 And there's also a block manager on the right where it knows which virtual disk segment corresponds to which block
 server.
-And also says block server management in terms of like blocks or fails, it reassigns its segments to other block servers
+And also does block server management in terms of like if a block server fails, it reassigns its segments to other block servers
 and things like that.
 
 {% include timecode.html time="8:27" %}
-And underneath that there's a file layer of the Pango distributed file system.
+And underneath that there's a file layer of the Pangu distributed file system.
 We do not handle persistence ourselves.
-We just write to Pango and write up performed by this LSBD core, lock structured block device core which basically
-turns writes into, turns in place updates into appends.
+We just write to Pangu and writes are performed by this LSBD core, log-structured block device core which basically
+turns in-place updates into appends.
 
-And on the file system side, we have two things, which is a replicated file, which is though those appends go into
-initially, they are still three times replicated, but that just basically or write ahead log, quote unquote, because
-these are writes turned to appends.
+And on the file system side, we have two things, which is a replicated file, which is what those appends go into
+initially. They are still three times replicated, but that is basically a write-ahead log, quote unquote, because
+these are writes turned into appends.
 
-And then the garbage collection side or basically a merge side on the background turns those replicated files into
+And then the garbage collection side or basically a merge side in the background turns those replicated files into
 erasure coded data files, which are more space efficient.
 You don't store the same, basically if you write data over and over, you don't store all the copies, you store just
 the most recent one and you also apply erasure coding and things like that, making it more storage optimized.
@@ -170,31 +170,30 @@ the most recent one and you also apply erasure coding and things like that, maki
 {% include timecode.html time="9:40" %}
 Logically, they also split their disk into a lot of different things.
 Like there's a segment group at the top. 
-Your logical space of the disk, your gigabytes and terabytes of disks, a virtual disk space turns into segments,
-segment groups, which turn into segments and those each segment is stored on each block server.
+Your logical space of the disk, your gigabytes and terabytes of disk, a virtual disk space turns into segment
+groups, which turn into segments and each segment is stored on a block server.
 
 And this whole logical structure allows for more parallelism in the disk itself.
-Write into different segments, segment groups or segments turns into rates into different block servers, which allows
+Writing into different segments or segment groups turns into writes to different block servers, which allows
 for more parallelism.
 And that is important for performance.
 
-As I mentioned before, none of the blocks actually handle persistence. Persistence handled by the Pango distributed file
+As I mentioned before, none of the blocks actually handle persistence. Persistence is handled by the Pangu distributed file
 system.
-Underneath that is also Pango.
+Underneath that is also Pangu.
 
 {% include timecode.html time="10:30" %}
-What does the lock structure device look like?
+What does the log-structured device look like?
 This is basically the client writes or front end writes.
-They start turning those in place updates into appends in Pango.
+They start turning those in-place updates into appends in Pangu.
 And this is a replicated data file where each four kilobyte data piece has a header.
 
-The write request comes in, you write that data to Pango and acknowledge the write.
-And then there are additional data structures to speed up recovery or moving block storage, block servers between moving
-chunks between block servers.
+The write request comes in, you write that data to Pangu and acknowledge the write.
+And then there are additional data structures to speed up recovery or moving chunks between block servers.
 
-There's a transaction file and this whole SS table, lock structure from history, data structure to support basically
-to know which logical offset corresponds to which file.
-And similar to all the other lock structure storage engines.
+There's a transaction file and this whole SSTable, log-structured merge-tree data structure to support basically
+knowing which logical offset corresponds to which file.
+And similar to all the other log-structured storage engines.
 This is the front end part.
 
 {% include timecode.html time="11:32" %}
@@ -203,28 +202,28 @@ Basically making sure that there's no bitrot.
 They briefly mentioned that as well.
 
 On the garbage collection side, you have a block client, which writes that data to the LSBD core in a block server,
-which we write the repl into Pango with the replicated data file.
-And then the garbage collection worker reads that back and stores a razor coded file again in Pango.
+which writes the replicas into Pangu with the replicated data file.
+And then the garbage collection worker reads that back and stores an erasure coded file again in Pangu.
 There's less data here because I guess this is not like a hard number.
 
 This is what they calculated on average in the wild for their clusters, which basically means like there are a lot of
-other writes on the same bytes and you can drop some of them.
+overwrites on the same bytes and you can drop some of them.
 But just some important information here is at this lower boundary here, you read and write 4.69 times and that is all
 network amplification, which they very much want to avoid.
 
 {% include timecode.html time="12:36" %}
 That's a pretty important number.
-As I mentioned, the network complication is important in terms of IOPS.
-This whole parallelism gave them 50 times more IOPS compared to UBS1.
+As I mentioned, the network amplification is important in terms of IOPS.
+This whole parallelism gave them 50 times more IOPS compared to EBS1.
 
 They can do a million IOPS per virtual disk.
 Depends on the size, obviously, but the larger the size, the more IOPS you can get.
 Maximum throughput per disk is also not bound by a single server now and you can have 4000 megabits per second.
-Again, huge improvement, but the network complication costs are pretty high.
+Again, huge improvement, but the network amplification costs are pretty high.
 Space amplification is way better.
 That's 1.29 instead of 3.
 
-But network complication, it's not only your pain for more network, your throughput is basically limited by the network
+But network amplification, it's not only that you're paying for more network, your throughput is basically limited by the network
 because every time you write something, you write way more to the network, which is one of the things they want to
 address in version 3.
 
@@ -232,7 +231,7 @@ address in version 3.
 
 {% include timecode.html time="13:34" %}
 The main goal is basically reducing that number to something more manageable for version 3.
-That's like how to reduce the network complications there.
+That's like how to reduce the network amplification there.
 
 What they did basically to address that is they added compression and erasure coding on the write path.
 For that, because you cannot just do that on the write path because you don't have enough, it will cost you latency in
@@ -244,25 +243,25 @@ The other thing is because per disk, you don't have enough throughput per disk t
 cannot, even 4 kilobyte writes, and you cannot make them smaller or pad them because it will basically make your space
 and network efficiency even worse if you pad the data.
 
-They came up with the approach, what they call a fusion write engine.
+They came up with the approach, what they call a FusionWrite engine.
 I'll talk about those in more detail in a minute.
 
-Basically moving erasure coding and compression to the front end path, to write path of the system.
-And for that, they need that fusion write engine and need FPGA.
+Basically moving erasure coding and compression to the front end path, to the write path of the system.
+And for that, they need that FusionWrite engine and need FPGA.
 And the overall result is that they reduced network amplification to roughly 1.6.
 And space amplification, again, is pretty small.
 Huge improvement of throughput, almost double compared to version two per network card.
 
 {% include timecode.html time="14:52" %}
-How does this fusion write engine work?
+How does this FusionWrite engine work?
 This is a new write path improved for version three.
-Basically a write request comes in and goes into this fusion write engine.
-The trick of the fusion write engine and the main idea is that at this point, you only care about persistence, but you
+Basically a write request comes in and goes into this FusionWrite engine.
+The trick of the FusionWrite engine and the main idea is that at this point, you only care about persistence, but you
 don't care about data layout to be super optimized.
 
-Basically, the fusion part of the fusion write engine is that they fuse together writes from different segments,
+Basically, the fusion part of the FusionWrite engine is that they fuse together writes from different segments,
 which means different virtual disks.
-They fuse them into the same kind of request or like the same persistent request to Pango.
+They fuse them into the same kind of request or like the same persistent request to Pangu.
 They use this hardware acceleration again to compress and do erasure coding.
 And then they write it to a journal file, but now the journal file contains data from different segments and different
 virtual disks versus previous versions.
@@ -275,7 +274,7 @@ But if you fuse them together from various segments, you can write for persisten
 {% include timecode.html time="16:36" %}
 Yes, you have a little more complicated recovery story, but in terms of performance, it's a huge win.
 On the side here, the data files that they still have, per segment, they still maintain them in memory and periodically
-dump those data files back to Pango.
+dump those data files back to Pangu.
 Also compressed, I assume with the same hardware acceleration and using slightly different erasure coding algorithms.
 Those who are like simplifying recovery, like kind of not relying on that log so much.
 
@@ -289,7 +288,7 @@ than EBS1, more performant than EBS2.
 
 They have graphs and benchmarks on that, but like overall, it just way better performance-wise and that's about it.
 But the benchmark they use is YCSB, RocksDB and SysBench MySQL.
-They run MySQL on top of their desk and see how well it performs.
+They run MySQL on top of their disk and see how well it performs.
 At the application level.
 
 #### EBS3: Elasticity
@@ -298,11 +297,11 @@ At the application level.
 The next challenge they talk about is elasticity.
 How to make sure that service is providing like those cloud capabilities in terms of elasticity.
 And elasticity they discuss in terms of four separate metrics.
-Two metrics for latency, which is average and very high percentile, five, nine, stale latency.
+Two metrics for latency, which is average and very high percentile, five nines tail latency.
 And so these are important.
 
-You want your desk to be fast and latency because running MySQL on top of the local disk and running MySQL on the cloud
-desk should probably work about okay.
+You want your disk to be fast in latency because running MySQL on top of the local disk and running MySQL on the cloud
+disk should probably work about okay.
 At least that's the goal.
 
 The other two metrics combined kind of like this throughput and IOPS.
@@ -315,7 +314,7 @@ for capacity discussion in the paper.
 
 {% include timecode.html time="19:01" %}
 So latency.
-These are their graphs for basically for latency averages on the left and high-labor latency on the write and where this
+These are their graphs for basically for latency averages on the left and high tail latency on the right and where this
 latency comes from.
 There are different parts of the system and how they contribute to latency in those scenarios.
 One is block cache, first hop of the network, the block server itself, the second hop of the network, Pangu storage,
@@ -333,10 +332,10 @@ mostly in the hardware.
 Average latency, the cause of that is hardware being there, a network hop being there.
 
 {% include timecode.html time="20:02" %}
-They developed EBSX, which basically stores data locally without the second hop to Pango in persistent memory, which
+They developed EBSX, which basically stores data locally without the second hop to Pangu in persistent memory, which
 completely removes the second hop and reduces latency to like an actual I/O device.
-And they still store three replicas of that because they need full tolerance and persistence and flush the data
-eventually for Pangu for costs, reasons, and yeah, because the P memory is way more expensive than SSDs.
+And they still store three replicas of that because they need fault tolerance and persistence and flush the data
+eventually to Pangu for cost reasons, because PMEM is way more expensive than SSDs.
 
 That basically gives them this graph for EBSX.
 If you see latency compared to top is write, bottom is read path significantly better for that, but obviously costs
@@ -348,17 +347,17 @@ Again, we completely eliminate the second hop and like Pangu is not there, like 
 persistent memory on those scales.
 
 {% include timecode.html time="21:43" %}
-The other latency case is very high percentile, five, nine percentile on the tail.
+The other latency case is very high percentile, five nines percentile on the tail.
 And then you notice that basically there's a huge part of the block server being slow quote unquote for those.
 It contributes a lot to that high percentile latency is specifically software in the block server.
 Their investigation found out that contention with background tasks is the reason for that high percentile.
 
-Basically you have an IO thread with doing things and also doing some, doing things for the front end for the write
-path of the read path, but also from time to time does interferes or contents with the background task like scrubbing
+Basically you have an IO thread doing things and also doing things for the front end for the write
+path or the read path, but also from time to time interferes or contends with the background tasks like scrubbing
 and compaction or garbage collection in there.
 They moved those to a separate thread.
 
-They also added speculative retry, which is the typical “tail at scale”.
+They also added speculative retry, which is the typical “Tail at Scale”.
 If the request doesn't come soon enough at some threshold, they just issue another request to another replica or
 another block server in this case, and that improves latency.
 
@@ -385,11 +384,11 @@ You want your disk to be able to scale to a lot of throughput because size is ki
 You can have as almost as big as you want or a system allows.
 And for that they moved things, they moved all their IO processing to user space.
 
-They started, if you remember from version one, just a regular TCP/AP stack and they moved to their more specialized
+They started, if you remember from version one, just a regular TCP/IP stack and they moved to their more specialized
 networking called Luna and Solar.
 Solar is the latest generation as far as I understand.
 
-They uploaded a bunch of IO operations, a bunch of things on the IO path to FPGAs, like CRC calculations and like packet
+They offloaded a bunch of IO operations, a bunch of things on the IO path to FPGAs, like CRC calculations and like packet
 transmission and just basically added a pretty huge network to that and having that network shifts bottleneck to
 internal PCIe bandwidth.
 
@@ -398,7 +397,7 @@ This is basically the first thing on your write path, which is still in a virtua
 requests to your clients.
 That is the first bottleneck because you cannot do faster than your block client.
 
-You have to remove all the bottlenecks from there because behind that block client which is a brand on one
+You have to remove all the bottlenecks from there because behind that block client which is run on one
 machine, you have a huge service where you can increase parallelism and scale up resources, but the block client starts
 on one machine.
 
@@ -413,7 +412,7 @@ the disk, virtual disks and that's, I guess, considered good enough.
 
 The other thing that they noticed is that a lot of clients actually over provision their disks, virtual disks, because
 they wanna make sure that they will not be throttled when they burst.
-They have regular writing activities and sometimes they burst a lot.
+They have regular write activities and sometimes they burst a lot.
 
 This is why they employ this base plus burst strategy where you have the base capacity where you can actually reserve
 for your disk and you have additional burst capacity which is available there as long as you like not to abuse it too
@@ -431,9 +430,9 @@ If certain block servers are getting too hot, segments are getting moved from th
 And all of those things improve IOPS.
 In the end, the service allows max base capacity at 50,000 IOPS and burst capacity up to a million.
 
-You can have, and they mentioned that the larger disk you can have is 64 terabytes.
+You can have, and they mentioned that the largest disk you can have is 64 terabytes.
 You can have 64 terabytes with 50,000 IOPS on that disk and basically kind of guaranteed, I guess, quote unquote, I'm
-not sure what the actual SLOs are for that and the burst up to a million IOPS.
+not sure what the actual SLAs are for that and the burst up to a million IOPS.
 
 #### Availability
 
@@ -493,20 +492,20 @@ I think the number they mentioned is on the order of hundreds of milliseconds to
 manager crashes.
 It's pretty great.
 
-Explicitly in the paper, they call out a comparison to AWS paper called millions of tiny databases talking about AWS
-Faisalio, which is Amazon's approach to having a high available control plane for elastic block store service.
+Explicitly in the paper, they call out a comparison to an AWS paper called "Millions of Tiny Databases" talking about AWS
+Physalia, which is Amazon's approach to having a highly available control plane for elastic block store service.
 That's a comparison if you're familiar with that paper.
 
 #### Availability: Data Plane
 
 {% include timecode.html time="31:16" %}
-On the data plane availability, as I mentioned, they mostly talk about individual events, a kind of poison pill and
+On the data plane availability, as I mentioned, they mostly talk about individual events, a kind of poison pill in
 software.
 
-You have a bug where certain write requests or certain disks, certain chunks call cause your block server
+You have a bug where certain write requests or certain disks, certain chunks cause your block server
 to crash and they want to prevent that crash from propagating across the entire cluster.
-They don't call it a poison pill, but I think in general, in the paper, but in general, the term is pretty popular.
-The core idea they have here is they need to somehow isolate those crashing chunks to a small number of blocks.
+They don't call it a poison pill in the paper, but in general, the term is pretty popular.
+The core idea they have here is they need to somehow isolate those crashing chunks to a small number of block servers.
 
 And for that, they employ a token bucket algorithm.
 Every segment has three tokens to migrate and tokens replenish at one per 30 minutes and you cannot go more
@@ -518,8 +517,8 @@ You have three block servers which are called logical failure domains.
 
 And if your chunk caused some block servers to basically crash more than three times in like 30 minutes, you will get
 that chunk migrated to that logical failure domain and will be there, I guess until it heals or something else happens.
-And if there are more chunks like that, they all be moved into that logical failure domain and there are those failure
-domains that also merge.
+And if there are more chunks like that, they all be moved into that logical failure domain and those failure
+domains also merge.
 
 {% include timecode.html time="33:00" %}
 You will always have just one logical failure domain.
@@ -527,7 +526,7 @@ Effectively what you have in the end is all your chunks which cause block server
 three times in 30 minutes or so, they all be moved to the same block servers.
 
 They will not migrate to other parts of the cluster at all.
-They might cause a lot of an availability in that small subset of block servers, but they will not get out of the
+They might cause a lot of unavailability in that small subset of block servers, but they will not get out of
 jail.
 There's no get out of jail card.
 They will be there until something improves.
