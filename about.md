@@ -13,8 +13,8 @@ More ways to [follow](/follow/).
 
 ### Bio
 
-Andrey is a Staff Site Reliability Engineer at Google, responsible for ensuring reliability of petabyte-scale
-OLAP/query processing systems, ranking among the top five in scale at Google.
+Andrey is a Staff Site Reliability Engineer at Google, where he focuses on the reliability, scalability and security
+of [Google Distributed Cloud](https://cloud.google.com/distributed-cloud?hl=en).
 He is an active participant in the distributed systems community and has served on the program
 committee of the [Hydra conference](https://hydraconf.com/).
 
