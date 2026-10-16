@@ -13,15 +13,18 @@ More ways to [follow](/follow/).
 
 ### Bio
 
-Andrey is a Staff Site Reliability Engineer at Google, where he focuses on the reliability, scalability and security
-of [Google Distributed Cloud](https://cloud.google.com/distributed-cloud?hl=en).
-He is an active participant in the distributed systems community and has served on the program
-committee of the [Hydra conference](https://hydraconf.com/).
+Andrey Satarin is a Staff Site Reliability Engineer at Google, where he leads the SRE team for
+[Google Distributed Cloud](https://cloud.google.com/distributed-cloud),
+focusing on reliability, scalability, and security. Before that, he spent five years on Google's petabyte-scale
+query and database systems, [F1 Query](https://research.google/pubs/f1-query-declarative-querying-at-scale/) and
+[F1 DB](https://research.google/pubs/f1-a-distributed-sql-database-that-scales/).
 
-Previously, Andrey worked on [Amazon Aurora](https://aws.amazon.com/rds/aurora/) at Amazon Web
-Services, [YDB](https://ydb.tech/) a distributed SQL database at
-Yandex, [Astraea](https://www.kaspersky.com/enterprise-security/wiki-section/products/big-data-the-astraea-technology)
-cloud malware detection system at Kaspersky Lab, an online multiplayer game at Mail.ru, and a low latency foreign
-exchange pricing service at Deutsche Bank.
+Earlier in his career, Andrey worked on [Amazon Aurora](https://aws.amazon.com/rds/aurora/) at AWS,
+[YDB](https://ydb.tech/) (a distributed SQL database) at Yandex,
+the [Astraea](https://www.kaspersky.com/enterprise-security/wiki-section/products/big-data-the-astraea-technology)
+cloud malware detection system at Kaspersky Lab, an online multiplayer game at Mail.ru, and a low-latency
+foreign exchange pricing service at Deutsche Bank.
 
-He is interested in building large scale distributed databases, data processing and backend systems.
+Andrey is active in the distributed systems community. He served on the program committee of the
+[Hydra conference](https://hydraconf.com/). He is interested in large-scale distributed databases, data processing,
+and the reliability and correctness of backend systems.
