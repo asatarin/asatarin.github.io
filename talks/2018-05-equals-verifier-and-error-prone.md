@@ -10,7 +10,7 @@ Presented in Saint Petersburg in May 2018
 at [Heisenbug](https://heisenbug.ru/en/)
 conference. Video and slides are in Russian.
 
-### Abstract
+## Abstract
 
 The best kind of tests are the ones that cost almost nothing, yet find defects.
 We’ll talk about two Java tools that are close to this ideal.
@@ -21,7 +21,7 @@ from Google — a compile-time checker for common mistakes in your code.
 
 This talk will be useful for testers and Java developers.
 
-### Materials
+## Materials
 
 [Download slides in Russian (PDF)](/assets/talks/2018-05-talk-equalsverifier-and-errorprone.pdf)
 
@@ -32,7 +32,7 @@ print_alt_url = "https://speakerdeck.com/asatarin/equalsverifier-errorprone-i-vs
 
 {% include youtube.html video_id="jeCpYOEuL64" %}
 
-### References
+## References
 
 - [EqualsVerifier](https://jqno.nl/equalsverifier/)
 - [“Not all equals methods are created equal”](https://youtu.be/pNJ_O10XaoM) by Jan Ouwens

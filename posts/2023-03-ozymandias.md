@@ -42,6 +42,6 @@ A legacy that lasts beyond the earth.
 Poem about software development in the style of "Ozymandias" by Percy Bysshe Shelley.
 Written by ChatGPT.
 
-### References
+## References
 
 * ["Ozymandias" By Percy Bysshe Shelley](https://www.poetryfoundation.org/poems/46565/ozymandias)

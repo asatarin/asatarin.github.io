@@ -11,11 +11,11 @@ Hydra and other things (in Russian).
 
 {% include youtube.html video_id="BP00xihSQo8" %}
 
-### References
+## References
 
 These references came up during discussion and questions.
 
-#### Books
+### Books
 
 - ["Distributed systems for fun and profit"](https://book.mixu.net/distsys/single-page.html)  
   This short book will give you a good grasp of some theoretical concepts without going too deep.
@@ -30,14 +30,14 @@ These references came up during discussion and questions.
   It's almost a classic book at this point. Martin Kleppmann does a great job introducing the reader to fundamental
   concepts in distributed systems.
 
-#### Amazon Aurora
+### Amazon Aurora
 
 Paper reviews on [Amazon Aurora database](https://aws.amazon.com/rds/aurora/), with links to papers themselves:
 
 - [Amazon Aurora: design considerations for high throughput cloud-native relational databases](https://web.archive.org/web/https://blog.acolyer.org/2019/03/25/amazon-aurora-design-considerations-for-high-throughput-cloud-native-relational-databases/)
 - [Amazon Aurora: on avoiding distributed consensus for I/Os, commits, and membership changes](https://web.archive.org/web/https://blog.acolyer.org/2019/03/27/amazon-aurora-on-avoiding-distributed-consensus-for-i-os-commits-and-membership-changes/)
 
-#### Papers
+### Papers
 
 - [Distributed systems theory for the distributed systems engineer](https://www.the-paper-trail.org/post/2014-08-09-distributed-systems-theory-for-the-distributed-systems-engineer/)  
   My deep dive into distributed systems started with this reading list.

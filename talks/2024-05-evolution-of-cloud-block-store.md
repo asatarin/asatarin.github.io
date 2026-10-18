@@ -15,7 +15,7 @@ This is a talk on "What's the Story in EBS Glory: Evolutions and Lessons in Buil
 paper for the [distributed systems reading group](https://charap.co/category/reading-group/) led
 by [Aleksey Charapko](https://twitter.com/AlekseyCharapko).
 
-### Paper
+## Paper
 
 "What's the Story in EBS Glory: Evolutions and Lessons in Building Cloud Block Store" by Weidong Zhang, Erci Xu, Qiuping
 Wang, Xiaolu Zhang, Yuesheng Gu, Zhenwei Lu, Tao Ouyang, Guanqun Dai, Wenwen Peng, Zhe Xu, Shuo Zhang, Dong Wu, Yilei
@@ -24,7 +24,7 @@ Shi, Yinhu Wang, Rong Liu, Junping Wu, Jiaji Zhu, and Jiesheng Wu, Alibaba Group
 
 Paper presented at [FAST 2024](https://www.usenix.org/conference/fast24/technical-sessions).
 
-#### Paper Abstract
+### Paper Abstract
 
 In this paper, we qualitatively and quantitatively discuss the design choices, production experience, and lessons in
 building the Elastic Block Storage (EBS) at Alibaba Cloud over the past decade. To cope with hardware advancement and
@@ -37,7 +37,7 @@ by minimizing the blast radius of individual, regional, and global failure event
 key tradeoffs in various hardware offloading solutions; and (iv) identifying the pros/cons of the alternative solutions
 and explaining why seemingly promising ideas would not work in practice.
 
-### Materials
+## Materials
 
 [Download slides (PDF)](/assets/talks/2024-05-evolution-of-cloud-block-store.pdf)
 
@@ -48,7 +48,7 @@ print_alt_url = "https://speakerdeck.com/asatarin/evolution-of-cloud-block-store
 
 {% include youtube.html video_id="IYMsY7Y-ePA" %}
 
-### References
+## References
 
 - "What's the Story in EBS Glory: Evolutions and Lessons in Building Cloud Block
   Store" [paper](https://www.usenix.org/conference/fast24/presentation/zhang-weidong)
@@ -63,6 +63,6 @@ print_alt_url = "https://speakerdeck.com/asatarin/evolution-of-cloud-block-store
 - [The Tail at Scale](https://research.google/pubs/the-tail-at-scale/) — classic paper on improving high percentile
   latency in distributed systems
 
-### Transcript
+## Transcript
 
 {% include transcript.html filename="2024-05-evolution-of-cloud-block-store.transcript.md" %}

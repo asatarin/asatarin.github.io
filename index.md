@@ -7,11 +7,11 @@ description: Personal Website
 Private notes https://docs.google.com/document/d/15TvHbeZGgTvKGpxWFxH84Cm9LXXmIF8botfuBHAPBJA/edit#
 {% endcomment %}
 
-### Featured
+## Featured
 
 {% include featured-pages-list.html %}
 
-### Recent
+## Recent
 
 {% include recent-talks-list.html %}
 

@@ -10,7 +10,7 @@ Presented in Moscow in December 2017
 at [Heisenbug](https://heisenbug.ru/en/) conference. Video and slides are
 in Russian.
 
-### Abstract
+## Abstract
 
 Every day the systems we develop become more and more complicated.
 It seems there is nowhere to hide from the ubiquitous complexity.
@@ -23,7 +23,7 @@ how useful it has been for our project.
 This talk will be helpful for those who want to learn an easy way to
 increase system stability and availability in production.
 
-### Materials
+## Materials
 
 [Download slides in Russian (PDF)](/assets/talks/2017-12-talk-how-to-check-a-system-without-running-it.pdf)
 
@@ -34,7 +34,7 @@ print_alt_url = "https://speakerdeck.com/asatarin/kak-provierit-sistiemu-nie-zap
 
 {% include youtube.html video_id="KaeEjsAjV6A" %}
 
-### References
+## References
 
 - [Three days that shocked us in 2013](https://habrahabr.ru/company/odnoklassniki/blog/268413/) in Russian
 - ["Paxos Made Live – An Engineering Perspective"](https://web.archive.org/web/https://blog.acolyer.org/2015/03/05/paxos-made-live/)

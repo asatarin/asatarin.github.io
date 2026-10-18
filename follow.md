@@ -3,7 +3,7 @@ title: How to Follow
 description: How to follow me on the Internet
 ---
 
-### Social Media Platforms
+## Social Media Platforms
 
 To follow me on other platforms, use one of these profiles:
 <ul>
@@ -12,7 +12,7 @@ To follow me on other platforms, use one of these profiles:
     {%- endfor %}
 </ul>
 
-### RSS / Atom
+## RSS / Atom
 
 To follow the RSS / Atom feed of this website, you need a feed reader. I recommend [Feedly](https://feedly.com).
 Add any website page or the Atom [feed]({{ '/feed.xml' | absolute_url }}) to Feedly. If neither works,

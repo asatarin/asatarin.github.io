@@ -2,7 +2,7 @@
 Draft transcript https://docs.google.com/document/d/1EYTEZysRqwiSs4ehm-BGzF-17FOES2wacGikP22K7-c/edit#
 {% endcomment %}
 
-#### Introduction
+### Introduction
 
 {% include timecode.html time="0:05" %}
 Hello, everyone.
@@ -22,7 +22,7 @@ looked at in the system, and overall experience and lessons from that work.
 
 So introduction.
 
-#### Introduction and ShardStore
+### Introduction and ShardStore
 
 {% include timecode.html time="0:50" %}
 S3 is like a key-value object storage provided by Amazon, and the core of S3 service are storage node servers, which
@@ -71,7 +71,7 @@ than one write log and that complicates crash consistency.
 And as I mentioned before, there is a garbage collection and other internal processes also complicate things.
 And the idea is to validate that.
 
-#### Validating a Storage System
+### Validating a Storage System
 
 So what kind of properties?
 
@@ -119,7 +119,7 @@ That idea of using the reference model as a mock also helps to keep it up to dat
 need to, if you implement a new API, basically you have to implement the new API in the mock in the reference model
 because you want to use it in some other test as a mock.
 
-#### Conformance Checking
+### Conformance Checking
 
 {% include timecode.html time="6:10" %}
 So conformance checking.
@@ -161,7 +161,7 @@ basically says don't compare the crashed operations to the reference model.
 And some things like resource exhaustion is specifically out of scope for property based testing, because it's kind of
 hard to extend the model to those accidental complexity things without making it more complicated than it should be.
 
-#### Checking Crash Consistency
+### Checking Crash Consistency
 
 So crash consistency, which is again, it's like sequential execution with presence of crashes.
 So the test system still controls every operation and still executes them sequentially.
@@ -223,7 +223,7 @@ But the outcome was that they didn't uncover any new bugs.
 And because the state space is vastly larger, it's just way slower.
 So this is not the default for how they run tests because it just was not beneficial.
 
-#### Checking Concurrent Executions
+### Checking Concurrent Executions
 
 For concurrent executions.
 So basically, we covered sequential execution, sequential execution with crashes.
@@ -250,7 +250,7 @@ So you can validate the shorter histories in Loom, making sure that they're corr
 But at the larger scale with more iterations, longer histories, you have to do like a Shuttle model checker, which does
 not provide a full guarantee but still explores the state space.
 
-#### Other Properties
+### Other Properties
 
 So other properties they looked at in the system, which are also desirable, is absence of undefined behavior.
 
@@ -265,7 +265,7 @@ And that helps to prove panic freedom of serialization code.
 But on top of that, they also used fuzzing extensively to kind of like the way fuzzing works with serialization code to
 make sure that there are no crashes or undesirable behaviors and stuff like that.
 
-#### Experience and Lessons
+### Experience and Lessons
 
 So what are the overall lessons from that work?
 And experience.

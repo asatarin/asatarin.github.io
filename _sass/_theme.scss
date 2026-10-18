@@ -112,6 +112,7 @@ a {
     font-size: 1.25rem;
     font-weight: normal;
     margin-top: 0rem;
+    margin-bottom: 0.83em;
 }
 
 .page-date {
@@ -158,6 +159,16 @@ a {
     margin-bottom: 1rem;
     font-weight: normal;
     color: var(--section-headings-color);
+  }
+
+  // Content headings start at h2 (the page title is the only h1),
+  // sized like the h3/h4 they replaced.
+  h2 {
+    font-size: 1.17em;
+  }
+
+  h3 {
+    font-size: 1em;
   }
 
   h2, h3, h4, h5, h6  {

@@ -12,9 +12,9 @@ conference program committee (in Russian). We talked about distributed systems a
 
 {% include youtube.html video_id="-kD8zu7DGew" %}
 
-### References
+## References
 
-#### Talks on distributed systems and testing
+### Talks on distributed systems and testing
 
 * [Testing Distributed Systems](/talks/testing-distributed-systems/) talk by me (Heisenbug 2016, in Russian)
 * [CrashMonkey and ACE: Systematically Testing File-System Crash Consistency](https://youtu.be/BmhKbGoCyqo) by Jayashree
@@ -23,7 +23,7 @@ conference program committee (in Russian). We talked about distributed systems a
 * [Redundancy does not imply fault tolerance](https://2020.hydraconf.com/2020/msk/talks/4cs5kob6u7wvchmlyjq66h/) by
   Aishwarya Ganesan (Hydra 2020)
 
-#### Blogs
+### Blogs
 
 * [Testing Microservices, the sane way](https://medium.com/@copyconstruct/testing-microservices-the-sane-way-9bb31d158c16)
   by Cindy Sridharan
@@ -35,7 +35,7 @@ conference program committee (in Russian). We talked about distributed systems a
 * [Distributed systems theory for the distributed systems engineer](https://www.the-paper-trail.org/post/2014-08-09-distributed-systems-theory-for-the-distributed-systems-engineer/)
   by Henry Robinson
 
-#### Books
+### Books
 
 * [“Distributed systems for fun and profit”](https://book.mixu.net/distsys/single-page.html) by Mikito Takada.  
   This short book will give you a good grasp of some theoretical concepts without going too deep. It’s a good starting
@@ -52,7 +52,7 @@ conference program committee (in Russian). We talked about distributed systems a
   It’s almost a classic book at this point. Martin Kleppmann does a great job introducing the reader to fundamental
   concepts in distributed systems.
 
-#### Interviews
+### Interviews
 
 Some older interviews with me in Russian:
 

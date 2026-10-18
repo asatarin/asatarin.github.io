@@ -3,7 +3,7 @@ title: About
 description: Contacts and bio
 ---
 
-### Contacts
+## Contacts
 
 * Profile on [LinkedIn](https://www.linkedin.com/in/asatarin/)
 * Twitter [@asatarin](https://twitter.com/asatarin)
@@ -11,7 +11,7 @@ description: Contacts and bio
 
 More ways to [follow](/follow/).
 
-### Bio
+## Bio
 
 Andrey Satarin is a Staff Site Reliability Engineer at Google, where he leads the SRE team for
 [Google Distributed Cloud](https://cloud.google.com/distributed-cloud),

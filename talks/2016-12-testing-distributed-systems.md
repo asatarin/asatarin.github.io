@@ -15,7 +15,7 @@ Presented in Moscow in December 2016
 at [Heisenbug](https://heisenbug.ru/en/) conference and in
 Yekaterinburg in April 2017. Video and slides are in Russian.
 
-### Abstract
+## Abstract
 
 In our professional lives, we encounter distributed systems more and more often.
 Many modern popular websites and applications have a distributed system “under the hood” —
@@ -34,7 +34,7 @@ The following questions will be covered:
 The talk is built around the example of a persistent distributed queue developed at Yandex.
 Attendees will learn what Andrey and the Yandex team tested, how they tested it, and what results they obtained.
 
-### Materials
+## Materials
 
 [Download slides in Russian (PDF)](/assets/talks/2016-12-talk-testing-distributed-systems.pdf)
 
@@ -45,7 +45,7 @@ print_alt_url = "https://speakerdeck.com/asatarin/tiestirovaniie-raspriedielienn
 
 {% include youtube.html video_id="h8RV4JfSovg" %}
 
-### References
+## References
 
 - [Testing Distributed Systems](https://asatarin.github.io/testing-distributed-systems/) — curated list of resources on
   testing distributed systems
@@ -61,7 +61,7 @@ Not exactly references, but you could check out interviews with me on testing di
 systems, [one in November 2016](https://habrahabr.ru/company/jugru/blog/313908/)
 and [another one in June 2017](https://habrahabr.ru/company/jugru/blog/329974/) (both in Russian).
 
-### Other versions
+## Other versions
 
 A shorter version of this talk was presented at DUMP 2017 conference in Yekaterinburg in April 2017.
 

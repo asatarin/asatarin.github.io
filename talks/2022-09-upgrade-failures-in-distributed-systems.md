@@ -19,13 +19,13 @@ This is a talk on "Understanding and Detecting Software Upgrade Failures in Dist
 paper for the distributed systems [reading group](https://charap.co/category/reading-group/)
 led by [Aleksey Charapko](https://twitter.com/AlekseyCharapko).
 
-### Paper
+## Paper
 
 "Understanding and Detecting Software Upgrade Failures in Distributed Systems"
 by Yongle Zhang, Junwen Yang, Zhuqi Jin, Utsav Sethi, Kirk Rodrigues, Shan Lu, Ding Yuan.
 Presented at [SOSP 2021](https://dl.acm.org/doi/10.1145/3477132.3483577).
 
-#### Paper Abstract
+### Paper Abstract
 
 Upgrade is one of the most disruptive yet unavoidable maintenance tasks that undermine
 the availability of distributed systems. Any failure during an upgrade is catastrophic,
@@ -43,7 +43,7 @@ and applied a series of static checkers DUPChecker that discovered
 over 800 cross-version data-format incompatibilities that can lead to upgrade failures.
 DUPChecker has been requested by HBase developers to be integrated into their toolchain.
 
-### Materials
+## Materials
 
 [Download slides (PDF)](/assets/talks/2022-09-upgrade-failures-in-distributed-systems.pdf)
 
@@ -54,7 +54,7 @@ print_alt_url = "https://speakerdeck.com/asatarin/understanding-upgrade-failures
 
 {% include youtube.html video_id="2ybZcLXbJp8" %}
 
-### References
+## References
 
 - "Understanding and Detecting Software Upgrade Failures in Distributed
   Systems" [paper](https://dl.acm.org/doi/10.1145/3477132.3483577)
@@ -67,6 +67,6 @@ print_alt_url = "https://speakerdeck.com/asatarin/understanding-upgrade-failures
   Failures" [paper](https://www.usenix.org/conference/osdi14/technical-sessions/presentation/yuan)
 - Curated list of resources on [testing distributed systems](/testing-distributed-systems/)
 
-### Transcript
+## Transcript
 
 {% include transcript.html filename="2022-09-upgrade-failures-in-distributed-systems.transcript.md" %}

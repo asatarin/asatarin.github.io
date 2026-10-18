@@ -9,7 +9,7 @@ layout: talk
 Presented in Saint Petersburg in June 2017 at [Heisenbug](https://heisenbug.ru/en/) conference. Video and slides are in
 Russian.
 
-### Materials
+## Materials
 
 [Download slides in Russian (PDF)](/assets/talks/2017-07-talk-sanitizers-in-testing.pdf)
 
@@ -20,7 +20,7 @@ print_alt_url = "https://speakerdeck.com/asatarin/moitie-ruki-pieried-iedoi-ili-
 
 {% include youtube.html video_id="Aeu7abIKgGs" %}
 
-### Abstract
+## Abstract
 
 As the saying goes, “with great power comes great responsibility”.
 C++ is a language with great expressive power and vast capabilities.
@@ -31,7 +31,7 @@ Sanitizers are wonderful tools that will help you find complex
 defects in C++ programs. I’ll talk about these tools,
 what they can do, and how to use them in your project.
 
-### References
+## References
 
 - ["AddressSanitizer: A Fast Address Sanity Checker"](https://scholar.google.com/scholar?cluster=2096653874509075773&hl=en&as_sdt=0,5)
 - ["MemorySanitizer: fast detector of uninitialized memory use in C++"](https://scholar.google.com/scholar?cluster=3033949213014053600&hl=en&as_sdt=0,5)

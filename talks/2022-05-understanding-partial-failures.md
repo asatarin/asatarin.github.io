@@ -15,13 +15,13 @@ This is a talk on "Understanding, Detecting and Localizing Partial Failures in L
 paper for the distributed systems [reading group](https://charap.co/category/reading-group/)
 led by [Aleksey Charapko](https://twitter.com/AlekseyCharapko).
 
-### Paper
+## Paper
 
 "Understanding, Detecting and Localizing Partial Failures in Large System Software"
 by Chang Lou, Peng Huang, and Scott Smith. Presented
 at [NSDI 2020](https://www.usenix.org/conference/nsdi20/presentation/lou).
 
-#### Paper Abstract
+### Paper Abstract
 
 Partial failures occur frequently in cloud systems and can cause serious damage including
 inconsistency and data loss. Unfortunately, these failures are not well understood.
@@ -38,7 +38,7 @@ watchdogs can detect 20 cases with a median detection time of 4.2 seconds, and
 pinpoint the failure scope for 18 cases. The generated watchdogs also expose an
 unknown, confirmed partial failure bug in the latest version of ZooKeeper.
 
-### Materials
+## Materials
 
 [Download slides (PDF)](/assets/talks/2022-05-understanding-partial-failures.pdf)
 
@@ -49,7 +49,7 @@ print_alt_url = "https://speakerdeck.com/asatarin/understanding-partial-failures
 
 {% include youtube.html video_id="LACafAXKQ4Y" %}
 
-### References
+## References
 
 - Paper
   ["Understanding, Detecting and Localizing Partial Failures in Large System Software"](https://www.usenix.org/conference/nsdi20/presentation/lou)
@@ -58,16 +58,16 @@ print_alt_url = "https://speakerdeck.com/asatarin/understanding-partial-failures
 - [Automatic Generation of Runtime Checkers for Production Distributed Systems](https://youtu.be/FI1atZ6wRoQ) — talk
   by Ryan Huang (one of the paper authors) at Strange Loop conference about this research
 
-### Errata
+## Errata
 
 Slides 5 and 6 showed an incorrect failure hierarchy.
-The correct hierarchy is ```Fail-Stop``` ⊂ ```Omission Failure``` ⊂ ```Fail-Recover``` ⊂ ```Byzantine Failure```.
+The correct hierarchy is `Fail-Stop` ⊂ `Omission Failure` ⊂ `Fail-Recover` ⊂ `Byzantine Failure`.
 The slides are updated, but the video still contains incorrect slides.
 
 See Chapter 2.2 "Abstracting Processes" from
 [Introduction to Reliable and Secure Distributed Programming](https://www.distributedprogramming.net/) by Christian
 Cachin, Rachid Guerraoui, and Luís Rodrigues.
 
-### Transcript
+## Transcript
 
 {% include transcript.html filename="2022-05-understanding-partial-failures.transcript.md" %}

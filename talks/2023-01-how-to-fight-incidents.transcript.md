@@ -2,7 +2,7 @@
 Draft transcript https://docs.google.com/document/d/1Y5gXyjd5Lt_Plzmw3FKc2RPY_IZoNdcwi5DVex4hfoo/edit
 {% endcomment %}
 
-#### Introduction
+### Introduction
 
 {% include timecode.html time="0:05" %}
 Hi everyone! Today, I’m going to be talking about this paper, “How to Fight Production Incidents: An Empirical Study on a Large-Scale Cloud Service”.
@@ -20,7 +20,7 @@ analyzed from the actual on-call engineers who wrote reports.
 They classify those in different categories, and in the end, they have a multi-dimensional analysis between all
 those categories to see what the main trends and conclusions are, of course.
 
-#### Methodology
+### Methodology
 
 {% include timecode.html time="1:01" %}
 So, the methodology — where does that data come from, and what do they do with this incident report? All the
@@ -82,7 +82,7 @@ And as I mentioned, they left out 25% of the incidents because the post-mortem r
 they needed. So, potentially those might skew results in a significant way, but I think they don’t expect that to be the
 case.
 
-#### Root Causes and Mitigation
+### Root Causes and Mitigation
 
 {% include timecode.html time="5:31" %}
 So, what about root causes? Basically, the paper presents all the information in breakdowns between different root
@@ -120,7 +120,7 @@ quick, they do account for about 40% of incident mitigation. Just because you do
 fixing forward with a code fix or config fix, and reviewing it, presumably, and rolling it forward through your
 deployment system, which takes time then.
 
-#### What Causes Delays in Response?
+### What Causes Delays in Response?
 
 {% include timecode.html time="9:26" %}
 In another aspect, they looked at delays in response. So basically, what are the causes of that? And one of the
@@ -160,7 +160,7 @@ procedures. This is one of the findings, and manual deployment steps, so there�
 for improvement even without changing the code or investing heavily in tools, but you can still have improved time to
 mitigate by changing the communication procedures or improving those.
 
-#### Lessons Learned
+### Lessons Learned
 
 {% include timecode.html time="13:34" %}
 Overall, Lessons Learned: basically, this is not what authors learned from all incidents, this is what they aggregated
@@ -204,7 +204,7 @@ might improve incident management. So this is one of the major categories. Basic
 {% include timecode.html time="17:03" %}
 It could be considered, I guess, less investment than in the systems if you want to build resilience.
 
-#### Multi-Dimensional Analysis
+### Multi-Dimensional Analysis
 
 {% include timecode.html time="17:15" %}
 The last section of the paper is a multi-dimensional analysis about how all those categories align with each
@@ -265,7 +265,7 @@ conventional.
 {% include timecode.html time="21:14" %}
 So, mitigation steps include automation like traffic failover, rebooting, and auto-scaling.
 
-#### Conclusions
+### Conclusions
 
 {% include timecode.html time="21:23" %}
 Conclusions from the paper: they did look at 152 incident reports, which is a pretty large number of reports over

@@ -1,5 +1,5 @@
 <div class="video-container">
-<iframe id="player"
+<iframe id="player" title="Video: {{ page.title | escape }}"
         src="https://www.youtube.com/embed/{{ include.video_id }}?enablejsapi=1"
         loading="lazy" frameborder="0" allowfullscreen>
 </iframe>

@@ -2,14 +2,14 @@
 Draft transcript https://docs.google.com/document/d/1wLbqJ_H0ts5_ntrsGlUamvwwNjS82aZx2k7L8Wi4LCA/edit
 {% endcomment %}
 
-#### Introduction
+### Introduction
 
 {% include timecode.html time="0:09" %}
 Hello everybody, my name is Andrey Satarin and I'm going to be talking about this paper, “What's the Story in EBS Glory:
 Evolutions and Lessons in Building Cloud Block Store”.
 This is a paper from Alibaba about their Cloud Block Store.
 
-#### Outline
+### Outline
 
 The rough outline, I'm going to be talking about the evolution of their service from version 1 to version 3 and
 there's also EBSX, which is slightly different.
@@ -17,7 +17,7 @@ I'll talk about what that is.
 Their discussion about elasticity in latency and throughput and how they address those challenges, challenges in
 availability, quite important for any cloud service out there and overall conclusions and references.
 
-#### Cloud Block Store
+### Cloud Block Store
 
 What is even the Cloud Block Store, also known as Elastic Block Store?
 This is basically a persistent virtual disk in the cloud.
@@ -36,7 +36,7 @@ And this is a service like that from Alibaba Cloud, one of the big ones, Cloud, 
 The main focus of the, one of the main focuses of the paper is evolution of that service through years and how they
 first started and how they addressed upcoming challenges.
 
-#### EBS Architecture Evolution
+### EBS Architecture Evolution
 
 {% include timecode.html time="1:49" %}
 They mentioned that EBS first version came out in 2012, so pretty old.
@@ -64,7 +64,7 @@ And the most recent feature they have is federated block manager, which is also 
 the control plane level for their service.
 And I'm going to be talking about that later.
 
-#### EBS1: An Initial Foray
+### EBS1: An Initial Foray
 
 {% include timecode.html time="3:18" %}
 What is evolution?
@@ -115,7 +115,7 @@ hotspots.
 They also found that to guarantee any kind of SLO, it's hard to do with spinning hard drives and the kernel TCP/IP.
 They kind of do not like that architecture and that approach for those reasons.
 
-#### EBS2: Speedup with Space Efficiency
+### EBS2: Speedup with Space Efficiency
 
 {% include timecode.html time="6:09" %}
 And to address all of those, they basically come up with EBS2, which is speedup in terms of performance and improving
@@ -227,7 +227,7 @@ But network amplification, it's not only that you're paying for more network, yo
 because every time you write something, you write way more to the network, which is one of the things they want to
 address in version 3.
 
-#### EBS3: Reducing Network Amplification
+### EBS3: Reducing Network Amplification
 
 {% include timecode.html time="13:34" %}
 The main goal is basically reducing that number to something more manageable for version 3.
@@ -291,7 +291,7 @@ But the benchmark they use is YCSB, RocksDB and SysBench MySQL.
 They run MySQL on top of their disk and see how well it performs.
 At the application level.
 
-#### EBS3: Elasticity
+### EBS3: Elasticity
 
 {% include timecode.html time="17:59" %}
 The next challenge they talk about is elasticity.
@@ -310,7 +310,7 @@ And the last one is elasticity of capacity.
 I'm going to be talking about latency and throughput and IOPS but not capacity because they barely dedicate any space
 for capacity discussion in the paper.
 
-#### Elasticity: Latency
+### Elasticity: Latency
 
 {% include timecode.html time="19:01" %}
 So latency.
@@ -376,7 +376,7 @@ Unlike, for example, throughput and IOPS, where you can scale those things by th
 disk or spreading it out or scaling it up or allocating resources for a particular disk.
 Latency in that sense is coarsely granulated.
 
-#### Elasticity: Throughput and IOPS
+### Elasticity: Throughput and IOPS
 
 {% include timecode.html time="23:52" %}
 The next challenge in elasticity is throughput and IOPS per disk.
@@ -434,7 +434,7 @@ You can have, and they mentioned that the largest disk you can have is 64 teraby
 You can have 64 terabytes with 50,000 IOPS on that disk and basically kind of guaranteed, I guess, quote unquote, I'm
 not sure what the actual SLAs are for that and the burst up to a million IOPS.
 
-#### Availability
+### Availability
 
 {% include timecode.html time="27:44" %}
 The other important challenge for cloud services is availability.
@@ -467,7 +467,7 @@ And they talk about how they prevent those from actually poisoning the entire cl
 The big challenge they start from the global blast radius perspective is the control plane because this is where you
 can have a lot of downtime if your control plane is not working properly.
 
-#### Availability: Control Plane
+### Availability: Control Plane
 
 {% include timecode.html time="29:32" %}
 And the way they address those challenges is a federated block manager.
@@ -496,7 +496,7 @@ Explicitly in the paper, they call out a comparison to an AWS paper called "Mill
 Physalia, which is Amazon's approach to having a highly available control plane for elastic block store service.
 That's a comparison if you're familiar with that paper.
 
-#### Availability: Data Plane
+### Availability: Data Plane
 
 {% include timecode.html time="31:16" %}
 On the data plane availability, as I mentioned, they mostly talk about individual events, a kind of poison pill in
@@ -536,7 +536,7 @@ a very interesting feature and neat feature to me.
 Like I've never seen that mentioned anywhere else, that kind of usage of token bucket and basically putting those chunks
 parts into like a logical failure domain.
 
-#### Conclusions
+### Conclusions
 
 {% include timecode.html time="34:02" %}
 Conclusions.

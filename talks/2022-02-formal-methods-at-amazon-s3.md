@@ -19,14 +19,14 @@ This is a talk on "Using Lightweight Formal Methods to Validate a Key-Value Stor
 paper for the distributed systems [reading group](https://charap.co/category/reading-group/)
 led by [Aleksey Charapko](https://twitter.com/AlekseyCharapko).
 
-### Paper
+## Paper
 
 "Using lightweight formal methods to validate a key-value storage node in Amazon S3"
 by James Bornholt, Rajeev Joshi, Vytautas Astrauskas, Brendan Cully, Bernhard Kragl,
 Seth Markle, Kyle Sauri, Drew Schleit, Grant Slatton, Serdar Tasiran, Jacob Van Geffen,
 Andrew Warfield. Presented at [SOSP 2021](https://dl.acm.org/doi/abs/10.1145/3477132.3483540).
 
-#### Paper Abstract
+### Paper Abstract
 
 This paper reports our experience applying lightweight formal methods to validate the correctness
 of ShardStore, a new key-value storage node implementation for the Amazon S3 cloud object storage service.
@@ -40,7 +40,7 @@ Our work has prevented 16 issues from reaching production, including subtle cras
 concurrency problems, and has been extended by non-formal-methods experts to check new
 features and properties as ShardStore has evolved.
 
-### Materials
+## Materials
 
 [Download slides (PDF)](/assets/talks/2022-02-formal-methods-at-amazon-S3.pdf)
 
@@ -51,7 +51,7 @@ print_alt_url = "https://speakerdeck.com/asatarin/formal-methods-at-amazon-s3"
 
 {% include youtube.html video_id="fAYNN2MmOvk" %}
 
-### References
+## References
 
 - "Using lightweight formal methods to validate a key-value storage node in Amazon S3"
   [paper](https://dl.acm.org/doi/abs/10.1145/3477132.3483540)
@@ -63,6 +63,6 @@ print_alt_url = "https://speakerdeck.com/asatarin/formal-methods-at-amazon-s3"
 - [Blog post](https://muratbuffalo.blogspot.com/2021/10/using-lightweight-formal-methods-to.html) on the paper
   from [Murat Demirbas](https://twitter.com/muratdemirbas)
 
-### Transcript
+## Transcript
 
 {% include transcript.html filename="2022-02-formal-methods-at-amazon-s3.transcript.md" %}

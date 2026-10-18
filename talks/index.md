@@ -7,7 +7,7 @@ image: /assets/thumbnails/thumbnail-talks.webp
 {% assign all_talks = site.pages | where: "layout", "talk" | sort: "date" | reverse %}
 {% assign border_year = "2021" %}
 
-### English
+## English
 
 <ul> 
   {%- for post in all_talks -%}
@@ -20,7 +20,7 @@ image: /assets/thumbnails/thumbnail-talks.webp
   {%- endfor %}
 </ul>
 
-### Russian
+## Russian
 
 <ul> 
   {%- for post in all_talks -%}

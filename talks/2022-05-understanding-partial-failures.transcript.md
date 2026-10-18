@@ -2,7 +2,7 @@
 Draft transcript https://docs.google.com/document/d/1BE5hWA1gmZMKmd8ciQnO2zqMux7ye20Ek_fg1M2GII8/edit#
 {% endcomment %}
 
-#### Introduction
+### Introduction
 
 {% include timecode.html time="0:09" %}
 Hello everyone.
@@ -14,7 +14,7 @@ Rough outline following the paper: we're gonna be talking about what even is par
 failure, watchdogs, how the proposed method of generating those watchdogs in the paper is with the tool called OmegaGen,
 evaluation of this approach, and overall conclusions for the paper.
 
-#### Understanding Partial Failures
+### Understanding Partial Failures
 
 {% include timecode.html time="0:45" %}
 So, what even are partial failures?
@@ -119,7 +119,7 @@ this point, they're only interested in detecting and localizing those.
 So how do we catch partial failures? The proposed approach is watchdogs, something running at runtime to catch these
 failures.
 
-#### Catching Partial Failures with Watchdogs
+### Catching Partial Failures with Watchdogs
 
 {% include timecode.html time="8:23" %}
 [Murat Demirbas](https://twitter.com/muratdemirbas):
@@ -182,7 +182,7 @@ a main program with different modules, such as a request listener and snapshot m
 checkers, where each checker mimics the behavior of a certain module or thread. The context is basically information
 copied from the main program to those checkers.
 
-#### Generating Watchdogs with OmegaGen
+### Generating Watchdogs with OmegaGen
 
 {% include timecode.html time="13:26" %}
 OmegaGen is the tool they're talking about, which generates these watchdogs.
@@ -257,7 +257,7 @@ failed.
 {% include timecode.html time="20:15" %}
 But they just mention that as one of the approaches for the future, I guess.
 
-#### Evaluation
+### Evaluation
 
 {% include timecode.html time="20:22" %}
 For the evaluation stage, they ask several questions: Does this work for large software? Can we actually detect and
@@ -354,7 +354,7 @@ don't mention if the retry recheck is done right away or if there is a grace per
 because two subsequent writes can definitely be slow if they're separated by a few seconds during an intermittent error,
 and a few seconds later it's all good.
 
-#### Conclusions
+### Conclusions
 
 {% include timecode.html time="27:48" %}
 In conclusion, the researchers studied 100 real-world partial failures in popular software like ZooKeeper and Hadoop.

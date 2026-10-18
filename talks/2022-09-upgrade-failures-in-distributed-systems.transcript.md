@@ -2,7 +2,7 @@
 Draft transcript https://docs.google.com/document/d/1O0c6yd6KVJhPqIZOWQQ8gjNmKEE0PMjp_jbdJ32L7uM/edit#
 {% endcomment %}
 
-#### Introduction
+### Introduction
 
 {% include timecode.html time="0:05" %}
 Hello everyone, my name is Andrey Satarin, and I'm going to be talking about the paper "Understanding and Detecting
@@ -40,7 +40,7 @@ These are the systems they analyzed, and these are the bugs they looked at from 
 systems. Overall, it's about 100 bugs, more than that even, and this is where all the findings come from, just
 basically, I assume, from reading and analyzing those bugs.
 
-#### Findings on Severity and Root Causes
+### Findings on Severity and Root Causes
 
 {% include timecode.html time="2:28" %}
 Let's talk about the findings they have on severity, root causes, and some other aspects of those failures. First of
@@ -100,7 +100,7 @@ Almost all of those upgrade failures are deterministic, so you don't need to fin
 conditions and things like that. If you can drive the system into that behavior with the workload, you can observe those
 with pretty high confidence.
 
-#### Testing and Detecting
+### Testing and Detecting
 
 {% include timecode.html time="6:10" %}
 So the next part of the paper is kind of testing and detecting how current systems approach the testing for upgrade
@@ -120,7 +120,7 @@ Also, they noticed that there is no mechanism to systematically explore the whol
 different versions, different configurations, and different update scenarios, like either stopping a full-stop upgrade
 or rolling upgrade. So those are not exposed in a systematic way.
 
-#### DUPTester
+### DUPTester
 
 {% include timecode.html time="7:10" %}
 And their proposed solution is two tools. First of those tools is DUPTester. So DUPTester is a distributed system
@@ -175,7 +175,7 @@ to me also implies they're not exactly unit tests because first of all, it persi
 they work at some kind of API where that system actually makes sense and not some internal things which are not
 translatable and not guaranteed between the versions.
 
-#### DUPChecker
+### DUPChecker
 
 {% include timecode.html time="10:10" %}
 The next tool they talk about is DUPChecker, which is targeting specifically the syntax of data across serialization
@@ -212,7 +212,7 @@ a string representation, but the index of the enum itself — and all those thin
 {% include timecode.html time="12:06" %}
 If both of those conditions are true, they again report it as an error to developers. This covers enums specifically.
 
-#### Conclusions
+### Conclusions
 
 {% include timecode.html time="12:15" %}
 So overall conclusions from the paper. First of all, this is the first in-depth analysis as far as the authors are
@@ -228,7 +228,7 @@ bugs, but they don't provide the number of what the number was for those.
 Specifically, the Apache HBase team requested DUPChecker to be a part of their overall testing pipeline, so they want to
 prevent those incompatibilities in the future.
 
-#### Personal Experience and Commentary
+### Personal Experience and Commentary
 
 {% include timecode.html time="13:09" %}
 With that, I kind of want to transition from discussing the paper to my personal experience and commentary on the paper

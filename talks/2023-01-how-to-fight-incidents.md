@@ -14,14 +14,14 @@ layout: talk
 This is a talk on "How to fight production incidents?: an empirical study on a large-scale cloud service"
 paper for the distributed systems [reading group](https://charap.co/category/reading-group/).
 
-### Paper
+## Paper
 
 "How to fight production incidents?: an empirical study on a large-scale cloud service"
 by Supriyo Ghosh, Manish Shetty, Chetan Bansal, Suman Nath.
 
 Paper published in [SoCC 2022 proceedings](https://dl.acm.org/doi/proceedings/10.1145/3542929).
 
-#### Paper Abstract
+### Paper Abstract
 
 Production incidents in today's large-scale cloud services can be extremely expensive in terms of customer
 impacts and engineering resources required to mitigate them. Despite continuous reliability efforts,
@@ -35,7 +35,7 @@ help make the services resilient. Finally, we uncover interesting insights by a 
 analysis that correlates different troubleshooting stages (detection, root-causing and mitigation),
 and provide guidance on how to tackle complex incidents through automation or testing at different granularity.
 
-### Materials
+## Materials
 
 [Download slides (PDF)](/assets/talks/2023-01-how-to-fight-production-incidents.pdf)
 
@@ -46,7 +46,7 @@ print_alt_url = "https://speakerdeck.com/asatarin/how-to-fight-production-incide
 
 {% include youtube.html video_id="j6Z-TawfQns" %}
 
-### References
+## References
 
 - "How to fight production incidents?: an empirical study on a large-scale cloud
   service" [paper](https://dl.acm.org/doi/10.1145/3542929.3563482)
@@ -70,6 +70,6 @@ print_alt_url = "https://speakerdeck.com/asatarin/how-to-fight-production-incide
 - Chetan Bansal's [page](https://www.microsoft.com/en-us/research/people/chetanb/) on Microsoft Research website
 - Suman Nath's [page](https://www.microsoft.com/en-us/research/people/sumann/) on Microsoft Research website
 
-### Transcript
+## Transcript
 
 {% include transcript.html filename="2023-01-how-to-fight-incidents.transcript.md" %}
