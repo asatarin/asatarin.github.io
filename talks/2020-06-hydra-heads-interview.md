@@ -4,6 +4,7 @@ description: Interview with Andrey Satarin for Hydra Conference 2020.
 date: 2020-06-17
 image: /assets/thumbnails/2020-06-hydra-heads-interview.webp
 layout: talk
+talk_language: ru
 ---
 
 An interview I gave while promoting [Hydra conference](https://hydraconf.com/), on the topics of distributed systems,

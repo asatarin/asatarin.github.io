@@ -4,6 +4,7 @@ description: Interview with Andrey Satarin for Heisenbug Show.
 date: 2020-09-22
 image: /assets/thumbnails/2020-09-heisenbug-show.webp
 layout: talk
+talk_language: ru
 ---
 
 An interview I gave to [Nikita Makarov](https://www.linkedin.com/in/nikita-makarov-8075875/)

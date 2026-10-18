@@ -4,6 +4,7 @@ description: Presented in Saint Petersburg in June 2017 at Heisenbug conference.
 date: 2017-07-04
 image: /assets/thumbnails/2017-sanitizers-in-testing.webp
 layout: talk
+talk_language: ru
 ---
 
 Presented in Saint Petersburg in June 2017 at [Heisenbug](https://heisenbug.ru/en/) conference. Video and slides are in

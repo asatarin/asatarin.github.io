@@ -4,6 +4,7 @@ description: Presented in Saint Petersburg in May 2018 at Heisenbug conference. 
 date: 2018-05-18
 image: /assets/thumbnails/2018-equals-verifier-and-error-prone.webp
 layout: talk
+talk_language: ru
 ---
 
 Presented in Saint Petersburg in May 2018

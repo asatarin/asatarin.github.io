@@ -8,6 +8,7 @@ description: >
 date: 2016-12-10
 image: /assets/thumbnails/2016-testing-distributed-systems.webp
 layout: talk
+talk_language: ru
 # @formatter:on
 ---
 

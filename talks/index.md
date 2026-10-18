@@ -5,30 +5,25 @@ image: /assets/thumbnails/thumbnail-talks.webp
 ---
 
 {% assign all_talks = site.pages | where: "layout", "talk" | sort: "date" | reverse %}
-{% assign border_year = "2021" %}
+{% assign russian_talks = all_talks | where: "talk_language", "ru" %}
+{% assign english_talks = all_talks | where_exp: "post", "post.talk_language != 'ru'" %}
 
 ## English
 
 <ul> 
-  {%- for post in all_talks -%}
-    {%- assign year_published = post.date | date: '%Y' -%}
-    {%- if year_published >= border_year %}
+  {%- for post in english_talks %}
       <li>
         <a href="{{ post.url | relative_url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y" }}) <br/>
       </li>
-    {%- endif -%}
   {%- endfor %}
 </ul>
 
 ## Russian
 
 <ul> 
-  {%- for post in all_talks -%}
-    {%- assign year_published = post.date | date: '%Y' -%}
-    {%- if year_published < border_year %}
+  {%- for post in russian_talks %}
       <li>
         <a href="{{ post.url | relative_url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y" }}) <br/>
       </li>
-    {%- endif -%}
   {%- endfor %}
 </ul>

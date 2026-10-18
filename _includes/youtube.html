@@ -24,8 +24,7 @@
   ],
   "embedUrl": "https://www.youtube.com/embed/{{ include.video_id }}",
   "url": {{ page.url | absolute_url | jsonify }},
-  {%- assign year_published = page.date | date: '%Y' %}
-  "inLanguage": "{% if year_published < '2021' %}ru{% else %}en{% endif %}",
+  "inLanguage": {{ page.talk_language | default: "en" | jsonify }},
   "author": {
     "@type": "Person",
     "name": {{ site.author.name | jsonify }},

@@ -4,6 +4,7 @@ description: Presented in Moscow in December 2017 at Heisenbug conference. Video
 date: 2017-12-08
 image: /assets/thumbnails/2017-how-to-check-a-system-without-running-it.webp
 layout: talk
+talk_language: ru
 ---
 
 Presented in Moscow in December 2017

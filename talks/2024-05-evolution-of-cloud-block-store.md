@@ -7,6 +7,7 @@ description: >
   systems reading group.
 date: 2024-05-02
 layout: talk
+talk_language: en
 image: /assets/thumbnails/2024-05-evolution-of-cloud-block-store.webp
 transcript: 2024-05-evolution-of-cloud-block-store.transcript.md
 paper:

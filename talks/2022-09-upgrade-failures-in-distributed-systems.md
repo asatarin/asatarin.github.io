@@ -8,6 +8,7 @@ description: >
 date: 2022-09-28
 image: /assets/thumbnails/2022-09-upgrade-failures-in-distributed-systems.webp
 layout: talk
+talk_language: en
 transcript: 2022-09-upgrade-failures-in-distributed-systems.transcript.md
 paper:
   title: "Understanding and Detecting Software Upgrade Failures in Distributed Systems"

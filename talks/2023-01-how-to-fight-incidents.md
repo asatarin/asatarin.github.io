@@ -8,6 +8,7 @@ description: >
 date: 2023-01-25
 image: /assets/thumbnails/2023-01-how-to-fight-incidents.webp
 layout: talk
+talk_language: en
 transcript: 2023-01-how-to-fight-incidents.transcript.md
 paper:
   title: "How to fight production incidents?: an empirical study on a large-scale cloud service"

@@ -8,6 +8,7 @@ description: >
 date: 2022-02-02
 image: /assets/thumbnails/2022-02-formal-methods-at-amazon-s3.webp
 layout: talk
+talk_language: en
 transcript: 2022-02-formal-methods-at-amazon-s3.transcript.md
 paper:
   title: "Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3"

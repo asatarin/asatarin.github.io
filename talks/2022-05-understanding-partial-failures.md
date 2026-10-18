@@ -8,6 +8,7 @@ description: >
 date: 2022-05-25
 image: /assets/thumbnails/2022-05-understanding-partial-failures.webp
 layout: talk
+talk_language: en
 transcript: 2022-05-understanding-partial-failures.transcript.md
 paper:
   title: "Understanding, Detecting and Localizing Partial Failures in Large System Software"
