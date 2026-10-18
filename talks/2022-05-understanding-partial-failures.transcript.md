@@ -24,7 +24,7 @@ In the paper, they describe partial failures as a failure in the process when a 
 causes the safety or liveness violation or severe slowness for some functionality. So it's at the process level, not the
 usual stuff we use in distributed systems at the node level, where some nodes crash and some don't. The process is still
 alive, so it's not the typical fail-stop failure. Again, as the usual ones, the health checks people implement for those
-distribution systems could miss those failures specifically because the process is still alive, but they can still cause
+distributed systems could miss those failures specifically because the process is still alive, but they can still cause
 catastrophic outages in the real world.
 
 {% include timecode.html time="1:29" %}
@@ -38,7 +38,7 @@ failure, is when the process can do whatever it can, even actively have maliciou
 your system from within.
 
 {% include timecode.html time="2:10" %}
-So, the way I understood it, they don't mention it in the system itself, the partial failure falls somewhere between
+So, the way I understood it, they don't mention it in the paper itself, the partial failure falls somewhere between
 Byzantine and omission failure, because some of them could be seen as an omission of certain packets. For example, your
 compaction fails, so you cannot do writes, and that means obviously all the write packets for write operations are
 lost. But the system itself can still process reads, but some of those failures are even more complex, so they can
@@ -65,7 +65,7 @@ Findings 1-2:
 First of all, all of those systems do have partial failures. They exhibit the majority of them, roughly 50%, in most
 recent years. So even mature systems do have those; they're not getting ironed out in testing or anywhere else. Root
 causes are very diverse, so there's no single root cause or majority root cause. The three top ones are uncaught errors,
-indefinite blocking, and buggy error handling – usual suspects, to a degree.
+indefinite blocking, and buggy error handling — usual suspects, to a degree.
 
 {% include timecode.html time="4:20" %}
 [Pat Helland](https://twitter.com/pathelland):
@@ -98,7 +98,7 @@ Finding three is that roughly 50% of them are liveness violations, so those are 
 straightforward. You just see things being slow, which means liveness is violated, and that means there's a partial
 failure. But the minority of them are things like 13% or "zombie" with undefined failure semantics, which I also kind of
 put in the Byzantine failure category. This is why there's an overlap before, and some of them are silent, so you have
-data loss, corruption – those you cannot detect easily with any simple check. You need to actually understand your
+data loss, corruption — those you cannot detect easily with any simple check. You need to actually understand your
 system's guarantees and deeper semantics.
 
 {% include timecode.html time="7:24" %}
@@ -143,11 +143,11 @@ of timeline. Right, I don't think there is a definite threshold.
 
 {% include timecode.html time="9:30" %}
 [Murat Demirbas](https://twitter.com/muratdemirbas):
-Okay, good. Thanks
+Okay, good. Thanks.
 
 {% include timecode.html time="9:36" %}
-It's kind of the same with availability and latency – was the system unavailable, or was it just a really long latency?
-What's the difference? It's the same with partial failures – was it a partial failure or just a slow disk write?
+It's kind of the same with availability and latency — was the system unavailable, or was it just a really long latency?
+What's the difference? It's the same with partial failures — was it a partial failure or just a slow disk write?
 
 {% include timecode.html time="9:56" %}
 The current situation, as described by the authors, is that systems use checkers, which can be divided into two
@@ -357,14 +357,14 @@ and a few seconds later it's all good.
 #### Conclusions
 
 {% include timecode.html time="27:48" %}
-In conclusion, the researchers studied 100 real-world partial failures in popular software like Zookeeper and Hadoop.
+In conclusion, the researchers studied 100 real-world partial failures in popular software like ZooKeeper and Hadoop.
 They created the tool OmegaGen to generate watchdogs from the code. The generated watchdogs detected 20 out of 22
 partial failures they tried to reproduce and pinpointed the scope for almost all of them (18 out of 20) with more
 precision than just identifying a slow process.
 
 {% include timecode.html time="28:25" %}
-And they also talk in the paper; they actually exposed a new partial failure in Zookeeper. So it's not just the old
-stuff they were able to reproduce; they found a new bug. My understanding is it was confirmed by the Zookeeper team
+And they also talk in the paper; they actually exposed a new partial failure in ZooKeeper. So it's not just the old
+stuff they were able to reproduce; they found a new bug. My understanding is it was confirmed by the ZooKeeper team
 and was also fixed. So, not only were old failures reproduced, but new ones were also discovered and reported as
 actual partial failures during their experiments. With that. Yeah, I'm done. Thank you.
 

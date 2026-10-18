@@ -11,7 +11,7 @@ Hi everyone! Today, I’m going to be talking about this paper, “How to Fight 
 Links and slides will be on that link, and all the references and all this stuff, and the video too.
 
 {% include timecode.html time="0:21" %}
-So, a quick outline following the paper: first, we’re going to talk about the methodology the author used to study
+So, a quick outline following the paper: first, we’re going to talk about the methodology the authors used to study
 those incidents. They looked into root causes and mitigation strategies. They looked into delays, what caused those
 delays in terms of detecting, triaging, and actually acting in mitigation. They have some lessons learned, which they
 analyzed from the actual on-call engineers who wrote reports.
@@ -28,7 +28,7 @@ incident reports come from a single, at least user-facing service, Microsoft Tea
 service behind that, and they analyzed and studied 152 different reports.
 
 {% include timecode.html time="1:21" %}
-They looked at their mitigation, root causes, the direction, and mitigation approaches. They only looked at the
+They looked at their mitigation, root causes, detection, and mitigation approaches. They only looked at the
 reports which included the complete post-mortem report, and they mentioned that 35 more they didn’t look at because they
 didn’t have the full post-mortem report with all the details they needed for analysis.
 
@@ -73,7 +73,7 @@ which has nothing similar to Microsoft Teams or like a messaging service, those 
 {% include timecode.html time="4:45" %}
 Also, Microsoft already has some effective tools and techniques for testing and rollout, like deployment tools and
 things like that. Basically, they’re very mature in that space, and those already prevent a large amount of incidents.
-So, depending on your kind of maturity level in terms of tools and all the role processes of running a cloud, you might
+So, depending on your kind of maturity level in terms of tools and all the rollout processes of running a cloud, you might
 not see the same results or might be a breakdown between the causes and effects, and mitigation strategies could be
 completely different from that.
 
@@ -113,7 +113,7 @@ itself.
 
 {% include timecode.html time="8:18" %}
 So even though 40% of incidents were caused by code or configuration bugs, 80% of those were mitigated without any
-code or configuration bugs. I assume because the strategies are kind of faster, they don’t involve a deployment cycle.
+code or configuration fixes. I assume because the strategies are kind of faster, they don’t involve a deployment cycle.
 That makes, or the same overall back. This is why, kind of, I think they mentioned it in one of the other findings, where
 rollback is a popular strategy because it’s pretty quick. The rollback and the infrastructure change, because they’re
 quick, they do account for about 40% of incident mitigation. Just because you don’t go through the more laborious cycle of
@@ -133,12 +133,12 @@ various bugs the system has. And it also makes it sound complicated in resolutio
 Yeah, and things like configuration fix and code fix take longer time. Again, it corresponds with one of the
 previous findings. It’s just easier to roll back, usually if you can do that. Obviously, not every system can do that if
 you change the data underneath, and you can’t roll back with all large-scale services. Usually, keep that option open
-for basically any change you can just because it is so convenient to have options to roll back. Alexey has something to
+for basically any change you can just because it is so convenient to have options to roll back. Aleksey has something to
 say about that in terms of metastability and things like that, but rollback is still a popular resolution.
 
 {% include timecode.html time="11:11" %}
 Detection delay is basically: why did we not detect incidents faster? Things like not failing at all — so,
-I guess I’m not actually sure what they mean by that "not failing" category. I guess there is no detection except maybe
+I guess I’m not actually sure what they mean by that “not failing” category. I guess there is no detection except maybe
 the user reporting it. Other popular ones are lack of monitors or telemetry coverage, which also causes a
 delay. Basically, some of the things which indicate that your system is having an incident are just not covered by
 monitors for whatever reason or in any other telemetry, and that makes it harder to detect and delays resolution.
@@ -160,7 +160,7 @@ procedures. This is one of the findings, and manual deployment steps, so there�
 for improvement even without changing the code or investing heavily in tools, but you can still have improved time to
 mitigate by changing the communication procedures or improving those.
 
-#### Lessons Learnt
+#### Lessons Learned
 
 {% include timecode.html time="13:34" %}
 Overall, Lessons Learned: basically, this is not what authors learned from all incidents, this is what they aggregated
@@ -187,7 +187,7 @@ like a pretty vast category and can look completely different depending on what 
 improve testing, improve monitoring, things like that.
 
 {% include timecode.html time="16:04" %}
-That's like the “lessons learned” category.
+That’s like the “lessons learned” category.
 
 {% include timecode.html time="16:07" %}
 Investing in automating mitigation, and again, unclear is a pretty large category here, 37%.
@@ -222,7 +222,7 @@ As I said, for code changes, people say that improving testing is important, whi
 with.
 
 {% include timecode.html time="18:01" %}
-Even since, for example, the “Simple Testing Can Prevent Most Critical Failures” paper from 2014, a while ago.
+Ever since, for example, the “Simple Testing Can Prevent Most Critical Failures” paper from 2014, a while ago.
 
 {% include timecode.html time="18:12" %}
 But as I said before, authors in this analysis don’t go into details like what kind of testing is actually
@@ -282,7 +282,7 @@ But it’s still valuable information for improving documentation or training. I
 to figure out, especially in general terms, what kind of documentation needs to be improved.
 
 {% include timecode.html time="22:25" %}
-Actually, Microsoft Teams had an outage today or last night, whatever it happened. So, this is the tweet from a
+Actually, Microsoft Teams had an outage today or last night, whenever it happened. So, this is the tweet from a
 few hours ago. They rolled back a network change.
 
 {% include timecode.html time="22:36" %}

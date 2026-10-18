@@ -4,7 +4,7 @@
     {% assign limit_num = {{ include.limit | default: 4 }} -%}
     {% for post in recent_talks limit:limit_num -%}
     <li>
-        <a href="{{ post.url | relative_url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y"" }}) <br/>
+        <a href="{{ post.url | relative_url }}"> {{ post.title }} </a> ({{ post.date | date: "%B %Y" }}) <br/>
     </li>
     {%- endfor %}
 </ul>

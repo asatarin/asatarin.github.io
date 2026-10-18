@@ -9,14 +9,14 @@ Hello, everyone.
 
 My name is Andrey Satarin.
 
-I'm going to be talking about the paper using lightweight formal methods to validate key value storage node in Amazon S3.
+I'm going to be talking about the paper "Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3."
 
 So let's start.
 
 The quick outline of the talk roughly follows the outline of the paper.
 
-So I'm going to be introducing the shard store, talking about what they actually are validating in the storage system,
-what kind of properties they're looking for, different approaches, and different lenses they look at, validating is,
+So I'm going to be introducing ShardStore, talking about what they actually are validating in the storage system,
+what kind of properties they're looking for, different approaches, and different lenses they look at, validating it,
 which is conformance checking, checking crash consistency, checking concurrent executions, some of the properties they
 looked at in the system, and overall experience and lessons from that work.
 
@@ -25,10 +25,10 @@ So introduction.
 #### Introduction and ShardStore
 
 {% include timecode.html time="0:50" %}
-S3 is like a key value object storage provided by Amazon S3, and the core of S3 service are storage node servers, which
+S3 is like a key-value object storage provided by Amazon, and the core of S3 service are storage node servers, which
 basically are servers storing the actual data apart from like index and other control plane stuff.
 
-So the shard store is a new key value storage node, which is slowly at the time of the paper publication is rolling out
+So ShardStore is a new key-value storage node, which is slowly at the time of the paper publication is rolling out
 in production to replace the previous version.
 
 Overall, it's roughly 40,000 lines of code in Rust.
@@ -48,7 +48,7 @@ And in the presence of crashes, we still want to have the data consistent and pr
 of the execution, because apart from API calls, there are also some background tasks executed concurrently, like for
 example, garbage collection.
 
-And the presence of those tasks should not invalidate any of the external guarantees this shard store provides.
+And the presence of those tasks should not invalidate any of the external guarantees ShardStore provides.
 Also, the goal is kind of have a soundness correctness trade off overall.
 So they're not targeting full formal verification of the system and like proving that is absolutely correct.
 
@@ -59,12 +59,12 @@ larger histories or larger scale systems or bigger APIs, and things like that.
 So that's like, the idea is not to have like a fully verified storage, the idea is to have like some kind of trade
 off between verifying correctness and having scalable way to verify it.
 
-In terms of the shard store, it's basically based on the large log-structured merge tree, data is stored in chunks,
+In terms of ShardStore, it's basically based on the large log-structured merge tree, data is stored in chunks,
 chunks are stored in extents, and that's everything is stored on disk, obviously.
 
 So on the right, there is a picture from the paper itself.
 
-So because shard store writes to several extents at the time, at the moment, it basically means that like there are more
+So because ShardStore writes to several extents at the time, at the moment, it basically means that like there are more
 than one write log and that complicates crash consistency.
 
 {% include timecode.html time="3:20" %}
@@ -93,7 +93,7 @@ So this is why they go in with a lightweight approach to formal methods.
 Apart from other reasons I mentioned before.
 
 So what about durability?
-Like the main thing, basically they view it through three different lens, like split it in three different lenses, which
+Like the main thing, basically they view it through three different lenses, like split it in three different lenses, which
 is kind of like matrix two by two with sequential execution and concurrent execution and the presence or absence of
 crashes.
 
@@ -106,7 +106,7 @@ So they don't talk about that, but all the others are covered.
 So I'm just going to go through like sections of the go with the way they presented here.
 
 So the kind of thing they use a lot of to check for those properties is a reference model, which is basically
-implementation of the same API as the shard store provides in Rust, but way simplified.
+implementation of the same API as ShardStore provides in Rust, but way simplified.
 So it's like 1% of the size of the actual implementation.
 So it's like several orders of magnitude simpler because it does not care about certain other implementation details like
 failures, probably performance, other things.
@@ -138,7 +138,7 @@ interesting, more complicated operations to steer a system in interesting states
 But they mentioned that they only do this if there's like strong quantitative evidence for the benefit of that biasing,
 because otherwise you might bake certain assumptions you have of the implementation into the system.
 
-{% include timecode.html time="07:17" %}
+{% include timecode.html time="7:17" %}
 And that's kind of their idea of avoiding doing that to not bake assumptions in the test themselves, because that kind
 of will be self-validating the system in a way, in a bad way.
 
@@ -166,10 +166,10 @@ hard to extend the model to those accidental complexity things without making it
 So crash consistency, which is again, it's like sequential execution with presence of crashes.
 So the test system still controls every operation and still executes them sequentially.
 But some operations are basically crashes.
-And the crash consistency is the primary motivations of this effort, because like systems crash, and you still want to
+And the crash consistency is the primary motivation of this effort, because like systems crash, and you still want to
 provide durability guarantees in the presence of those crashes.
 
-And that's kind of the main goal of the shard store in the S3 as a system, because shard store is actually responsible
+And that's kind of the main goal of ShardStore in S3 as a system, because ShardStore is actually responsible
 for storing data on disks.
 
 So to talk about this, we need to talk about write path, which basically includes three steps.
@@ -263,17 +263,17 @@ ecosystem.
 {% include timecode.html time="14:42" %}
 And that helps to prove panic freedom of serialization code.
 But on top of that, they also used fuzzing extensively to kind of like the way fuzzing works with serialization code to
-make sure that there are no crashes on undesirable behaviors and stuff like that.
+make sure that there are no crashes or undesirable behaviors and stuff like that.
 
 #### Experience and Lessons
 
 So what are the overall lessons from that work?
 And experience.
 So they mentioned that the development of the reference model took roughly two people for nine months, and those were a
-formal methods experts, so people who are experts in specific area formal methods.
+formal methods experts, so people who are experts in a specific area, formal methods.
 
 And later in the kind of lifetime of the system at the time of the publication of the paper, non-experts, but I assume
-these are still experts in a shard store, but not formal method experts, contributed roughly 18% of the model code.
+these are still experts in ShardStore, but not formal methods experts, contributed roughly 18% of the model code.
 So there was some handing over support of the model, for sure, from experts to the actual development team.
 
 {% include timecode.html time="15:50" %}
@@ -299,12 +299,12 @@ cache, and they fine-tuned it with the bias, changing the cache size to kind of 
 the future they uncover bugs in there.
 
 {% include timecode.html time="17:30" %}
-There's also some kind of code which I think is fair to call accidental complexity of gluing shard store with S3, so
+There's also some kind of code which I think is fair to call accidental complexity of gluing ShardStore with S3, so
 they mentioned routing and parsing S3 messages itself, and that's a pretty big chunk as far as I understand, and that's
 not covered because it does not contribute to durability and consistency properties they were looking specifically for,
 so that's kind of outside of that, but still important in actual production system.
 
-And the API surface of shard store is actually larger than they cover in the tests because there are certain APIs
+And the API surface of ShardStore is actually larger than they cover in the tests because there are certain APIs
 provided for control plane, or which are not covered for whatever reason in the reference model, so not even all
 the APIs are covered.
 

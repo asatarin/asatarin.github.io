@@ -12,8 +12,8 @@ layout: talk
 ---
 
 This is a talk on "Understanding, Detecting and Localizing Partial Failures in Large System Software"
-paper for distributed systems [reading group](https://charap.co/category/reading-group/)
-lead by [Aleksey Charapko](https://twitter.com/AlekseyCharapko).
+paper for the distributed systems [reading group](https://charap.co/category/reading-group/)
+led by [Aleksey Charapko](https://twitter.com/AlekseyCharapko).
 
 ### Paper
 
@@ -60,13 +60,13 @@ print_alt_url = "https://speakerdeck.com/asatarin/understanding-partial-failures
 
 ### Errata
 
-Slides 5 and 6 showed incorrect failure hierarchy.
+Slides 5 and 6 showed an incorrect failure hierarchy.
 The correct hierarchy is ```Fail-Stop``` ⊂ ```Omission Failure``` ⊂ ```Fail-Recover``` ⊂ ```Byzantine Failure```.
-Slides are updated, but video still contains incorrect slides.
+The slides are updated, but the video still contains incorrect slides.
 
 See Chapter 2.2 "Abstracting Processes" from
 [Introduction to Reliable and Secure Distributed Programming](https://www.distributedprogramming.net/) by Christian
-Cachin, Rachid Guerraoui, Luís Rodrigues.
+Cachin, Rachid Guerraoui, and Luís Rodrigues.
 
 ### Transcript
 

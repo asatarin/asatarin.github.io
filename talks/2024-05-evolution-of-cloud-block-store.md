@@ -12,7 +12,7 @@ image: /assets/thumbnails/2024-05-evolution-of-cloud-block-store.webp
 ---
 
 This is a talk on "What's the Story in EBS Glory: Evolutions and Lessons in Building Cloud Block Store"
-paper for [distributed systems reading group](https://charap.co/category/reading-group/) lead
+paper for the [distributed systems reading group](https://charap.co/category/reading-group/) led
 by [Aleksey Charapko](https://twitter.com/AlekseyCharapko).
 
 ### Paper
@@ -56,11 +56,11 @@ print_alt_url = "https://speakerdeck.com/asatarin/evolution-of-cloud-block-store
   from [FAST 2024](https://www.usenix.org/conference/fast24/technical-sessions)
 - [More Than Capacity: Performance-oriented Evolution of Pangu in Alibaba](https://www.usenix.org/conference/fast23/presentation/li-qiang-deployed) —
   distributed file system Pangu is used as a foundation for EBS in Alibaba Cloud
-- [Formal Methods at Amazon S3](2022-02-formal-methods-at-amazon-s3.md) — I gave an overview talk on one of the papers
+- [Formal Methods at Amazon S3](/talks/2022-02-formal-methods-at-amazon-s3/) — I gave an overview talk on one of the papers
   referenced
 - [Millions of Tiny Databases](https://www.usenix.org/conference/nsdi20/presentation/brooker) — paper on AWS EBS control
   plane configuration database
-- [The Tail at Scale](https://research.google/pubs/the-tail-at-scale/) — classical paper on improving high percentile
+- [The Tail at Scale](https://research.google/pubs/the-tail-at-scale/) — classic paper on improving high percentile
   latency in distributed systems
 
 ### Transcript

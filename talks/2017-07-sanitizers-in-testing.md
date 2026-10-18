@@ -1,12 +1,12 @@
 ---
 title: Wash Your Hands Before You Eat, or Sanitizers in Testing
-description: Presented in Saint-Petersburg in June 2017 at Heisenbug conference. Video and slides are in Russian.
+description: Presented in Saint Petersburg in June 2017 at Heisenbug conference. Video and slides are in Russian.
 date: 2017-07-04
 image: /assets/thumbnails/2017-sanitizers-in-testing.webp
 layout: talk
 ---
 
-Presented in Saint-Petersburg in June 2017 at [Heisenbug](https://heisenbug.ru/en/) conference. Video and slides are in
+Presented in Saint Petersburg in June 2017 at [Heisenbug](https://heisenbug.ru/en/) conference. Video and slides are in
 Russian.
 
 ### Materials
@@ -23,11 +23,11 @@ print_alt_url = "https://speakerdeck.com/asatarin/moitie-ruki-pieried-iedoi-ili-
 ### Abstract
 
 As the saying goes, “with great power comes great responsibility”.
-C++ is a language with great expression power and vast capabilities.
-One have to pay for these capabilities with possible defects,
-which are absent in programs written in managed languages.
+C++ is a language with great expressive power and vast capabilities.
+One has to pay for these capabilities with possible defects
+that are absent in programs written in managed languages.
 
-Sanitizers are wonderful tools, which will help you find complex
+Sanitizers are wonderful tools that will help you find complex
 defects in C++ programs. I’ll talk about these tools,
 what they can do, and how to use them in your project.
 
@@ -37,8 +37,8 @@ what they can do, and how to use them in your project.
 - ["MemorySanitizer: fast detector of uninitialized memory use in C++"](https://scholar.google.com/scholar?cluster=3033949213014053600&hl=en&as_sdt=0,5)
 - ["ThreadSanitizer: data race detection in practice"](https://scholar.google.com/scholar?cluster=14589555155353882213&hl=en&as_sdt=0,5)
 - [https://github.com/google/sanitizers](https://github.com/google/sanitizers)
-- [AddressSanitizer, или как сделать программы на C/С++ надежнее и безопаснее, Константин Серебряный](https://youtu.be/vKtNwALHb2k)—
+- [AddressSanitizer, или как сделать программы на C/С++ надежнее и безопаснее, Константин Серебряный](https://youtu.be/vKtNwALHb2k) —
   talk on AddressSanitizer by Konstantin Serebryany at HighLoad 2012 in Moscow (in Russian)
-- [""go test -race" Under the Hood"](https://youtu.be/5erqWdlhQLA) by Kavya Joshi — explanation of "go race" which is
+- [“"go test -race" Under the Hood”](https://youtu.be/5erqWdlhQLA) by Kavya Joshi — explanation of "go test -race", which is
   based on ThreadSanitizer, presented at StrangeLoop 2016
 - [Konstantin Serebryany](https://research.google.com/pubs/KonstantinSerebryany.html?source=post_page---------------------------) page at Google Research

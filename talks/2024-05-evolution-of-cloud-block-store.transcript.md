@@ -7,26 +7,26 @@ Draft transcript https://docs.google.com/document/d/1wLbqJ_H0ts5_ntrsGlUamvwwNjS
 {% include timecode.html time="0:09" %}
 Hello everybody, my name is Andrey Satarin and I'm going to be talking about this paper, “What's the Story in EBS Glory:
 Evolutions and Lessons in Building Cloud Block Store”.
-This is a paper from Alibaba about their Cloud Blockstore.
+This is a paper from Alibaba about their Cloud Block Store.
 
 #### Outline
 
 The rough outline, I'm going to be talking about the evolution of their service from version 1 to version 3 and
 there's also EBSX, which is slightly different.
 I'll talk about what that is.
-Their discussion about elasticity in latency and throughput and how they address those challenges, challenges
+Their discussion about elasticity in latency and throughput and how they address those challenges, challenges in
 availability, quite important for any cloud service out there and overall conclusions and references.
 
 #### Cloud Block Store
 
-What is even the Cloud Blockstore also known as Elastic Blockstore?
+What is even the Cloud Block Store, also known as Elastic Block Store?
 This is basically a persistent virtual disk in the cloud.
 You cannot have a persistent disk in your virtual machine in the cloud because once the machine disappears, the data
-disappears. You have to come up with something else. And something else is the Cloud Blockstore or Elastic Block
+disappears. You have to come up with something else. And something else is the Cloud Block Store or Elastic Block
 Storage. You can attach it to a virtual machine.
 
 {% include timecode.html time="1:18" %}
-You can scale it at scale IOPS throughput capacity in a pretty wide range.
+You can scale its IOPS, throughput, and capacity in a pretty wide range.
 
 You can have a small disk, you can have a larger disk, you can scale it up online without changing anything, without
 reattaching hardware or anything like that because it's the cloud, all those things you do through API.
@@ -94,7 +94,7 @@ Basically where you know your virtual disk, where the data is actually located f
 Which chunk manager stores the data.
 
 Block client connects to that and obviously caches those mappings because they don't change that often.
-The data, everything is implemented on Paxos in their services, which we will import later because they will rip that
+The data, everything is implemented on Paxos in their services, which will be important later because they will rip that
 out.
 
 Everything replicated three times and stored locally, basically in chunk servers in the ext4 file system with in-place
@@ -127,9 +127,9 @@ First of all, they do not handle persistence or consensus directly.
 They develop on top of their distributed file system Pangu, which also has a leader election API.
 Instead of having consensus, you just defer to Pangu, who is the leader now and do that.
 They don't implement Paxos in their own services.
-Basically they have like whatever, etcd/chubby zookeeper implemented in Pangu.
+Basically they have like whatever, etcd/Chubby/ZooKeeper implemented in Pangu.
 
-They also changed the log-structured design of their block servers.
+They also changed to a log-structured design of their block servers.
 Basically instead of having in place updates for writes, they turn them into appends and I'll talk about that later a
 bit.
 
@@ -169,7 +169,7 @@ the most recent one and you also apply erasure coding and things like that, maki
 
 {% include timecode.html time="9:40" %}
 Logically, they also split their disk into a lot of different things.
-Like there's a segment group at the top. 
+Like there's a segment group at the top.
 Your logical space of the disk, your gigabytes and terabytes of disk, a virtual disk space turns into segment
 groups, which turn into segments and each segment is stored on a block server.
 
@@ -178,7 +178,7 @@ Writing into different segments or segment groups turns into writes to different
 for more parallelism.
 And that is important for performance.
 
-As I mentioned before, none of the blocks actually handle persistence. Persistence is handled by the Pangu distributed file
+As I mentioned before, none of the block servers actually handle persistence. Persistence is handled by the Pangu distributed file
 system.
 Underneath that is also Pangu.
 
@@ -286,7 +286,7 @@ definitely find it later.
 Overall evaluation for that performance improvement and network improvement is EBS3 is definitely more performant
 than EBS1, more performant than EBS2.
 
-They have graphs and benchmarks on that, but like overall, it just way better performance-wise and that's about it.
+They have graphs and benchmarks on that, but like overall, it's just way better performance-wise and that's about it.
 But the benchmark they use is YCSB, RocksDB and SysBench MySQL.
 They run MySQL on top of their disk and see how well it performs.
 At the application level.
@@ -325,7 +325,7 @@ This is how they discuss it in the paper.
 And the thing they notice is like if you look at those colors, on average for EBS3, the network, the second hop of the
 network and the actual disk I/O on Pangu takes a pretty big part of the latency.
 
-You can get rid of the first hop because it's basically hopped from a virtual machine to your service.
+You can't get rid of the first hop because it's basically hopped from a virtual machine to your service.
 But you can get rid of a second hop and this is what they're trying to do here.
 For the average latency case, they developed EBSX, which is, yeah, as I said, they noticed that the latency was
 mostly in the hardware.
@@ -364,7 +364,7 @@ another block server in this case, and that improves latency.
 The optimized writes and reads for those latencies, again, it's a very high percentile basically, again, completely
 eliminated that contention from a block server.
 And that huge block of block server latency is no longer there.
-It just network hops and disk IO.
+It's just network hops and disk IO.
 
 {% include timecode.html time="23:15" %}
 The other part of the discussion about latency they mentioned is latency is what they call coarse granularity.
@@ -372,7 +372,7 @@ Means you cannot fix latency for a particular virtual disk.
 You can only fix it in a system overall because like the whole, like there is no latency path for like one disk, but not
 the other.
 
-You cannot, for example, throughput and IO where you can scale those things by throwing more hardware at a particular
+Unlike, for example, throughput and IOPS, where you can scale those things by throwing more hardware at a particular
 disk or spreading it out or scaling it up or allocating resources for a particular disk.
 Latency in that sense is coarsely granulated.
 
@@ -381,7 +381,7 @@ Latency in that sense is coarsely granulated.
 {% include timecode.html time="23:52" %}
 The next challenge in elasticity is throughput and IOPS per disk.
 You want your disk to be able to scale to a lot of throughput because size is kind of not a problem.
-You can have as almost as big as you want or a system allows.
+It can be almost as big as you want or a system allows.
 And for that they moved things, they moved all their IO processing to user space.
 
 They started, if you remember from version one, just a regular TCP/IP stack and they moved to their more specialized
@@ -415,7 +415,7 @@ they wanna make sure that they will not be throttled when they burst.
 They have regular write activities and sometimes they burst a lot.
 
 This is why they employ this base plus burst strategy where you have the base capacity where you can actually reserve
-for your disk and you have additional burst capacity which is available there as long as you like not to abuse it too
+for your disk and you have additional burst capacity which is available there as long as you don't abuse it too
 much.
 
 This is why they have priority based congestion control.
@@ -448,7 +448,7 @@ If, for example, a block manager misbehaves, it impacts a big part of the cluste
 where your blocks for your segments and virtual disks are.
 
 A regional event is something impacting several virtual disks.
-For example, block server crashes because blocks are responsible for more for several virtual disks now and single crash
+For example, block server crashes because block servers are responsible for several virtual disks now and single crash
 kind of impacts several disks.
 
 An individual is a single virtual disk where they are in detail, I'll talk about that later.
@@ -482,12 +482,12 @@ As I said, a federated block manager is a central manager, now manages all the o
 And the block manager manages what they call partitions now.
 
 It's kind of a virtual disk level.
-it has a lot of segments in their partitions.
+It has a lot of segments in their partitions.
 And once a block manager fails itself, these partitions get redistributed to other block managers and presumably a new
 block manager starts.
 The crashed one restarts and things like that.
 
-But that logic is now handled by a central manager instead of a guess block manager being fault tolerant themselves.
+But that logic is now handled by a central manager instead of, I guess, the block manager being fault tolerant themselves.
 I think the number they mentioned is on the order of hundreds of milliseconds to redistribute partitions after a block
 manager crashes.
 It's pretty great.
@@ -517,13 +517,13 @@ You have three block servers which are called logical failure domains.
 
 And if your chunk caused some block servers to basically crash more than three times in like 30 minutes, you will get
 that chunk migrated to that logical failure domain and will be there, I guess until it heals or something else happens.
-And if there are more chunks like that, they all be moved into that logical failure domain and those failure
+And if there are more chunks like that, they will all be moved into that logical failure domain and those failure
 domains also merge.
 
 {% include timecode.html time="33:00" %}
 You will always have just one logical failure domain.
 Effectively what you have in the end is all your chunks which cause block servers to crash too often, which is like
-three times in 30 minutes or so, they all be moved to the same block servers.
+three times in 30 minutes or so, they will all be moved to the same block servers.
 
 They will not migrate to other parts of the cluster at all.
 They might cause a lot of unavailability in that small subset of block servers, but they will not get out of
@@ -544,7 +544,7 @@ Paper talks about the evolution of architecture of block store or elastic block 
 three, and also mentioned the latency sensitive version EBSX.
 
 They talk about a lot of lessons and trade-offs they learned and trade-offs they took in those designs, how to approach,
-how to address the issues arising from like the previous trade-offs from version one to version two, from version three.
+how to address the issues arising from like the previous trade-offs from version one to version two, to version three.
 
 They talk about challenges in availability, elasticity, and how to leverage specialized hardware to offload parts of
 workload to improve performance and efficiency.

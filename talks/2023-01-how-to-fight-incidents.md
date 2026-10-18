@@ -12,7 +12,7 @@ layout: talk
 ---
 
 This is a talk on "How to fight production incidents?: an empirical study on a large-scale cloud service"
-paper for distributed systems [reading group](https://charap.co/category/reading-group/).
+paper for the distributed systems [reading group](https://charap.co/category/reading-group/).
 
 ### Paper
 
@@ -50,7 +50,7 @@ print_alt_url = "https://speakerdeck.com/asatarin/how-to-fight-production-incide
 
 - "How to fight production incidents?: an empirical study on a large-scale cloud
   service" [paper](https://dl.acm.org/doi/10.1145/3542929.3563482)
-- [Slides](https://acmsocc.org/2022/assets/slides/95.pdf) for the talk presented at SOCC 2022 by the authors
+- [Slides](https://acmsocc.org/2022/assets/slides/95.pdf) for the talk presented at SoCC 2022 by the authors
 - [Reading Group. How to fight production incidents?](https://charap.co/reading-group-how-to-fight-production-incidents-an-empirical-study-on-a-large-scale-cloud-service/)
   blog post by [Aleksey Charapko](https://charap.co/about-me/) on the meeting with overview of the discussion
 - Paper review by Cindy Sridharan in
@@ -63,12 +63,12 @@ print_alt_url = "https://speakerdeck.com/asatarin/how-to-fight-production-incide
   paper
 - "Simple Testing Can Prevent Most Critical
   Failures" [paper](https://www.usenix.org/conference/osdi14/technical-sessions/presentation/yuan)
-- Supriyo Ghosh`s [personal website](https://sites.google.com/site/supriyophdsmu/)
+- Supriyo Ghosh's [personal website](https://sites.google.com/site/supriyophdsmu/)
   and [Twitter](https://mobile.twitter.com/supriyo_ai)
-- Manish Shetty`s [personal website](https://manishshettym.github.io/)
+- Manish Shetty's [personal website](https://manishshettym.github.io/)
   and [Twitter](https://mobile.twitter.com/slimshetty_)
-- Chetan Bansal`s [page](https://www.microsoft.com/en-us/research/people/chetanb/) on Microsoft Research website
-- Suman Nath`s [page](https://www.microsoft.com/en-us/research/people/sumann/) on Microsoft Research website
+- Chetan Bansal's [page](https://www.microsoft.com/en-us/research/people/chetanb/) on Microsoft Research website
+- Suman Nath's [page](https://www.microsoft.com/en-us/research/people/sumann/) on Microsoft Research website
 
 ### Transcript
 

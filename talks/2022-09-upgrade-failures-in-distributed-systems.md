@@ -16,8 +16,8 @@ Notes and draft for the talk https://docs.google.com/document/d/1rrcea6jOsAuB3Se
 {% endcomment %}
 
 This is a talk on "Understanding and Detecting Software Upgrade Failures in Distributed Systems"
-paper for distributed systems [reading group](https://charap.co/category/reading-group/)
-lead by [Aleksey Charapko](https://twitter.com/AlekseyCharapko).
+paper for the distributed systems [reading group](https://charap.co/category/reading-group/)
+led by [Aleksey Charapko](https://twitter.com/AlekseyCharapko).
 
 ### Paper
 

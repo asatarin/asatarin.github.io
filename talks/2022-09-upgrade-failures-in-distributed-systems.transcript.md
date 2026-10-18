@@ -14,7 +14,7 @@ on severity and root causes of upgrade failures, discuss testing and detecting t
 the end, I'm going to give some personal experience of me doing upgrade testing for a distributed system.
 
 {% include timecode.html time="0:42" %}
-Let's start with the introduction. What are upgrade failures? In the paper, we describe them as failures that occur
+Let's start with the introduction. What are upgrade failures? In the paper, they describe them as failures that occur
 during an upgrade. So, it's not some configuration change; it's not a bug in the new version of the software you just
 deployed. It's specifically the bug between interacting with two versions of software during the upgrade and nothing
 else.
@@ -62,7 +62,7 @@ drive the system into that behavior.
 {% include timecode.html time="3:40" %}
 And even though they're easy to observe, 63% of them are not caught before the release. So, the whole premise of the
 paper is that we need to get better at testing for those upgrades, and we need to come up with some other solutions to
-find those before they make it to release, which the authors are working towards
+find those before they make it to release, which the authors are working towards.
 
 {% include timecode.html time="4:00" %}
 About two-thirds of those upgrade failures are caused by data syntax or semantics, and those are roughly split 6 to
@@ -74,7 +74,7 @@ versions.
 That comes later when they try to address those issues.
 
 {% include timecode.html time="4:31" %}
-Uh, so some of the percentage of those syntax incompatibilities are coming from serialization libraries, like Protobuf or
+So some of the percentage of those syntax incompatibilities are coming from serialization libraries, like Protobuf or
 Thrift, where you just describe the message in a special language, and that means you can automatically detect those
 incompatibilities versus trying to build some kind of a solution for every way to serialize. So that makes it easier to
 scale in terms of, like, if you build solutions for Protobuf or Thrift, you can apply it to a lot of different systems.
@@ -96,7 +96,7 @@ So that's an important result and kind of makes it easier for us to test. We don
 that.
 
 {% include timecode.html time="5:51" %}
-Uh, almost all of those upgrades are deterministic, so you don't need to find any kind of special data races or timing
+Almost all of those upgrade failures are deterministic, so you don't need to find any kind of special data races or timing
 conditions and things like that. If you can drive the system into that behavior with the workload, you can observe those
 with pretty high confidence.
 
@@ -117,18 +117,18 @@ exposing the system to a variety of workloads during the upgrade.
 
 {% include timecode.html time="6:52" %}
 Also, they noticed that there is no mechanism to systematically explore the whole space of upgrades, which includes
-different versions, different configurations, and different update scenarios, like either stopping a full stop upgrade
+different versions, different configurations, and different update scenarios, like either stopping a full-stop upgrade
 or rolling upgrade. So those are not exposed in a systematic way.
 
 #### DUPTester
 
 {% include timecode.html time="7:10" %}
-Uh, and their proposed solution is two tools. First of those tools is DUPTester. So DUPTester is a distributed system
+And their proposed solution is two tools. First of those tools is DUPTester. So DUPTester is a distributed system
 upgrade tester.
 
 {% include timecode.html time="7:23" %}
 The way it works is it simulates a three-node cluster, as one of the findings mentioned, you just need three nodes. And
-systematically, it has three scenarios like full stop upgrade, rolling upgrade, and adding a new node to the system.
+systematically, it has three scenarios like full-stop upgrade, rolling upgrade, and adding a new node to the system.
 
 {% include timecode.html time="7:44" %}
 As I mentioned before, the workload challenge, and they mentioned that in the paper specifically, the main challenge is
@@ -178,7 +178,7 @@ translatable and not guaranteed between the versions.
 #### DUPChecker
 
 {% include timecode.html time="10:10" %}
-The next tool they talk about is DUPChecker, which is targeting specifically the syntax of data cross-serialization
+The next tool they talk about is DUPChecker, which is targeting specifically the syntax of data across serialization
 libraries and enum types.
 
 {% include timecode.html time="10:22" %}
@@ -207,7 +207,7 @@ API to write Java data.
 
 {% include timecode.html time="11:51" %}
 And then, if there are any additions or deletions to those enums and the index of the enum gets persisted — so not just
-a string representation, but the index of the enum itself — and all those things they can find from dataflow analysis.
+a string representation, but the index of the enum itself — and all those things they can find from data flow analysis.
 
 {% include timecode.html time="12:06" %}
 If both of those conditions are true, they again report it as an error to developers. This covers enums specifically.
@@ -215,8 +215,8 @@ If both of those conditions are true, they again report it as an error to develo
 #### Conclusions
 
 {% include timecode.html time="12:15" %}
-So overall conclusions from the paper. First of all, this is the first in-depth analysis as long as like authors, uh,
-aware and as I'm aware of upgrade failures in distributed systems. And they found that those failures have severe
+So overall conclusions from the paper. First of all, this is the first in-depth analysis as far as the authors are
+aware, and as far as I'm aware, of upgrade failures in distributed systems. And they found that those failures have severe
 consequences compared to general bug population.
 
 {% include timecode.html time="12:37" %}
@@ -231,7 +231,7 @@ prevent those incompatibilities in the future.
 #### Personal Experience and Commentary
 
 {% include timecode.html time="13:09" %}
-With that, I kind of want to transition from discussing the paper to my personal experience and commentary in the paper
+With that, I kind of want to transition from discussing the paper to my personal experience and commentary on the paper
 about upgrade testing.
 
 {% include timecode.html time="13:23" %}
@@ -281,16 +281,16 @@ even less frequently, so it's more important to test them in adversarial conditi
 {% include timecode.html time="17:15" %}
 And also, because we're talking specifically about upgrade bugs, that means the probability of exposing those bugs,
 especially under fault injection where the whole scenario becomes even more probabilistic than before, we need to have
-increased mixed version time. Because that directly corresponds to how many bugs we can expose. The more we can keep the
+increased mixed-version time. Because that directly corresponds to how many bugs we can expose. The more we can keep the
 system in the mixed-version situation where we have version one and version two — I'm talking specifically about the
-rolling upgrade scenario, obviously, because a full-stop upgrade is less interesting — we need to maximize that mixed
-version time.
+rolling upgrade scenario, obviously, because a full-stop upgrade is less interesting — we need to maximize that mixed-version
+time.
 
 {% include timecode.html time="17:58" %}
-So the way I previously did upgrade testing in practice was have a basically infinite cycle of upgrades and rollbacks so
+So the way I previously did upgrade testing in practice was to have a basically infinite cycle of upgrades and rollbacks so
 the system goes through all the states infinitely. Obviously in practice they're not infinite; you have some kind of
 time budget like 24 hours or 48 hours or whatever your release cadence is. So you want to schedule those upgrades and
-rolling upgrades in a way that maximizes time of upgrade and rollback where the system actually runs two versions
+rollbacks in a way that maximizes time of upgrade and rollback where the system actually runs two versions
 concurrently.
 
 And as I mentioned before, you can use not just stress tests as the paper suggests, but also your correctness validation

@@ -12,13 +12,13 @@ in Russian.
 
 ### Abstract
 
-Every day the systems which we develop become more and more complicated.
+Every day the systems we develop become more and more complicated.
 It seems there is nowhere to hide from the ubiquitous complexity.
 One of its aspects is configuration. On the one hand, configuration
-has a significant influence on stability and availability of a system.
+has a significant influence on the stability and availability of a system.
 On the other hand, there is too little time set aside for checking its
 correctness. In this talk, we'll explain how we test configuration and
-how far it was useful for our project.
+how useful it has been for our project.
 
 This talk will be helpful for those who want to learn an easy way to
 increase system stability and availability in production.

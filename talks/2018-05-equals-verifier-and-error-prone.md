@@ -12,9 +12,9 @@ conference. Video and slides are in Russian.
 
 ### Abstract
 
-Best kind of tests are ones that cost almost nothing, yet find defects.
+The best kind of tests are the ones that cost almost nothing, yet find defects.
 We’ll talk about two Java tools that are close to this ideal.
-First tool is [EqualsVerifier](https://jqno.nl/equalsverifier/) library,
+The first tool is the [EqualsVerifier](https://jqno.nl/equalsverifier/) library,
 which helps with testing equals() and hashCode() contracts.
 The second tool is [ErrorProne](https://errorprone.info/)
 from Google — a compile-time checker for common mistakes in your code.
