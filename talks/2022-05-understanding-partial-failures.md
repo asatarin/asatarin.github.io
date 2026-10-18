@@ -8,6 +8,10 @@ description: >
 date: 2022-05-25
 image: /assets/thumbnails/2022-05-understanding-partial-failures.webp
 layout: talk
+transcript: 2022-05-understanding-partial-failures.transcript.md
+paper:
+  title: "Understanding, Detecting and Localizing Partial Failures in Large System Software"
+  url: https://www.usenix.org/conference/nsdi20/presentation/lou
 # @formatter:on
 ---
 
@@ -70,4 +74,4 @@ Cachin, Rachid Guerraoui, and Luís Rodrigues.
 
 ## Transcript
 
-{% include transcript.html filename="2022-05-understanding-partial-failures.transcript.md" %}
+{% include transcript.html filename=page.transcript %}

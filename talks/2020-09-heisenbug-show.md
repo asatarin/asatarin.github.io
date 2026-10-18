@@ -56,7 +56,7 @@ conference program committee (in Russian). We talked about distributed systems a
 
 Some older interviews with me in Russian:
 
-* [https://habr.com/ru/company/jugru/blog/329974/](https://habr.com/ru/company/jugru/blog/329974/)
-* [https://habr.com/ru/company/jugru/blog/313908/](https://habr.com/ru/company/jugru/blog/313908/)
+* [https://habr.com/ru/companies/jugru/articles/329974/](https://habr.com/ru/companies/jugru/articles/329974/)
+* [https://habr.com/ru/companies/jugru/articles/313908/](https://habr.com/ru/companies/jugru/articles/313908/)
  
  

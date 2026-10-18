@@ -8,6 +8,10 @@ description: >
 date: 2022-09-28
 image: /assets/thumbnails/2022-09-upgrade-failures-in-distributed-systems.webp
 layout: talk
+transcript: 2022-09-upgrade-failures-in-distributed-systems.transcript.md
+paper:
+  title: "Understanding and Detecting Software Upgrade Failures in Distributed Systems"
+  url: https://dl.acm.org/doi/10.1145/3477132.3483577
 # @formatter:on
 ---
 
@@ -69,4 +73,4 @@ print_alt_url = "https://speakerdeck.com/asatarin/understanding-upgrade-failures
 
 ## Transcript
 
-{% include transcript.html filename="2022-09-upgrade-failures-in-distributed-systems.transcript.md" %}
+{% include transcript.html filename=page.transcript %}

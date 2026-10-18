@@ -58,8 +58,8 @@ print_alt_url = "https://speakerdeck.com/asatarin/tiestirovaniie-raspriedielienn
   familiar with Kyle's work
 
 Not exactly references, but you could check out interviews with me on testing distributed
-systems, [one in November 2016](https://habrahabr.ru/company/jugru/blog/313908/)
-and [another one in June 2017](https://habrahabr.ru/company/jugru/blog/329974/) (both in Russian).
+systems, [one in November 2016](https://habr.com/ru/companies/jugru/articles/313908/)
+and [another one in June 2017](https://habr.com/ru/companies/jugru/articles/329974/) (both in Russian).
 
 ## Other versions
 

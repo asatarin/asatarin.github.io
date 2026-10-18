@@ -36,13 +36,13 @@ print_alt_url = "https://speakerdeck.com/asatarin/kak-provierit-sistiemu-nie-zap
 
 ## References
 
-- [Three days that shocked us in 2013](https://habrahabr.ru/company/odnoklassniki/blog/268413/) in Russian
+- [Three days that shocked us in 2013](https://habr.com/ru/companies/odnoklassniki/articles/268413/) in Russian
 - ["Paxos Made Live – An Engineering Perspective"](https://web.archive.org/web/https://blog.acolyer.org/2015/03/05/paxos-made-live/)
 - ["Early detection of configuration errors to reduce failure damage"](https://web.archive.org/web/https://blog.acolyer.org/2016/11/29/early-detection-of-configuration-errors-to-reduce-failure-damage/)
-- [Gixy — open source tool from Yandex to make your Nginx configuration safe](https://habrahabr.ru/company/yandex/blog/327590/)
+- [Gixy — open source tool from Yandex to make your Nginx configuration safe](https://habr.com/ru/companies/yandex/articles/327590/)
   in Russian
 - ["Configuration testing for Java developers: a case study"](https://youtu.be/Tk_nmV-mWOA) — talk
   by [Ruslan Cheremin](https://twitter.com/dj_begemot) on practical application of these ideas implemented in Java (in
-  Russian). Full talk [transcript](https://habr.com/company/jugru/blog/427487/)
+  Russian). Full talk [transcript](https://habr.com/ru/companies/jugru/articles/427487/)
   and [slides](https://assets.ctfassets.net/ut4a3ciohj8i/HcZWuiIEg0ESicwEGWQM0/d0d76e5edb016747d1a6a3fba032ddb2/_______________________________________________________________________________________________-__________________________.pdf)
   are also published (in Russian).

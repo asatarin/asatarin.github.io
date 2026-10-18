@@ -8,6 +8,10 @@ description: >
 date: 2024-05-02
 layout: talk
 image: /assets/thumbnails/2024-05-evolution-of-cloud-block-store.webp
+transcript: 2024-05-evolution-of-cloud-block-store.transcript.md
+paper:
+  title: "What's the Story in EBS Glory: Evolutions and Lessons in Building Cloud Block Store"
+  url: https://www.usenix.org/conference/fast24/presentation/zhang-weidong
 # @formatter:on
 ---
 
@@ -65,4 +69,4 @@ print_alt_url = "https://speakerdeck.com/asatarin/evolution-of-cloud-block-store
 
 ## Transcript
 
-{% include transcript.html filename="2024-05-evolution-of-cloud-block-store.transcript.md" %}
+{% include transcript.html filename=page.transcript %}

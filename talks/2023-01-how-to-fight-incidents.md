@@ -8,6 +8,10 @@ description: >
 date: 2023-01-25
 image: /assets/thumbnails/2023-01-how-to-fight-incidents.webp
 layout: talk
+transcript: 2023-01-how-to-fight-incidents.transcript.md
+paper:
+  title: "How to fight production incidents?: an empirical study on a large-scale cloud service"
+  url: https://dl.acm.org/doi/10.1145/3542929.3563482
 # @formatter:on
 ---
 
@@ -64,12 +68,12 @@ print_alt_url = "https://speakerdeck.com/asatarin/how-to-fight-production-incide
 - "Simple Testing Can Prevent Most Critical
   Failures" [paper](https://www.usenix.org/conference/osdi14/technical-sessions/presentation/yuan)
 - Supriyo Ghosh's [personal website](https://sites.google.com/site/supriyophdsmu/)
-  and [Twitter](https://mobile.twitter.com/supriyo_ai)
+  and [Twitter](https://twitter.com/supriyo_ai)
 - Manish Shetty's [personal website](https://manishshettym.github.io/)
-  and [Twitter](https://mobile.twitter.com/slimshetty_)
+  and [Twitter](https://twitter.com/slimshetty_)
 - Chetan Bansal's [page](https://www.microsoft.com/en-us/research/people/chetanb/) on Microsoft Research website
 - Suman Nath's [page](https://www.microsoft.com/en-us/research/people/sumann/) on Microsoft Research website
 
 ## Transcript
 
-{% include transcript.html filename="2023-01-how-to-fight-incidents.transcript.md" %}
+{% include transcript.html filename=page.transcript %}

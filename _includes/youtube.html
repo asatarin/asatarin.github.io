@@ -7,3 +7,39 @@
 <div class="print-content">
   Video link — <a href="https://youtu.be/{{ include.video_id }}">https://youtu.be/{{ include.video_id }}</a>
 </div>
+{%- if page.transcript %}
+{%- capture transcript_md %}{% include_relative {{ page.transcript }} %}{% endcapture %}
+{%- assign transcript_text = transcript_md | markdownify | strip_html | normalize_whitespace %}
+{%- endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | strip | jsonify }},
+  "uploadDate": {{ page.date | date_to_xmlschema | jsonify }},
+  "thumbnailUrl": [
+    {{ page.image | absolute_url | jsonify }},
+    "https://i.ytimg.com/vi/{{ include.video_id }}/hqdefault.jpg"
+  ],
+  "embedUrl": "https://www.youtube.com/embed/{{ include.video_id }}",
+  "url": {{ page.url | absolute_url | jsonify }},
+  {%- assign year_published = page.date | date: '%Y' %}
+  "inLanguage": "{% if year_published < '2021' %}ru{% else %}en{% endif %}",
+  "author": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ '/about/' | absolute_url | jsonify }}
+  }
+  {%- if page.paper %},
+  "about": {
+    "@type": "ScholarlyArticle",
+    "name": {{ page.paper.title | jsonify }},
+    "url": {{ page.paper.url | jsonify }}
+  }
+  {%- endif %}
+  {%- if transcript_text %},
+  "transcript": {{ transcript_text | jsonify }}
+  {%- endif %}
+}
+</script>

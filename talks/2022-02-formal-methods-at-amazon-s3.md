@@ -8,6 +8,10 @@ description: >
 date: 2022-02-02
 image: /assets/thumbnails/2022-02-formal-methods-at-amazon-s3.webp
 layout: talk
+transcript: 2022-02-formal-methods-at-amazon-s3.transcript.md
+paper:
+  title: "Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3"
+  url: https://dl.acm.org/doi/abs/10.1145/3477132.3483540
 # @formatter:on
 ---
 
@@ -65,4 +69,4 @@ print_alt_url = "https://speakerdeck.com/asatarin/formal-methods-at-amazon-s3"
 
 ## Transcript
 
-{% include transcript.html filename="2022-02-formal-methods-at-amazon-s3.transcript.md" %}
+{% include transcript.html filename=page.transcript %}

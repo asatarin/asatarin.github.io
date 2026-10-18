@@ -6,8 +6,8 @@ description: Contacts and bio
 ## Contacts
 
 * Profile on [LinkedIn](https://www.linkedin.com/in/asatarin/)
-* Twitter [@asatarin](https://twitter.com/asatarin)
 * Bluesky [@asatarin.bsky.social](https://bsky.app/profile/asatarin.bsky.social)
+* Twitter [@asatarin](https://twitter.com/asatarin)
 
 More ways to [follow](/follow/).
 

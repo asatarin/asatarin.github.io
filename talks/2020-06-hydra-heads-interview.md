@@ -21,12 +21,12 @@ These references came up during discussion and questions.
   This short book will give you a good grasp of some theoretical concepts without going too deep.
   It's a good starting point to dive into distributed systems.
 
-- [“Database Internals: A Deep Dive into How Distributed Data Systems Work”](https://www.amazon.com/dp/1492040347/ref=cm_sw_r_tw_dp_x_GcI9Eb0T0NTMT)  
+- [“Database Internals: A Deep Dive into How Distributed Data Systems Work”](https://www.amazon.com/dp/1492040347/)  
   The first part is about single-node databases and not directly about distributed systems. The second part is
   specifically about distributed systems.
   One of the great things about this book is its references — lots of good ones to go deep into any topic covered.
 
-- [“Designing Data-Intensive Applications”](https://www.amazon.com/dp/1449373321/ref=cm_sw_r_tw_dp_x_IcI9EbNF3SFHR)  
+- [“Designing Data-Intensive Applications”](https://www.amazon.com/dp/1449373321/)  
   It's almost a classic book at this point. Martin Kleppmann does a great job introducing the reader to fundamental
   concepts in distributed systems.
 

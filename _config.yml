@@ -3,6 +3,7 @@ description: Personal Website
 author: 
   name: Andrey Satarin
   twitter: asatarin
+  bluesky: asatarin.bsky.social
 google_analytics: G-6RQFPSJXCJ
 lang: en-US
 
@@ -13,12 +14,12 @@ twitter:
 social:
   name: Andrey Satarin
   links:
-    - https://twitter.com/asatarin
     - https://www.linkedin.com/in/asatarin
-    - https://github.com/asatarin
-    - https://discuss.systems/@asatarin
-    - https://speakerdeck.com/asatarin
     - https://bsky.app/profile/asatarin.bsky.social
+    - https://discuss.systems/@asatarin
+    - https://twitter.com/asatarin
+    - https://github.com/asatarin
+    - https://speakerdeck.com/asatarin
 
 defaults:
   - 
