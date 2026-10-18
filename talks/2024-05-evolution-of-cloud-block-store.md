@@ -3,7 +3,7 @@
 # @formatter:off
 title: Evolution of Cloud Block Store
 description: >
-  Talk on "What's the Story in EBS Glory: Evolutions and Lessons in Building Cloud Block Store" paper for distributed
+  Talk on "What's the Story in EBS Glory: Evolutions and Lessons in Building Cloud Block Store" paper for the distributed
   systems reading group.
 date: 2024-05-02
 layout: talk

@@ -3,7 +3,7 @@
 # @formatter:off
 title: Formal Methods at Amazon S3
 description: >
-  Presentation on "Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3" paper for
+  Presentation on "Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3" paper for the
   distributed systems reading group.
 date: 2022-02-02
 image: /assets/thumbnails/2022-02-formal-methods-at-amazon-s3.webp

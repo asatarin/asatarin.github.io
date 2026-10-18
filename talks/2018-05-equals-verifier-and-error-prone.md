@@ -1,6 +1,6 @@
 ---
 title: EqualsVerifier, ErrorProne and All the Others
-description: Presented in Saint Petersburg in May 2018 at Heisenbug conference. Video and slides are in Russian.
+description: Presented in Saint Petersburg in May 2018 at the Heisenbug conference. Video and slides are in Russian.
 date: 2018-05-18
 image: /assets/thumbnails/2018-equals-verifier-and-error-prone.webp
 layout: talk
@@ -8,7 +8,7 @@ talk_language: ru
 ---
 
 Presented in Saint Petersburg in May 2018
-at [Heisenbug](https://heisenbug.ru/en/)
+at the [Heisenbug](https://heisenbug.ru/en/)
 conference. Video and slides are in Russian.
 
 ## Abstract

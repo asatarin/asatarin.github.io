@@ -8,7 +8,7 @@ talk_language: ru
 ---
 
 An interview I gave to [Nikita Makarov](https://www.linkedin.com/in/nikita-makarov-8075875/)
-from [Heisenbug](https://heisenbug.ru/en/)
+from the [Heisenbug](https://heisenbug.ru/en/)
 conference program committee (in Russian). We talked about distributed systems and testing them (d'oh!).
 
 {% include youtube.html video_id="-kD8zu7DGew" %}

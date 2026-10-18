@@ -3,7 +3,7 @@
 # @formatter:off
 title: Understanding Upgrade Failures in Distributed Systems
 description: >
-  Talk on "Understanding and Detecting Software Upgrade Failures in Distributed Systems" paper for distributed systems
+  Talk on "Understanding and Detecting Software Upgrade Failures in Distributed Systems" paper for the distributed systems
   reading group.
 date: 2022-09-28
 image: /assets/thumbnails/2022-09-upgrade-failures-in-distributed-systems.webp

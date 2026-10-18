@@ -3,7 +3,7 @@
 # @formatter:off
 title: How to Fight Production Incidents?
 description: >
-  Talk on "How to fight production incidents?: an empirical study on a large-scale cloud service" paper for distributed
+  Talk on "How to fight production incidents?: an empirical study on a large-scale cloud service" paper for the distributed
   systems reading group.
 date: 2023-01-25
 image: /assets/thumbnails/2023-01-how-to-fight-incidents.webp

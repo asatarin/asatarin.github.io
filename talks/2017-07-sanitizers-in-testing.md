@@ -1,13 +1,14 @@
 ---
 title: Wash Your Hands Before You Eat, or Sanitizers in Testing
-description: Presented in Saint Petersburg in June 2017 at Heisenbug conference. Video and slides are in Russian.
+description: Presented in Saint Petersburg in June 2017 at the Heisenbug conference. Video and slides are in Russian.
 date: 2017-07-04
 image: /assets/thumbnails/2017-sanitizers-in-testing.webp
 layout: talk
 talk_language: ru
 ---
 
-Presented in Saint Petersburg in June 2017 at [Heisenbug](https://heisenbug.ru/en/) conference. Video and slides are in
+Presented in Saint Petersburg in June 2017 at the [Heisenbug](https://heisenbug.ru/en/) conference. Video and slides are
+in
 Russian.
 
 ## Materials

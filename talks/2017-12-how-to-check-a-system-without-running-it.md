@@ -1,6 +1,6 @@
 ---
 title: How to Check a System Without Running It
-description: Presented in Moscow in December 2017 at Heisenbug conference. Video and slides are in Russian.
+description: Presented in Moscow in December 2017 at the Heisenbug conference. Video and slides are in Russian.
 date: 2017-12-08
 image: /assets/thumbnails/2017-how-to-check-a-system-without-running-it.webp
 layout: talk
@@ -8,7 +8,7 @@ talk_language: ru
 ---
 
 Presented in Moscow in December 2017
-at [Heisenbug](https://heisenbug.ru/en/) conference. Video and slides are
+at the [Heisenbug](https://heisenbug.ru/en/) conference. Video and slides are
 in Russian.
 
 ## Abstract
