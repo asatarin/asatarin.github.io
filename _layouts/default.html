@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     {% seo %}
     {% include head-common.html %}
+    {%- if page.layout == 'talk' %}
+    <script defer src="{{ '/assets/js/embeds.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+    {%- endif %}
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>

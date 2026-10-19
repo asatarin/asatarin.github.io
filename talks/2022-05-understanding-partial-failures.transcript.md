@@ -367,5 +367,3 @@ And they also talk in the paper; they actually exposed a new partial failure in 
 stuff they were able to reproduce; they found a new bug. My understanding is it was confirmed by the ZooKeeper team
 and was also fixed. So, not only were old failures reproduced, but new ones were also discovered and reported as
 actual partial failures during their experiments. With that. Yeah, I'm done. Thank you.
-
-{% include transcript-code.html %}

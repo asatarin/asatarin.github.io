@@ -254,6 +254,50 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
+  border: 0;
+}
+
+// Click-to-load placeholders for YouTube and SpeakerDeck, replaced by the iframe by assets/js/embeds.js
+.video-placeholder, .slides-placeholder {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: #000;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    // YouTube's hqdefault thumbnail is 4:3 with letterboxing; cover crops it to 16:9
+    object-fit: cover;
+  }
+
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 68px;
+    height: 48px;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    background: rgba(33, 33, 33, 0.8);
+    transition: background-color 0.15s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-35%, -50%);
+      border-style: solid;
+      border-width: 11px 0 11px 19px;
+      border-color: transparent transparent transparent #fff;
+    }
+  }
+
+  &:hover .play-button, &:focus-visible .play-button {
+    background: #f00;
+  }
 }
 
 details::marker {

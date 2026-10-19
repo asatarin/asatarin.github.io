@@ -314,5 +314,3 @@ With this, I have a shameless plug.
 If you're interested in testing things like that, distributed systems and storage systems, I have a list of the things
 different companies do, and it's like papers, blog posts, videos, it's there, pretty comprehensive, and that's the end
 of the talk.
-
-{% include transcript-code.html %}

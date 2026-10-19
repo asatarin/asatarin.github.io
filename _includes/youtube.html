@@ -1,8 +1,9 @@
-<div class="video-container">
-<iframe id="player" title="Video: {{ page.title | escape }}"
-        src="https://www.youtube.com/embed/{{ include.video_id }}?enablejsapi=1"
-        loading="lazy" frameborder="0" allowfullscreen>
-</iframe>
+<div class="video-container" id="video">
+  <a class="video-placeholder" href="https://youtu.be/{{ include.video_id }}"
+     data-video-id="{{ include.video_id }}" aria-label="Video: {{ page.title | escape }}">
+    <img src="https://i.ytimg.com/vi/{{ include.video_id }}/hqdefault.jpg" alt="" loading="lazy">
+    <span class="play-button"></span>
+  </a>
 </div>
 <div class="print-content">
   Video link — <a href="https://youtu.be/{{ include.video_id }}">https://youtu.be/{{ include.video_id }}</a>
