@@ -4,7 +4,7 @@ description: Posts on various subjects.
 image: /assets/thumbnails/thumbnail-posts.webp
 ---
 
-{% assign all_posts = site.pages | where: "layout", "post" | where_exp: "post", "post.draft != true" | sort: "date" | reverse %}
+{% assign all_posts = site.pages | where_exp: "post", "post.path contains 'posts/'" | where_exp: "post", "post.date" | where_exp: "post", "post.draft != true" | sort: "date" | reverse %}
 
 <ul> 
   {%- for post in all_posts -%}
