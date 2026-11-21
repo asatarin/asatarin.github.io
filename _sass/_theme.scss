@@ -26,6 +26,13 @@
   box-sizing: border-box;
 }
 
+// Cross-fade between pages in browsers that support cross-document view transitions
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -97,6 +104,8 @@ a {
 }
 
 .page-navigation {
+    // Same on every page, so keep it in place instead of cross-fading it
+    view-transition-name: page-navigation;
     text-align: right;
     font-size: 0.8rem;
     @media print {
@@ -114,6 +123,7 @@ a {
     font-size: 2rem;
     font-weight: normal;
     color: var(--section-headings-color);
+    text-wrap: balance;
 }
 
 .page-description {
@@ -169,6 +179,7 @@ a {
     margin-bottom: 1rem;
     font-weight: normal;
     color: var(--section-headings-color);
+    text-wrap: balance;
   }
 
   // Content headings start at h2 (the page title is the only h1),
@@ -202,6 +213,11 @@ a {
 
   p {
     margin-bottom: 1em;
+  }
+
+  // Avoid single-word last lines in body text
+  p, li, blockquote {
+    text-wrap: pretty;
   }
 
   ul,
