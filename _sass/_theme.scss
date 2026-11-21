@@ -203,10 +203,18 @@ a {
     &:target .anchor {
       visibility: visible;
     }
-    // No hover on touch screens, so always show the anchors there
+    // No hover on touch screens: the whole heading becomes a tap target for its anchor link,
+    // and tapping it makes the heading :target, which reveals the anchor.
+    // Skipped for headings that contain other links, so those stay tappable.
     @media (hover: none) {
-      .anchor {
-        visibility: visible;
+      &:not(:has(a:not(.heading-anchor))) {
+        position: relative;
+
+        .heading-anchor::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+        }
       }
     }
   }
