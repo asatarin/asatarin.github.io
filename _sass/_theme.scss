@@ -33,23 +33,31 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: var(--body-text-color);
+  background-color: var(--header-bg-color);
 }
 
+// Visually hidden until focused, but still announced by screen readers
 #skip-to-content {
-  height: 1px;
-  width: 1px;
   position: absolute;
+  width: 1px;
+  height: 1px;
   overflow: hidden;
-  top: -10px;
+  clip-path: inset(50%);
+  white-space: nowrap;
 
-  &:focus {
+  &:focus-visible {
     position: fixed;
     top: 10px;
     left: 10px;
-    height: auto;
+    z-index: 1;
     width: auto;
-    background: invert(100%);
-    outline: thick solid invert(100%);
+    height: auto;
+    padding: 0.5rem 1rem;
+    clip-path: none;
+    color: var(--header-bg-color);
+    background-color: var(--body-link-color);
+    outline: 3px solid var(--body-text-color);
+    outline-offset: 2px;
   }
 }
 
@@ -147,6 +155,8 @@ a {
 
   img {
     max-width: 100%;
+    // Keeps the aspect ratio from the width/height attributes when max-width shrinks the image
+    height: auto;
   }
 
   h1,
@@ -177,8 +187,16 @@ a {
     .anchor {
       visibility: hidden;
     }
-    &:hover .anchor {
+    &:hover .anchor,
+    &:focus-within .anchor,
+    &:target .anchor {
       visibility: visible;
+    }
+    // No hover on touch screens, so always show the anchors there
+    @media (hover: none) {
+      .anchor {
+        visibility: visible;
+      }
     }
   }
 
@@ -236,10 +254,9 @@ a {
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%;
+  aspect-ratio: 16 / 9;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  height: 0;
   width: 100%;
   overflow: hidden;
   box-shadow: var(--shadow-color) 1px 5px 20px;
